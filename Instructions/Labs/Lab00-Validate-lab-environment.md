@@ -28,15 +28,17 @@ Exercise 1 – Acquire your Power Platform trial tenant
 
 1. Copy your **Microsoft 365 credentials** from the Authorized Lab Hoster.
 
-2. Navigate to <powerapps.microsoft.com> and click **Start free.**
+2. Navigate to <powerapps.microsoft.com> and click **Start free**.
 
 3. Under **Work email**, enter the email address from your Microsoft 365 credentials.
 
-4. You see a prompt that you have an existing account with Microsoft. Select **Sign in.**
+4. You see a prompt that you have an existing account with Microsoft. Select **Sign in**.
 
 5. Enter the password provided by the Authorized Lab Hoster. 
 
 6. Select **Yes** to stay signed in.
+
+7. Click the **Start** button to begin building your Power Platform trial tenant.
 
 
 Exercise 2 - Create your environment 
@@ -48,17 +50,19 @@ In this exercise, you will be create your **Practice** environment that you will
 
 1.  Access <https://admin.Powerplatform.microsoft.com> and log in with your Microsoft 365 credentials if prompted again.
 
-2. Select **Environments** and click **+New.**
+2. Select **Environments** and click **+New**.
 
-    - For **Name**, enter **[my initials] Practice.** (Example: AJ Practice.)
+    - For **Name**, enter **[my initials] Practice**. (Example: AJ Practice.)
     
-    - For **Type**, select **Trial.**
+    - For **Type**, select **Trial**.
     
-    - Change the toggle on **Create a database for this environment?** to **Yes.**
+    - Change the toggle on **Create a database for this environment?** to **Yes**.
     
-    - Leave all other selections as default and click **Save.**
+    - Leave all other selections as default and click **Next**.
     
-    - On the next tab, leave all selections to default and click **Save** again.
+    - On the next tab, leave all selections to default and click **Next** again.
+
+    - On the next tab, leave all selections to default and click **Save**.
 
 3. Your **Practice** environment should now show in the list of Environments. 
 
