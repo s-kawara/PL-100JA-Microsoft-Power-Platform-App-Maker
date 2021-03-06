@@ -118,11 +118,11 @@ Review the following discussion with your coworker and take notes of any of the 
 > 
 > **You**: Perfect\! Do you fix all the problems that get reported?
 > 
-> **Coworker**: Many of them some are duplicates and do not get fixed; others will cost too much and must get manager approval and if they are not approved then they don't get fixed.
+> **Coworker**: Many of them are duplicates and do not get fixed; others will cost too much and must get manager approval. If they are not approved they don't get fixed.
 > 
 > **You**: How do you do that approval today?
 > 
-> **Coworker**: Well if I get one that I think is going to be expensive I have to try to track down the manager for approval, and sometimes if I can’t get it right away it gets set aside till I remember.
+> **Coworker**: If I get one that I think is going to be expensive I have to try to track down the manager for approval, and sometimes if I can’t get it right away it gets set aside till I remember.
 > 
 > **You**: Ok, so if we could include approval that might help. I will let you know when you can try the app\!
 
@@ -148,51 +148,48 @@ In this exercise, you will create the data model to support the apps you will be
 
 In this task, you will be evaluating the information you already collected about your proposed solution and trying to identify what data Tables are needed and how they are related. If you want, you can do this task concurrently with the next task where you draw the data model.
 
-1.  Identify the main data that will be managed by the solution. This will typically become one or two Tables and will be the focus of the app you build. Other data is typically related to and supports these Tables.
+  - Identify the main data that will be managed by the solution. This will typically become one or two Tables and will be the focus of the app you build. Other data is typically related to and supports these Tables.
 
-2.  Identify related Tables needed to support your scenario.
+  - Identify related Tables needed to support your scenario.
 
-3.  Identify how Tables should be connected using relationships.
-
-4.  Evaluate what should be Columns and what should be Tables. For example, how should the photo be stored or the location within the building?
+  - Identify how Tables should be connected using relationships.
+  
+  - Evaluate what should be Columns and what should be Tables. For example, how should the photo be stored or the location within the building?
 
 #### Task 2: Draw a draft data model
 
-Use whatever tools you have available; you can use a whiteboard, Visio, PowerPoint, OneNote, or you can even use it piece of paper and pen. The goal here is not to be picture perfect but to allow you to think through what the data model should look like and possibly share with others and get their ideas. This data model typically will be your guide when you are creating the Tables in the maker portal. Well you could of course just start creating the Tables in the portal by creating a diagram helps ensure it's a little bit more well thought out.
+Use whatever tools you have available; you can use a whiteboard, Visio, PowerPoint, OneNote, or you can even use it piece of paper and pen. The goal here is not to be picture perfect but to allow you to think through what the data model should look like and possibly share it with others and get their ideas. This data model will typically be your guide when you are creating the Tables in the maker portal. You could, of course, just start creating the Tables in the portal, but creating a diagram helps ensure it's more carefully planned out.
 
 1.  Draw your data model, including relationships and any relationship behaviors. Your drawing should look like the following example, except yours should be for your Company 311 solution.
     
     ![Whiteboard drawing of an example data model](01/media/image1.png)
 
-2.  After you complete your drawing proceed to the next task.
 
 #### Task 3: Compare data models
 
-In this task, you will compare the data model you created in the previous task with the one we prepared. If there are significant differences you should discuss those with your instructor.
+1.  Compare the data model you created in the previous task with the one we prepared. If there are significant differences you should discuss those with your instructor.
 
 ![A close up of text on a whiteboard with a data model showing problem report, department and building](01/media/image2.png)
 
 ### Exercise 4: Identify apps and automation needed
 
-In this exercise, you will be looking at the information you collected and deciding what apps and automation is required to implement the solution. The goal is not to identify every feature of the application or automation but to identify do you need one app or ten apps and what style app are they.
+In this exercise, you will be looking at the information you collected and deciding what apps and automations are required to implement the solution. The goal is not to identify every feature of the application or automation but to identify if you need one app or ten apps, and what style app they should be.
 
 #### Task 1: Evaluate what apps are needed
 
-In this task you are going to look at how the users interact with the applications and decide if you need one or multiple applications and what style they're going to be, i.e. canvas or model-driven. There is no single right answer to how to accomplish this, but by asking the right questions you can lead down a path of getting a better solution for your users. As you go through the following steps make some notes that is applicable for your Company 311 solution.
+In this task you are going to look at how the users interact with the applications and decide if you need one or multiple applications and what style they're going to be, i.e. canvas or model-driven. There is no single right answer to how to accomplish this, but by asking the right questions you can design a better solution for your users. As you go through the following steps make some notes about your Company 311 solution.
 
 1.  Identify who will be using the app.
 
-2.  For each set of users will they be accessing it mostly from for mobile device or desktop?
+2.  Identify how each set of users will be accessing the app. Will it be mostly from for mobile device or desktop?
 
-3.  Of the overall functionality you are going to provide are there specific subsets that some users use all the time?
+3.  Of the overall functionality you are going to provide, are there specific subsets that some users use all the time?
 
 4.  Is there any device usage that would lend itself to one type of application versus another?
 
-5.  Is any of the functionality more data management that would lend itself more to a model-driven app?
+5.  Model-driven apps are great for data management. Is there any functionality that would lend itself more to a model-driven app?
 
-6.  Considering your answers to the above questions make notes of how many apps you will be building, the type of app, and what each app will do and how it will be used by.
-
-7.  After you complete these continue to the next task to compare notes.
+6.  Considering your answers to the above questions and make notes of how many apps you will be building, the type of app, and what each app will do and who it will be used by.
 
 #### Task 2: Compare your notes on apps
 
