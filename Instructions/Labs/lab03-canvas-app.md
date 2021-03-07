@@ -60,35 +60,33 @@ In this task, you will import the shared components solution into your environme
 
 5.  Click **Next**.
 
-6.  Click **Import**. Wait for the message **Solution "Shared Comonents" imported successfully.** to be displayed.
+6.  Click **Import**.
 
 7.  Click **Publish All Customizations** and wait for the publishing to complete.
 
-8  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution you imported.
+8.  Click **Close**.
 
-9. The solution should have one item in it, **Lamna Healthcare Shared Components**.
+9.  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution you imported.
+
+10. The solution should have one item in it, **Lamna Healthcare Shared Components**.
 
 ![Imported solution components - screenshot](03/media/image2.png)
 
 > [!IMPORTANT]
 > There is an issue where importing the app as part of a solution may not add it to your components library. The following steps are designed to resolve the issue.
 
-10 Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
-11. Click the **Edit Icon** to edit the app. 
+11. Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
+12. Click the **Edit Icon** to edit the app.
 
 ![Edit components app](03/media/image2-1.png)
 
-12. Click **Skip** on the welcome screen.
-
-13.  Select your **Region/Country** and click **Get started**.
- 
-14. After the app opens, click **File** > **Save As**. Save the app as **Lamna Healthcare Share Components A**.
+13. After the app opens, click **File** > **Save As**.
+14. Save the app as **Lamna Healthcare Share Components A**.
 
 ![Save component app under a new name - screenshot](03/media/image2-2.png)
 
 15. Click **OK**.
 16. Close the **Lamna Healthcare Shared Components** tab in your browser.
-17. Click the **Done** button.
 
 #### Task 2: Create view
 
@@ -134,53 +132,57 @@ In this task, you will create a canvas application using the phone form factor.
 
 ![Create canvas appellation - screenshot](03/media/image7.png)
 
-5.  Click **File** and select **Save**.
+4.  Click **Skip** on the welcome screen.
 
-6.  Enter **Company 311 Phone App** for name and click **Save**.
+5.  Select your **Region/Country** and click **Get started**.
 
-7.  Click on the back button.
+6.  Click **File** and select **Save**.
+
+7.  Enter **Company 311 Phone App** for name and click **Save**.
+
+8.  Click on the back button.
 
 ![Back to app designer - screenshot](03/media/image8.png)
 
-8.  Go to the Tree view and double click **Screen1**.
+9.  Go to the Tree view and double click **Screen1**.
 
 ![Edit screen name - screenshot](03/media/image9.png)
 
-9. Rename the screen **Main Screen**. It’s always a good idea to give your screens a meaningful name.
+10. Rename the screen **Main Screen**. It’s always a good idea to give your screens a meaningful name.
 
 ![Rename screens - screenshot](03/media/image10.png)
 
-10. Select the **Main Screen** and click **Insert**.
+11. Select the **Main Screen** and click **Insert**.
 
 ![Insert component - screenshot](03/media/image11.png)
 
-11. Select **Get more Components**.
+12. Select **Get more Components**.
 
 ![Get more components - screenshot](03/media/image12-1.png)
 
-12. Expand the **Lamna Healthcare Shared Components A** Library, and select **Header** and **Tab Control**.
+13. Expand the **Lamna Healthcare Shared Components A** Library, and select **Header** and **Tab Control**.
 
 ![Import header and tab controls from the library - screenshot](03/media/image12-2.png)
 
-13. Click **Import**.
+14. Click **Import**.
 
-14. Expand **Library components**, select **Header Control** and **Tab Control**. These are both components from the library you imported earlier in the lab.
+15. Expand **Library components**, select **Header Control** and **Tab Control**. These are both components from the library you imported earlier in the lab.
 
 ![Select and insert controls into the app - screenshot](03/media/image12-3.png)
 
-15. Move the **Tab Control** to the bottom of the screen and the **Header Control** to the top of the screens.
+16. Move the **Tab Control** to the bottom of the screen and the **Header Control** to the top of the screens.
 
-16. Select the **Header Control** and change the **Text** value to **"Company 311".**
+18. Select the **Header Control** and change the **Text** value to **"Company 311".**
 
 ![Change text value - screenshot](03/media/image13.png)
 
-17. Select the **Tree** view. Right click on the Main Screen and select Duplicate screen.
+19. Right click on the Main Screen and select Duplicate screen.
 
 ![Duplicate screens - screenshot](03/media/image14.png)
 
-18. Rename the new screen **New Reports Screen**.
+20. Rename the new screen **New Reports Screen**.
 
-19. Select **App** and click the **Advanced** tab. Change the **OnStart** value to the formula below. This formula will create a new variable named My Tabs and set it to a table of tab items.
+21. Select the **Tree view**, select **App** and change the **OnStart** value to the formula below. This formula will create a new variable named My Tabs and set it to a table of tab items.
 
 ```javascript
 Set('My Tabs', Table( {
@@ -203,25 +205,25 @@ Set('My Tabs', Table( {
 
 ![tab data variable - screenshot](03/media/image15.png)
 
-20. Select the **Tab Control** in the **Main Screen** and click **Properties**. Change the **Items** value to **‘My Tabs’**.
+22. Select the **Tab Control** in the **Main Screen** and change the **Items** value to **‘My Tabs’**.
 
 ![Set tab items - screenshot](03/media/image16.png)
 
-21. Change the **SelectedColor** value to **WhiteSmoke**.
-
-22. Select the **Tab Control** inside the **New Report Screen** and set the Item value to **‘My Tabs’**.
-
 23. Change the **SelectedColor** value to **WhiteSmoke**.
 
-24. Click on the **…** button of the **App** and select **Run OnStart**.
+24. Select the **Tab Control** inside the **New Report Screen** and set the Item value to **‘My Tabs’**.
+
+25. Change the **SelectedColor** value to **WhiteSmoke**.
+
+26. Click on the **…** button of the **App** and select **Run OnStart**.
 
 ![Run app on start - screenshot](03/media/image17.png)
 
-25. Your tabs should now show the two tabs you added.
+27. Your tabs should now show the two tabs you added.
 
 ![Tab with data - screenshot](03/media/image18.png)
 
-26. Do not navigate away from this page.
+28. Do not navigate away from this page.
 
 ### Exercise 2: My reports
 
