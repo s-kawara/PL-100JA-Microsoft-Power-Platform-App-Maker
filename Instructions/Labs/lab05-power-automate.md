@@ -62,11 +62,11 @@ In this task, you will create a flow that send notification when the status of p
 
 2.  Select **Solutions** and click to open the **Company 311** solution.
 
-3.  Click **+ New** and select **Flow**.
+3.  Click **+ New** and select **Cloud Flow**.
 
 ![Create new flow - screenshot](05/media/image1.png)
 
-4.  Search for **when a Row is created** and select **When a Row is created, updated, or deleted** **Microsoft Dataverse (Current Environment)**
+4.  Search for **when a record is updated** and select **When a record is created, updated, or deleted** **Microsoft Dataverse (Current Environment)**
 
 ![Select trigger - screenshot](05/media/image2.png)
 
