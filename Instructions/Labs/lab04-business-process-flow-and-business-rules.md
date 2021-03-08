@@ -82,7 +82,7 @@ In this task, you will create a business process flow for the problem report Tab
 
 ![New business process flow - screenshot](04/media//image3.png)
 
-4.  Enter **Problem resolution process** for **Name**, select **Problem Report** for **Table**, and click **Create**.
+4.  Enter **Problem resolution process** for **Flow Name**, select **Problem Report** for **Table**, and click **Create**.
 
 5.  Select the **New stage**, go to the **Properties** pane, change the **Display Name** to **Route**, and click **Apply**.
 
@@ -106,7 +106,7 @@ In this task, you will create a business process flow for the problem report Tab
 
 11. Click **+ Add** again and select **Add Data Step**.
 
-12. Add the new data step below the **Location** data step.
+12. Click **+ placeholder** to add the new data step below the **Location** data step.
 
 13. Select the new data step, go to the **Properties** pane, select **Department** for **Data Column**, and click **Apply**.
 
@@ -150,7 +150,7 @@ In this task, you will create a business process flow for the problem report Tab
 
 31. Click **Activate**.
 
-32. Confirm activation.
+32. Confirm that **Status: Active**.
 
 33. Close the process editor browser window or tab.
 
@@ -258,7 +258,7 @@ In this exercise, you will test the business process flow and the business rule 
 
 ![Select stage - screenshot](04/media//image23.png)
 
-6.  Enter **North end** for **Location**, select **Facility Maintenance** for **Department**, and select the Fix stage.
+6.  Enter **North end** for **Location**, select **Facility Maintenance** for **Department**, and select the **Fix** stage.
 
 ![Select stage - screenshot ](04/media//image24.png)
 
