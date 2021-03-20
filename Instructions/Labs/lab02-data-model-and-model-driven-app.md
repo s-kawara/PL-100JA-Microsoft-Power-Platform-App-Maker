@@ -92,7 +92,7 @@ In this exercise, you will create Tables, Columns, and the relationships you ide
 
 2.  Click **+ New** and select **Table**.
 
-3.  Enter **Building** for **Display name** and click **Done**.
+3.  Enter **Building** for **Display name** and click **Create**.
 
 ![Building Table properties - screenshot](02/media/image5.png)
 
@@ -168,7 +168,7 @@ In this task, you will add Columns to the Problem Report Table.
 
 14. Enter **Resolved On** for **Display name**, select **Date and time** for **Data type**, and click **Done**.
 
-15. Click Filter and select Custom
+15. Click **Default** Filter and select Custom
 
 ![Filter Columns - screenshot](02/media/image17.png)
 
@@ -359,7 +359,7 @@ In this exercise, you will configure form and views for the problem report Table
 
 ![Open view - screenshot](02/media/image44.png)
 
-2.  Click **+ Add column** and select **Building** to add the **Building** column to the view.
+2.  Click **+ View column** and select **Building** to add the **Building** column to the view.
 
 ![Add column to view - screenshot](02/media/image45.png)
 
@@ -421,7 +421,7 @@ In this task, you will create a new view from the Active Problem Reports view.
 
 ![Save view - screenshot ](02/media/image56.png)
 
-9.  Click on the **\<-Back Button**.
+9.  Click on the **<-Back Button**.
 
 ![Back button - screenshot](02/media/image57.png)
 
