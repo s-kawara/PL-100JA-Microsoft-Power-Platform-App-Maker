@@ -87,11 +87,11 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ![Get data command in Power BI Desktop](06/media/image-6-3.png)
 
-4. Select **Power Platform**, then select **Microsoft Dataverse**, and press **Connect**.
+4. Select **Power Platform**, then select **Common Data Service**, and press **Connect**.
 
 ![Connect to Power Platform > Microsoft Dataverse data source](06/media/image-6-4.png)
 
-5. Paste the environment URL you copied earlier, press **OK**.
+5. Type **https://** and paste the environment URL you copied earlier.  Click **OK**.
 
 ![Connection details for Microsoft Dataverse](06/media/image-6-5.png)
 
@@ -99,7 +99,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ![Signing into Microsoft Dataverse](06/media/image-6-6.png)
 
-7. Expand **Tables** node, select **lh_Building**, **lh_Department**, **lh_ProblemReport** Tables, press **Load**. Wait until the load is complete.
+7. Expand **Entities** node, select **lh_Building**, **lh_Department**, **lh_ProblemReport** Tables, press **Load**. Wait until the load is complete.
 
 ![img](06/media/image-6-7.png)
 
@@ -119,7 +119,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ![Report icon on the toolbar](06/media/image-6-11.png)
 
-12. Expand **lh_ProblemReports** node in the **Columns** panel.
+12. Expand **lh_ProblemReports** node in the **Fields** panel.
 
 13. Click ... and select **New Column**.
 
@@ -156,7 +156,7 @@ Department = RELATED(lh_Department[lh_name])
 ![Select pie chart visualization](06/media/image-6-14.png)
 
 2. Drag **Building** Column and drop it into **Legend** target box.
-3. Drag **Problem Reports** Column and drop it into **Values** target box.
+3. Drag **Problem Report** Column and drop it into **Values** target box.
 
 ![Complete visualization properties by selecting columns as legend and values](06/media/image-6-15.png)
 
