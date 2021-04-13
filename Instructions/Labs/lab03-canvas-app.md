@@ -130,7 +130,7 @@ In this task, you will create a canvas application using the phone form factor.
 
 3.  Click **+ New | App |Canvas app | Phone form factor**.
 
-![Create canvas appellation - screenshot](03/media/image7.png)
+![Create canvas application - screenshot](03/media/image7.png)
 
 4.  Click **Skip** on the welcome screen.
 
@@ -193,7 +193,7 @@ Set('My Tabs', Table( {
 },
 {
 	Label: "New Report",
-	Screen: 'New Report Screen',
+	Screen: 'New Reports Screen',
 	Icon: "",
 	SelectedIcon:""
 }
@@ -267,7 +267,7 @@ In this exercise, you will allow unassigned reports to be removed. This will all
 
 #### Task 1: Allow remove
 
-1.  Select the **Main Screen**, go to the **Insert** tab, click **Gallery**, and select **Vertical**.
+1.  Expand the **My Reports Gallery**.
 
 2.  Select the **Icon** inside the **My Reports Gallery**.
 
@@ -355,9 +355,6 @@ In this exercise, you will add a form to submit new problem reports.
 
 21. Click **File** and then click **Save**.
 
-22. Click on button.
-
-23. Do not navigate away from this page.
 
 ### Exercise 5: Test the application
 

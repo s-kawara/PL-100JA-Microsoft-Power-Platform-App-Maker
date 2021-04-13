@@ -20,7 +20,7 @@ In this lab you will be implementing the data model for the solution and buildi
 
   - Create Tables, Columns, and relationships
 
-  - Create model-driven app
+  - Create a model-driven app
 
   - Create a site map
 
@@ -56,7 +56,7 @@ In this exercise, you will create a custom solution publisher and a solution. Th
 
 #### Task 1: Create publisher and solution
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment assigned to you.
+1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the practice environment you created.
 
 2.  Select **Solutions** and click **+ New solution**.
 
@@ -92,7 +92,7 @@ In this exercise, you will create Tables, Columns, and the relationships you ide
 
 2.  Click **+ New** and select **Table**.
 
-3.  Enter **Building** for **Display name** and click **Done**.
+3.  Enter **Building** for **Display name** and click **Create**.
 
 ![Building Table properties - screenshot](02/media/image5.png)
 
@@ -168,7 +168,7 @@ In this task, you will add Columns to the Problem Report Table.
 
 14. Enter **Resolved On** for **Display name**, select **Date and time** for **Data type**, and click **Done**.
 
-15. Click Filter and select Custom
+15. Click **Default** Filter and select Custom
 
 ![Filter Columns - screenshot](02/media/image17.png)
 
@@ -180,7 +180,7 @@ In this task, you will add Columns to the Problem Report Table.
 
 18. Click **Publish all customizations** and wait for the publishing to complete.
 
-19. Do not navigate away from this page.
+19. Do not navigate away from this page until all customizations have been published successfully.
 
 #### Task 3: Edit status reason Choice
 
@@ -197,7 +197,7 @@ In this task, you will edit the status reason Column of the problem report Table
 
 ![Switch to classic - screenshot](02/media/image19.png)
 
-4.  Select **Columns** and double click to open the **Status Reason** Column.
+4.  Select **Fields** and double click to open the **Status Reason** Column.
 
 ![Open Column - screenshot](02/media/image20.png)
 
@@ -240,8 +240,6 @@ In this task, you will edit the status reason Column of the problem report Table
 18. You should now be back on the **Power Apps Maker** portal.
 
 ![Power Apps maker portal - screenshot](02/media/image26.png)
-
-19. Do not navigate away from this page.
 
 #### Task 4: Relationships
 
@@ -289,11 +287,11 @@ In this exercise, you will configure form and views for the problem report Table
 
 ![Open main form - screenshot](02/media/image30.png)
 
-5.  Select the form section.
+5.  Use the Zoom control at the bottom of the form to make the form large enough for you to work easily. Select the form section.
 
 ![Form section - screenshot](02/media/image31.png)
 
-6.  Go to the **Properties** pane, change the **Section label** to **Problem details**, and enter **section\_problem\_report** for **Name**.
+6.  Go to the **Properties** pane, change the **Label** to **Problem details**, and enter **section\_problem\_report** for **Name**.
 
 ![Section properties - screenshot](02/media/image32.png)
 
@@ -327,11 +325,11 @@ In this exercise, you will configure form and views for the problem report Table
 
 ![Select section - screenshot](02/media/image39.png)
 
-15. Go to the **Properties** pane, change the **Section label** to **Resolution details**, and change the **Name** to **section\_resolution\_details**.
+15. Go to the **Properties** pane, change the **Section label** to **Resolution details**, and enter **section\_resolution\_details** for **Name**.
 
 ![Rename section - screenshot](02/media/image40.png)
 
-16. Select **Columns** from the toolbar.
+16. Select **Table columns** from the toolbar.
 
 17. Add **Department**, **Status Reason**, **Resolved on**, and **Resolution** Columns to the **Resolution details** section.
 
@@ -349,13 +347,11 @@ In this exercise, you will configure form and views for the problem report Table
 
 22. Click **Publish** and wait for the publishing to complete.
 
-23. Click on the **\<- Back** button.
+23. Click on the **<- Back** button.
 
 ![Back to previous view -screenshot](02/media/image43.png)
 
 24. You should now be back to the Table.
-
-25. Do not navigate away from this page.
 
 #### Task 2: Edit view
 
@@ -363,11 +359,11 @@ In this exercise, you will configure form and views for the problem report Table
 
 ![Open view - screenshot](02/media/image44.png)
 
-2.  Click **+ Add column** and select **Building**.
+2.  Click **+ View column** and select **Building** to add the **Building** column to the view.
 
 ![Add column to view - screenshot](02/media/image45.png)
 
-3.  Add **Location**, **Status Reason**, and **Owner** columns to the view. You will have to change the filter to All when adding status reason and owner columns.
+3.  Add **Location**, **Status Reason**, and **Owner** columns to the view. You will have to change the column filter to All when adding status reason and owner columns.
 
 ![Add columns to view - screenshot](02/media/image46.png)
 
@@ -377,7 +373,7 @@ In this exercise, you will configure form and views for the problem report Table
 
 5.  Set the first filter to **Status Reason Equals New**.
 
-6.  Click on the Column where you **New** selected.
+6.  Click on the Column where **New** is selected.
 
 ![Add more filters - screenshot](02/media/image48.png)
 
@@ -385,15 +381,13 @@ In this exercise, you will configure form and views for the problem report Table
 
 ![Edit filter - screenshot](02/media/image49.png)
 
-8.  Click on the filed again and select **In progress**.
+8.  Click on the column again and select **In progress**.
 
 9.  The filter should now look like the image below. Click **OK**.
 
 ![Completed filter - screenshot](02/media/image50.png)
 
 10. Click **Save**.
-
-11. Do not navigate away from this page.
 
 #### Task 3: Create view from existing
 
@@ -427,7 +421,7 @@ In this task, you will create a new view from the Active Problem Reports view.
 
 ![Save view - screenshot ](02/media/image56.png)
 
-9.  Click on the **\<-Back Button**.
+9.  Click on the **<-Back Button**.
 
 ![Back button - screenshot](02/media/image57.png)
 
@@ -617,13 +611,15 @@ In this exercise, you will input data.
 
 ![Click Column - screenshot](02/media/image88.png)
 
-22. Select an image from your device.
+22. Select an image from your device. The sample imaged displayed below can be found here: F:\\Instructions\\Labs\\02\\media\\image89.png
 
 23. The image should now show on the form.
 
 ![Image on a form - screenshot](02/media/image89.png)
 
-24. You may add more Rows.
+24. Click **Save & Close**.
+
+35. Close the browser tab.
 
 ### Exercise 6: Import data
 
@@ -641,13 +637,9 @@ In this exercise, you will import sample data into your environment. Rows are im
 
 5.  Click **Next**.
 
-6.  Click **Next** again.
+6.  Click **Import** and wait for the message **Solution "Data Import" imported successfully.** to appear.
 
-7.  Click **Import** and wait for the solution import to complete.
-
-8.  Click **Publish all customizations** and wait for the publishing to complete.
-
-9.  Click **Close** the to close the solution import wizard.
+7.  Click **Publish all customizations** and wait for the publishing to complete. 
 
 #### Task 2: Review and run flow
 
@@ -655,7 +647,7 @@ In this exercise, you will import sample data into your environment. Rows are im
 
 2.  Select **Solutions** and click to open the **Data Import** solution you imported.
 
-3.  Click to open the **Import Data** flow.
+3.  Click to open the **Import Data** flow. Click the **Get Started** button on the **Welcome to Power Automare** window.
 
 ![Open flow - screenshot](02/media/image90.png)
 

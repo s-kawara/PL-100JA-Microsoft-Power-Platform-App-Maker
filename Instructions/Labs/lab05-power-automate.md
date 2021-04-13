@@ -62,17 +62,19 @@ In this task, you will create a flow that send notification when the status of p
 
 2.  Select **Solutions** and click to open the **Company 311** solution.
 
-3.  Click **+ New** and select **Flow**.
+3.  Click **+ New** and select **Cloud Flow**.
 
 ![Create new flow - screenshot](05/media/image1.png)
 
-4.  Search for **when a Row is created** and select **When a Row is created, updated, or deleted** **Microsoft Dataverse (Current Environment)**
+4.  Select Common Data Service.
+![Select trigger - screenshot](05/media/imageC1.png)
 
+5.  Select **When a row is added, modified or deleted** 
 ![Select trigger - screenshot](05/media/image2.png)
 
-5.  Select **Update** for **Trigger condition**, **Problem Reports** for **Table name**, **Organization** for **Scope**, and click **Show advanced options**.
+5.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
 
-6.  Enter **statuscode** for **Filtering Columns** and **… Menu** button of the trigger step.
+6.  Enter **statuscode** for **Column filter** and **… Menu** button of the trigger step.
 
 ![Provide filter and click menu - screenshot](05/media/image3.png)
 
@@ -84,15 +86,15 @@ In this task, you will create a flow that send notification when the status of p
 
 ![Add new flow step - screenshot](05/media/image4.png)
 
-10. Search for **get a Row** and select **Get a Row Microsoft Dataverse (Current environment)**.
+10. Select Common Data Service. Click on **Actions**, then select **Get a Row by ID**.
 
 11. Select **Users** for **Table name**.
 
-12. Click on the **Item ID** Column, go to the Dynamic pane, search for **created** and select **Created By (Value)**.
+12. Click on the **Row ID** Column, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
 
 13. Click **Show advanced options** of the new step.
 
-14. Enter **internalemailaddress** for **Select Query**.
+14. Enter **internalemailaddress** for **Select columns**.
 
 15. Click on the **… Menu** button of the new step and select **Rename**.
 
@@ -142,15 +144,13 @@ In this task, you will create a flow that send notification when the status of p
 
 33. Clock **Done** on the popup window.
 
-34. Do not navigate away from this page.
-
 #### Task 2: Test the flow
 
 In this task, you will test the notify problem creator flow.
 
 1.  Make sure you are still on the [Power Apps maker portal](https://make.powerapps.com/) site and you are in the correct environment.
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application.
+2.  Select **Apps**, and then select the **Company 311 Admin** Model-driven application. Clcik **Play**.
 
 3.  Click **+ New**.
 
@@ -166,7 +166,7 @@ In this task, you will test the notify problem creator flow.
 
 9.  Locate and click to open the **Notify Problem Creator** flow you created.
 
-10. You should see a succeeded flow run. Click to open the run.
+10. You should see a succeeded flow run in the **28-day run history section**. Click to open the run.
 
 ![Open floe run - screenshot](05/media/image9.png)
 
@@ -226,13 +226,13 @@ In this task, you will create the escalation flow.
 
 2.  Select **Solutions** and click to open the **Company 311** solution.
 
-3.  Click **+ New** and select **Flow**.
+3.  Click **+ New** and select **Cloud flow**.
 
-4.  Search for **when a Row is created** and select **When a Row is created, updated, or deleted Microsoft Dataverse (Current environment)**.
+4.  Search for **when a row is added** and select **When a row is added, modified, or deleted Microsoft Dataverse (Current environment)**.
 
-5.  Select **Create or Update** for **Trigger condition**, select **Problem Reports** for **Table name**, select **Organization** for **Scope**, and click **Show advanced options**.
+5.  Select **Create or Update** for **Change type**; select **Problem Reports** for **Table name**; select **Organization** for **Scope**, and click **Show advanced options**.
 
-6.  Enter **lh\_estimatedcost** for Filtering Column and click **Hide advanced options**.
+6.  Enter **lh\_estimatedcost** for Column filter and click **Hide advanced options**.
 
 7.  Click on the **… Menu** button of the trigger step and select **Rename**.
 
@@ -254,7 +254,7 @@ In this task, you will create the escalation flow.
 
 15. Go to the **If yes** branch and click **Add an action**.
 
-16. Search for **get a Row** and select **Get a Row Microsoft Dataverse (Current environment)**.
+16. Search for **Get a row** and select **Get a row by ID Microsoft Dataverse (Current environment)**.
 
 17. Select **Users** for **Table name**.
 
@@ -262,7 +262,7 @@ In this task, you will create the escalation flow.
 
 19. Click **Show advanced options**.
 
-20. Enter **internalemailaddress** for **Select Query**.
+20. Enter **internalemailaddress** for **Select columns**.
 
 21. Click **Hide advanced option**.
 
@@ -308,7 +308,7 @@ In this task, you will create the escalation flow.
 
 38. Select **Problem Reports** for **Table name**.
 
-39. Click to select the **Item ID** Column.
+39. Click to select the **Row ID** Column.
 
 40. Go to the **Dynamic content** pane, search for **problem report,** and select **Problem Report**.
 
