@@ -54,7 +54,7 @@ In this task, you will import the shared components solution into your environme
 
 ![Import solution - screenshot](03/media/image1.png)
 
-3.  Click **Choose File**.
+3.  Click **Browse**.
 
 4.  Go to the course resources folder, select the **Shared components** solution, and click **Open**.
 
@@ -63,8 +63,6 @@ In this task, you will import the shared components solution into your environme
 6.  Click **Import**.
 
 7.  Click **Publish All Customizations** and wait for the publishing to complete.
-
-8.  Click **Close**.
 
 9.  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution you imported.
 
@@ -317,7 +315,7 @@ In this exercise, you will add a form to submit new problem reports.
 
 7.  Remove the **Location** Column.
 
-8.  Click **+ Add Column**.
+8.  Click **+ Add field**.
 
 9.  Select **Details**, **Building**, **Department**, and **Photo**, and then click **Add**.
 
@@ -416,7 +414,7 @@ In this task you will setup a Microsoft Teams team for the Lamna Healthcare Comp
 
 ![Create Team](03/media/image-3-createteam.png)
 
-6.  Press **Build a team from scratch**.
+6.  Press **From scratch**.
 
 7.  Select **Public**.
 
@@ -452,3 +450,4 @@ In this task you will setup a Microsoft Teams team for the Lamna Healthcare Comp
 
 ![Add Power Apps in Teams](03/media/image-3-powerappinteams.png)
 
+Click **Next** to advance to the next lab. 
