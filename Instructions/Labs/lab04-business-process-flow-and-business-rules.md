@@ -106,8 +106,6 @@ In this task, you will create a business process flow for the problem report Tab
 
 11. Click **+ Add** again and select **Add Data Step**.
 
-12. Click **+ placeholder** to add the new data step below the **Location** data step.
-
 13. Select the new data step, go to the **Properties** pane, select **Department** for **Data Column**, and click **Apply**.
 
 14. The **Route** stage should now look like the image below.
@@ -188,7 +186,7 @@ In this exercise, you will create a business rule that will block completion of 
 
 ![Add business rule - screenshot ](04/media//image12.png)
 
-5.  Make sure the **Scope** is set to **Table** and click **Show details**.
+5.  Make sure the **Scope** is set to **Entity** and click **Show details**.
 
 ![Expand details - screenshot](04/media//image13.png)
 
@@ -198,7 +196,7 @@ In this exercise, you will create a business rule that will block completion of 
 
 8.  Go to the **Properties** pane and change the **Display name** to **Resolution required**.
 
-9.  Scroll down to **Rule 1**, select **Status Reason** for **Column**, select **Equals** for **Operator**, select **Value** for **Type**, select **Completed** for **Value**, and click **Apply**.
+9.  Scroll down to **Rule 1**, select **Status Reason** for **Field**, select **Equals** for **Operator**, select **Value** for **Type**, select **Completed** for **Value**, and click **Apply**.
 
 ![Rule properties - screenshot](04/media//image14.png)
 
@@ -206,7 +204,7 @@ In this exercise, you will create a business rule that will block completion of 
 
 ![Add new rule - screenshot](04/media//image15.png)
 
-11. Scroll down to **Rule 2**, select **Resolution** for **Column**, select **Does not contain data** for **Operator**, make sure **And** is selected for **Rule Logic**, and click **Apply**.
+11. Scroll down to **Rule 2**, select **Resolution** for **Field**, select **Does not contain data** for **Operator**, make sure **And** is selected for **Rule Logic**, and click **Apply**.
 
 ![Rule properties - screenshot](04/media//image16.png)
 
@@ -220,7 +218,7 @@ In this exercise, you will create a business rule that will block completion of 
 
 ![Add action after condition - screenshot](04/media//image18.png)
 
-15. Select the new action, go to the **Properties** pane, enter **Show message** for **Display Name**, select **Status Reason** for **Column**, enter **The Problem must have a resolution before it can be closed** for **Message**, and click **Apply**.
+15. Select the new action, go to the **Properties** pane, enter **Show message** for **Display Name**, select **Status Reason** for **Field**, enter **The Problem must have a resolution before it can be closed** for **Message**, and click **Apply**.
 
 ![Show error message action properties - screenshot](04/media//image19.png)
 
@@ -250,7 +248,7 @@ In this exercise, you will test the business process flow and the business rule 
 
 3.  Select **Problem Reports** and click **+ New**.
 
-4.  You should see the business process flow stages. Enter **Dark parking lot** for **Title**, select **London Paddington** for **Building**, enter **There are no lights at the north end of the parking lot**, and click **Save**.
+4.  You should see the business process flow stages. Enter **Dark parking lot** for **Title**, select **London Paddington** for **Building**, enter **There are no lights at the north end of the parking lot** for **Details**, and click **Save**.
 
 ![Business process flow in use - screenshot](04/media//image22.png)
 
@@ -275,3 +273,5 @@ In this exercise, you will test the business process flow and the business rule 
 ![Form without error message - screenshot](04/media//image26.png)
 
 11. Save the Row.
+
+Click **Next** to advance to the next lab.
