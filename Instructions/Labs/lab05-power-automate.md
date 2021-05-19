@@ -66,10 +66,12 @@ In this task, you will create a flow that send notification when the status of p
 
 ![Create new flow - screenshot](05/media/image1.png)
 
-4.  Select Common Data Service.
+4.  Select Microsoft Dataverse.
+
 ![Select trigger - screenshot](05/media/imageC1.png)
 
 5.  Select **When a row is added, modified or deleted** 
+
 ![Select trigger - screenshot](05/media/image2.png)
 
 5.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
@@ -86,7 +88,7 @@ In this task, you will create a flow that send notification when the status of p
 
 ![Add new flow step - screenshot](05/media/image4.png)
 
-10. Select Common Data Service. Click on **Actions**, then select **Get a Row by ID**.
+10. Select Microsoft Dataverse. Click on **Actions**, then select **Get a Row by ID**.
 
 11. Select **Users** for **Table name**.
 
@@ -120,7 +122,7 @@ In this task, you will create a flow that send notification when the status of p
 
 25. Press the **\[ENTER\]** key.
 
-26. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the Choice instead of the value.
+26. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the choice instead of the value.
 
 `triggerOutputs()?['body/_statuscode_label']`
 
@@ -228,7 +230,7 @@ In this task, you will create the escalation flow.
 
 3.  Click **+ New** and select **Cloud flow**.
 
-4.  Search for **when a row is added** and select **When a row is added, modified, or deleted Microsoft Dataverse (Current environment)**.
+4.  Search for **when a row is added** and select **When a row is added, modified, or deleted Microsoft Dataverse**.
 
 5.  Select **Create or Update** for **Change type**; select **Problem Reports** for **Table name**; select **Organization** for **Scope**, and click **Show advanced options**.
 
@@ -254,7 +256,7 @@ In this task, you will create the escalation flow.
 
 15. Go to the **If yes** branch and click **Add an action**.
 
-16. Search for **Get a row** and select **Get a row by ID Microsoft Dataverse (Current environment)**.
+16. Search for **Get a row** and select **Get a row by ID Microsoft Dataverse**.
 
 17. Select **Users** for **Table name**.
 
@@ -266,7 +268,7 @@ In this task, you will create the escalation flow.
 
 21. Click **Hide advanced option**.
 
-22. Rename the **Get a Row** step **Get user**.
+22. Rename the **Get a Row by ID** step **Get user**.
 
 23. Click **Add and action**.
 
@@ -304,7 +306,7 @@ In this task, you will create the escalation flow.
 
 36. Go to the **If yes** branch and click **Add an action**.
 
-37. Search for **update a Row** and select **Update a Row** **Microsoft Dataverse (Current environment)**.
+37. Search for **update a Row** and select **Update a Row** **Microsoft Dataverse**.
 
 38. Select **Problem Reports** for **Table name**.
 
@@ -360,9 +362,9 @@ In this task, you will test the escalation flow
 
 11. The **Status Reason** should be set to **Won’t fix** and the **Resolution** should match the comment you provided.
 
-![Updated Row - screenshot](05/media/image18.png)
+12. Click **Save**, if you have not done so previously.
 
-, if you have not done so previously.
+![Updated Row - screenshot](05/media/image18.png)
 
 ### Exercise 3: Send approval requests as adaptive card in Microsoft Teams
 
@@ -390,7 +392,7 @@ In this task you will setup a Microsoft Teams team for the Lamna Healthcare Comp
 
 ![Create Team](05/media/image-5-createteam.png)
 
-6.  Press **Build a team from scratch**.
+6.  Press **From scratch**.
 
 7.  Select **Public**.
 
@@ -445,7 +447,7 @@ In this task you will replace the approval sent by email with the adaptive card.
 
 18. Click to select **Message** Column.
 
-19. Go to the **Dynamic content** pane and select **Adaptive card** from the **Create an approval** step.
+19. Go to the **Dynamic content** pane and select **Teams Adaptive Card** from the **Create an approval** step.
 
 20. Select **+** then select **Add an action**.
 
@@ -463,7 +465,7 @@ In this task you will replace the approval sent by email with the adaptive card.
 
 25. Expand **Condition 2** step. The left side of the condition should be empty because it was referring the step now removed. 
 
-26. Go to the **Dynamic content** pane, search for **outcome,** and select **Outcome** from **Create an approval** step. 
+26. Go to the **Dynamic content** pane, search for **outcome,** and select **Outcome** from **Wait for an approval** step. 
 
 27. Local **Update problem report** step under **If yes** branch.
 
