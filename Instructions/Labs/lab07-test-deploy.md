@@ -56,7 +56,7 @@ In this exercise, you create security roles for users.
 
 ![Add security role - screenshot](07/media/image1.png)
 
-4.  Enter **Company 311 User** for **Role Name** and select the **Custom Tables** tab.
+4.  Enter **Company 311 User** for **Role Name** and select the **Custom Entities** tab.
 
 5.  Set the read privilege of the **Building** Table to **Organization**.
 
@@ -66,7 +66,7 @@ In this exercise, you create security roles for users.
 
 ![Read privileges - screenshot](07/media/image2.png)
 
-8.  Enter **Company 311 Admin** for **Role Name** and select the **Custom Tables** tab
+8.  Enter **Company 311 Admin** for **Role Name** and select the **Custom Entities** tab
 
 9.  Set all privilege of the **Building**, **Department**, and **Problem Reports** Tables to **Organization**.
 
