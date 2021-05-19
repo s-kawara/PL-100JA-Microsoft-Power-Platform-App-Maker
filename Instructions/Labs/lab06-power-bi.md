@@ -69,7 +69,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ![Prompt to sign up for Power BI account if opened for the first time](06/media/image-6-2.png)
 
-6. Select **Sign up for Power BI** and follow the prompts to complete the sign up 
+5. Select **Sign up for Power BI** and follow the prompts to complete the sign up 
 
 #### Task 2: Prepare Data
 
