@@ -74,77 +74,77 @@ In this task, you will create a flow that send notification when the status of p
 
 ![Select trigger - screenshot](05/media/image2.png)
 
-5.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
+6.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
 
-6.  Enter **statuscode** for **Column filter** and **… Menu** button of the trigger step.
+7.  Enter **statuscode** for **Column filter** and **… Menu** button of the trigger step.
 
 ![Provide filter and click menu - screenshot](05/media/image3.png)
 
-7.  Select **Rename**.
+8.  Select **Rename**.
 
-8.  Rename the trigger step **When problem report status changes**.
+9.  Rename the trigger step **When problem report status changes**.
 
-9.  Click **+ New step**.
+10.  Click **+ New step**.
 
 ![Add new flow step - screenshot](05/media/image4.png)
 
-10. Select Microsoft Dataverse. Click on **Actions**, then select **Get a Row by ID**.
+11. Select Microsoft Dataverse. Click on **Actions**, then select **Get a Row by ID**.
 
-11. Select **Users** for **Table name**.
+12. Select **Users** for **Table name**.
 
-12. Click on the **Row ID** Column, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
+13. Click on the **Row ID** Column, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
 
-13. Click **Show advanced options** of the new step.
+14. Click **Show advanced options** of the new step.
 
-14. Enter **internalemailaddress** for **Select columns**.
+15. Enter **internalemailaddress** for **Select columns**.
 
-15. Click on the **… Menu** button of the new step and select **Rename**.
+16. Click on the **… Menu** button of the new step and select **Rename**.
 
-16. Rename the step **Get problem creator**.
+17. Rename the step **Get problem creator**.
 
-17. Click **+ New step**.
+18. Click **+ New step**.
 
-18. Search for **send email** and select **Send an email (V2).**
+19. Search for **send email** and select **Send an email (V2).**
 
-19. Click to select the **To** Column and click **Switch to advanced mode**. Click on this button toggles show/hide of the dynamic pane.
+20. Click to select the **To** Column and click **Switch to advanced mode**. Click on this button toggles show/hide of the dynamic pane.
 
 ![Show the dynamic pane - screenshot](05/media/image5.png)
 
-20. Select the **Primary Email** Column form the **Get problem creator** step.
+21. Select the **Primary Email** Column form the **Get problem creator** step.
 
-21. Enter **Problem report status change notification** for **Subject**.
+22. Enter **Problem report status change notification** for **Subject**.
 
-22. Click to select the **Body** Column.
+23. Click to select the **Body** Column.
 
-23. Type **The status of the problem you reported has changed.** and press the **\[ENTER\]** key.
+24. Type **The status of the problem you reported has changed.** and press the **\[ENTER\]** key.
 
-24. Type **Problem Title:** go to the Dynamic pane, search for **title** and select **Title**.
+25. Type **Problem Title:** go to the Dynamic pane, search for **title** and select **Title**.
 
-25. Press the **\[ENTER\]** key.
+26. Press the **\[ENTER\]** key.
 
-26. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the choice instead of the value.
+27. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the choice instead of the value.
 
 `triggerOutputs()?['body/_statuscode_label']`
 
 ![Set expression value - screenshot](05/media/image6.png)
 
-27. Click on the **… Menu** button of the new step and select **Rename**.
+28. Click on the **… Menu** button of the new step and select **Rename**.
 
-28. Rename the **Notify problem creator**.
+29. Rename the **Notify problem creator**.
 
-29. The step should now look like the image below.
+30. The step should now look like the image below.
 
 ![Completed email step - screenshot](05/media/image7.png)
 
-30. Scroll up change the flow name from Untitled to **Notify Problem Creator.**
+31. Scroll up change the flow name from Untitled to **Notify Problem Creator.**
 
-31. Click **Save** to save the flow.
+32. Click **Save** to save the flow.
 
 ![Save flow - screenshot](05/media/image8.png)
 
-32. Close the flow designer browser window or tab.
+33. Close the flow designer browser window or tab.
 
-33. Clock **Done** on the popup window.
+34. Clock **Done** on the popup window.
 
 #### Task 2: Test the flow
 
