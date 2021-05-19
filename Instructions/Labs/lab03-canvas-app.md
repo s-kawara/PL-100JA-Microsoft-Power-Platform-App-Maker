@@ -64,27 +64,27 @@ In this task, you will import the shared components solution into your environme
 
 7.  Click **Publish All Customizations** and wait for the publishing to complete.
 
-9.  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution you imported.
+8.  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution you imported.
 
-10. The solution should have one item in it, **Lamna Healthcare Shared Components**.
+9. The solution should have one item in it, **Lamna Healthcare Shared Components**.
 
 ![Imported solution components - screenshot](03/media/image2.png)
 
 > [!IMPORTANT]
 > There is an issue where importing the app as part of a solution may not add it to your components library. The following steps are designed to resolve the issue.
 
-11. Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
-12. Click the **Edit Icon** to edit the app.
+10. Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
+11. Click the **Edit Icon** to edit the app.
 
 ![Edit components app](03/media/image2-1.png)
 
-13. After the app opens, click **File** > **Save As**.
-14. Save the app as **Lamna Healthcare Share Components A**.
+12. After the app opens, click **File** > **Save As**.
+13. Save the app as **Lamna Healthcare Share Components A**.
 
 ![Save component app under a new name - screenshot](03/media/image2-2.png)
 
-15. Click **OK**.
-16. Close the **Lamna Healthcare Shared Components** tab in your browser.
+14. Click **OK**.
+15. Close the **Lamna Healthcare Shared Components** tab in your browser.
 
 #### Task 2: Create view
 
