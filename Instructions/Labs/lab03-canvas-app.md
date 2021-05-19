@@ -170,17 +170,17 @@ In this task, you will create a canvas application using the phone form factor.
 
 16. Move the **Tab Control** to the bottom of the screen and the **Header Control** to the top of the screens.
 
-18. Select the **Header Control** and change the **Text** value to **"Company 311".**
+17. Select the **Header Control** and change the **Text** value to **"Company 311".**
 
 ![Change text value - screenshot](03/media/image13.png)
 
-19. Right click on the Main Screen and select Duplicate screen.
+18. Right click on the Main Screen and select Duplicate screen.
 
 ![Duplicate screens - screenshot](03/media/image14.png)
 
-20. Rename the new screen **New Reports Screen**.
+19. Rename the new screen **New Reports Screen**.
 
-21. Select the **Tree view**, select **App** and change the **OnStart** value to the formula below. This formula will create a new variable named My Tabs and set it to a table of tab items.
+20. Select the **Tree view**, select **App** and change the **OnStart** value to the formula below. This formula will create a new variable named My Tabs and set it to a table of tab items.
 
 ```javascript
 Set('My Tabs', Table( {
@@ -203,25 +203,25 @@ Set('My Tabs', Table( {
 
 ![tab data variable - screenshot](03/media/image15.png)
 
-22. Select the **Tab Control** in the **Main Screen** and change the **Items** value to **‘My Tabs’**.
+21. Select the **Tab Control** in the **Main Screen** and change the **Items** value to **‘My Tabs’**.
 
 ![Set tab items - screenshot](03/media/image16.png)
 
-23. Change the **SelectedColor** value to **WhiteSmoke**.
+22. Change the **SelectedColor** value to **WhiteSmoke**.
 
-24. Select the **Tab Control** inside the **New Report Screen** and set the Item value to **‘My Tabs’**.
+23. Select the **Tab Control** inside the **New Report Screen** and set the Item value to **‘My Tabs’**.
 
-25. Change the **SelectedColor** value to **WhiteSmoke**.
+24. Change the **SelectedColor** value to **WhiteSmoke**.
 
-26. Click on the **…** button of the **App** and select **Run OnStart**.
+25. Click on the **…** button of the **App** and select **Run OnStart**.
 
 ![Run app on start - screenshot](03/media/image17.png)
 
-27. Your tabs should now show the two tabs you added.
+26. Your tabs should now show the two tabs you added.
 
 ![Tab with data - screenshot](03/media/image18.png)
 
-28. Do not navigate away from this page.
+27. Do not navigate away from this page.
 
 ### Exercise 2: My reports
 
