@@ -98,11 +98,9 @@ In this exercise, you will create Tables, Columns, and the relationships you ide
 
 4.  Go back to the solution by clicking on the solution name.
 
-![Back to solution - screenshot](02/media/image6.png)
-
 5.  Click **+ New** and select **Table** again.
 
-6.  Enter **Department** for **Display name** and click **Done**.
+6.  Enter **Department** for **Display name** and click **Create**.
 
 ![Department Table properties - screenshot](02/media/image7.png)
 
@@ -118,7 +116,7 @@ In this exercise, you will create Tables, Columns, and the relationships you ide
 
 ![Expand section - screenshot](02/media/image9.png)
 
-11. Check the **Enable queues** checkbox and click **Done**. Enabling queues allows Problem Report Rows to be associated with one or more queues to help facilitate routing to the different departments.
+11. Check the **Enable queues** checkbox and click **Create**. Enabling queues allows Problem Report Rows to be associated with one or more queues to help facilitate routing to the different departments.
 
 ![Enable queues - screenshot](02/media/image10.png)
 
@@ -513,7 +511,7 @@ In this exercise, you will create model-driven application.
 
 22. Select the **New Subarea**.
 
-23. Go to the **Properties** pane, select **Table** for **Type**, and select **Building** for **Table**.
+23. Go to the **Properties** pane, select **Entity** for **Type**, and select **Building** for **Table**.
 
 ![Sitemap subarea properties - screenshot](02/media/image75.png)
 
@@ -654,8 +652,6 @@ In this exercise, you will import sample data into your environment. Rows are im
 4.  Click **Edit**.
 
 5.  Click **Continue**.
-
-![Flow trigger continue button - screenshot](02/media/image91.png)
 
 6.  Click to expand the **Input** **Data** step.
 

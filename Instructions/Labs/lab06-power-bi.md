@@ -69,7 +69,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ![Prompt to sign up for Power BI account if opened for the first time](06/media/image-6-2.png)
 
-6. Select **Sign up for Power BI** and follow the prompts to complete the sign up 
+5. Select **Sign up for Power BI** and follow the prompts to complete the sign up 
 
 #### Task 2: Prepare Data
 
@@ -244,13 +244,13 @@ This will open the published report in the browser.
 #### Task 4: Build Mobile Phone View
 
 1. Select the **Problem Management** dashboard from **Dashboards** area.
-2. Depending on the UI version select either **... &#124; Mobile View** or  **Web View &#124; Phone View**.
+2. Depending on the UI version select **... &#124; Mobile View** or  **Web View &#124; Phone View** or **Edit** and then select **Mobile view** from the drop down box.
 3. Rearrange tiles as desired.
 
 ![Editing phone view](06/media/image-6-26.png)
 
 4. Select your report under **My Workspace | Reports**
-5. Select **... | Generate QR Code**.
+5. Select **File** and then select **Generate QR Code** from the drop down box.
 
 ![Generating QR code](06/media/image-6-27.png)
 
@@ -283,7 +283,7 @@ In this task you will setup a Microsoft Teams team for the Lamna Healthcare Comp
 
 ![Create Team](06/media/image-6-createteam.png)
 
-6.  Press **Build a team from scratch**.
+6.  Press **From scratch**.
 
 7.  Select **Public**.
 

@@ -66,83 +66,85 @@ In this task, you will create a flow that send notification when the status of p
 
 ![Create new flow - screenshot](05/media/image1.png)
 
-4.  Select Common Data Service.
+4.  Select Microsoft Dataverse.
+
 ![Select trigger - screenshot](05/media/imageC1.png)
 
 5.  Select **When a row is added, modified or deleted** 
+
 ![Select trigger - screenshot](05/media/image2.png)
 
-5.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
+6.  Select **Update** for **Change type**; **Problem Reports** for **Table name**; **Organization** for **Scope**, and click **Show advanced options**.
 
-6.  Enter **statuscode** for **Column filter** and **… Menu** button of the trigger step.
+7.  Enter **statuscode** for **Column filter** and **… Menu** button of the trigger step.
 
 ![Provide filter and click menu - screenshot](05/media/image3.png)
 
-7.  Select **Rename**.
+8.  Select **Rename**.
 
-8.  Rename the trigger step **When problem report status changes**.
+9.  Rename the trigger step **When problem report status changes**.
 
-9.  Click **+ New step**.
+10.  Click **+ New step**.
 
 ![Add new flow step - screenshot](05/media/image4.png)
 
-10. Select Common Data Service. Click on **Actions**, then select **Get a Row by ID**.
+11. Select Microsoft Dataverse. Click on **Actions**, then select **Get a Row by ID**.
 
-11. Select **Users** for **Table name**.
+12. Select **Users** for **Table name**.
 
-12. Click on the **Row ID** Column, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
+13. Click on the **Row ID** Column, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
 
-13. Click **Show advanced options** of the new step.
+14. Click **Show advanced options** of the new step.
 
-14. Enter **internalemailaddress** for **Select columns**.
+15. Enter **internalemailaddress** for **Select columns**.
 
-15. Click on the **… Menu** button of the new step and select **Rename**.
+16. Click on the **… Menu** button of the new step and select **Rename**.
 
-16. Rename the step **Get problem creator**.
+17. Rename the step **Get problem creator**.
 
-17. Click **+ New step**.
+18. Click **+ New step**.
 
-18. Search for **send email** and select **Send an email (V2).**
+19. Search for **send email** and select **Send an email (V2).**
 
-19. Click to select the **To** Column and click **Switch to advanced mode**. Click on this button toggles show/hide of the dynamic pane.
+20. Click to select the **To** Column and click **Switch to advanced mode**. Click on this button toggles show/hide of the dynamic pane.
 
 ![Show the dynamic pane - screenshot](05/media/image5.png)
 
-20. Select the **Primary Email** Column form the **Get problem creator** step.
+21. Select the **Primary Email** Column form the **Get problem creator** step.
 
-21. Enter **Problem report status change notification** for **Subject**.
+22. Enter **Problem report status change notification** for **Subject**.
 
-22. Click to select the **Body** Column.
+23. Click to select the **Body** Column.
 
-23. Type **The status of the problem you reported has changed.** and press the **\[ENTER\]** key.
+24. Type **The status of the problem you reported has changed.** and press the **\[ENTER\]** key.
 
-24. Type **Problem Title:** go to the Dynamic pane, search for **title** and select **Title**.
+25. Type **Problem Title:** go to the Dynamic pane, search for **title** and select **Title**.
 
-25. Press the **\[ENTER\]** key.
+26. Press the **\[ENTER\]** key.
 
-26. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the Choice instead of the value.
+27. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click OK. This expression will show the label of the choice instead of the value.
 
 `triggerOutputs()?['body/_statuscode_label']`
 
 ![Set expression value - screenshot](05/media/image6.png)
 
-27. Click on the **… Menu** button of the new step and select **Rename**.
+28. Click on the **… Menu** button of the new step and select **Rename**.
 
-28. Rename the **Notify problem creator**.
+29. Rename the **Notify problem creator**.
 
-29. The step should now look like the image below.
+30. The step should now look like the image below.
 
 ![Completed email step - screenshot](05/media/image7.png)
 
-30. Scroll up change the flow name from Untitled to **Notify Problem Creator.**
+31. Scroll up change the flow name from Untitled to **Notify Problem Creator.**
 
-31. Click **Save** to save the flow.
+32. Click **Save** to save the flow.
 
 ![Save flow - screenshot](05/media/image8.png)
 
-32. Close the flow designer browser window or tab.
+33. Close the flow designer browser window or tab.
 
-33. Clock **Done** on the popup window.
+34. Clock **Done** on the popup window.
 
 #### Task 2: Test the flow
 
@@ -228,7 +230,7 @@ In this task, you will create the escalation flow.
 
 3.  Click **+ New** and select **Cloud flow**.
 
-4.  Search for **when a row is added** and select **When a row is added, modified, or deleted Microsoft Dataverse (Current environment)**.
+4.  Search for **when a row is added** and select **When a row is added, modified, or deleted Microsoft Dataverse**.
 
 5.  Select **Create or Update** for **Change type**; select **Problem Reports** for **Table name**; select **Organization** for **Scope**, and click **Show advanced options**.
 
@@ -254,7 +256,7 @@ In this task, you will create the escalation flow.
 
 15. Go to the **If yes** branch and click **Add an action**.
 
-16. Search for **Get a row** and select **Get a row by ID Microsoft Dataverse (Current environment)**.
+16. Search for **Get a row** and select **Get a row by ID Microsoft Dataverse**.
 
 17. Select **Users** for **Table name**.
 
@@ -266,7 +268,7 @@ In this task, you will create the escalation flow.
 
 21. Click **Hide advanced option**.
 
-22. Rename the **Get a Row** step **Get user**.
+22. Rename the **Get a Row by ID** step **Get user**.
 
 23. Click **Add and action**.
 
@@ -304,7 +306,7 @@ In this task, you will create the escalation flow.
 
 36. Go to the **If yes** branch and click **Add an action**.
 
-37. Search for **update a Row** and select **Update a Row** **Microsoft Dataverse (Current environment)**.
+37. Search for **update a Row** and select **Update a Row** **Microsoft Dataverse**.
 
 38. Select **Problem Reports** for **Table name**.
 
@@ -360,9 +362,9 @@ In this task, you will test the escalation flow
 
 11. The **Status Reason** should be set to **Won’t fix** and the **Resolution** should match the comment you provided.
 
-![Updated Row - screenshot](05/media/image18.png)
+12. Click **Save**, if you have not done so previously.
 
-, if you have not done so previously.
+![Updated Row - screenshot](05/media/image18.png)
 
 ### Exercise 3: Send approval requests as adaptive card in Microsoft Teams
 
@@ -390,7 +392,7 @@ In this task you will setup a Microsoft Teams team for the Lamna Healthcare Comp
 
 ![Create Team](05/media/image-5-createteam.png)
 
-6.  Press **Build a team from scratch**.
+6.  Press **From scratch**.
 
 7.  Select **Public**.
 
@@ -445,7 +447,7 @@ In this task you will replace the approval sent by email with the adaptive card.
 
 18. Click to select **Message** Column.
 
-19. Go to the **Dynamic content** pane and select **Adaptive card** from the **Create an approval** step.
+19. Go to the **Dynamic content** pane and select **Teams Adaptive Card** from the **Create an approval** step.
 
 20. Select **+** then select **Add an action**.
 
@@ -463,7 +465,7 @@ In this task you will replace the approval sent by email with the adaptive card.
 
 25. Expand **Condition 2** step. The left side of the condition should be empty because it was referring the step now removed. 
 
-26. Go to the **Dynamic content** pane, search for **outcome,** and select **Outcome** from **Create an approval** step. 
+26. Go to the **Dynamic content** pane, search for **outcome,** and select **Outcome** from **Wait for an approval** step. 
 
 27. Local **Update problem report** step under **If yes** branch.
 
