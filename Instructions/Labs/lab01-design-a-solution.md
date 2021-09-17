@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab: Design the solution'
-    module: 'Module 1: Introduction to Power Platform'
+    title: 'Lab 01: Design the solution'
+    module: 'Module 01: Introduction to Power Platform'
 ---
 
 > [!NOTE]
@@ -9,7 +9,6 @@ lab:
 > - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
 > - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 >
-> This content will be updated soon to reflect the latest terminology.
 
 
 # Lab 01: Design the solution
@@ -162,7 +161,7 @@ Use whatever tools you have available; you can use a whiteboard, Visio, PowerPoi
 
 1.  Draw your data model, including relationships and any relationship behaviors. Your drawing should look like the following example, except yours should be for your Company 311 solution.
     
-    ![Whiteboard drawing of an example data model](01/media/image1.png)
+    ![Whiteboard drawing of an example data model containing entities Course and Module and 1:N parental raltionship from Course to Module](01/media/image1.png)
 
 
 #### Task 3: Compare data models
