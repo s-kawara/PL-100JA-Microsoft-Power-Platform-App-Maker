@@ -354,171 +354,171 @@ lab:
 
 #### Task 2: Edit view
 
-1.  Select the **Views** tab and click to open the **Active Problem Reports** view.
+1.  **Vies** タブを選択し、クリックして **Active Problem Reports** ビューを開きます。
 
 ![A Screenshot with an arrow pointing to the active problem reports button](02-1/media/image44.png)
 
-2.  Click **+ View column** and select **Building** to add the **Building** column to the view.
+2.  **+View column** をクリックし、**Building** を選択して **Building** 列をビューに追加します。
 
 ![A Screenshot with an arrow pointing to the view column button and a border around the building button](02-1/media/image45.png)
 
-3.  Add **Location**, **Status Reason**, and **Owner** columns to the view.
-    You will have to change the column filter to **All** when adding status reason and owner columns.
+3.  ビューに **Location**、**Status Reason**、および **Owner** 列を追加します。
+    ステータス理由と所有者の列を追加するときは、列フィルターを **All** に変更する必要があります。
 
 ![A screenshot of a border around the column filter set to all](02-1/media/image46.png)
 
-4.  Go to the view properties pane and click **Edit filters**.
+4.  ビューのプロパティペインに移動し、**Edit filters** をクリックします。
 
 ![A Screenshot with an arrow pointing to the edit filters button](02-1/media/image47.png)
 
-5.  Update the existing filter and set it to **Status Reason Equals New**.
+5.  既存のフィルターを更新し、**Status Reason Equals New** に設定します。
 
-6.  Click on the Column where **New** is selected.
+6.  **New** が選択されている列をクリックします。
 
 ![A Screenshot with an arrow pointing to a column with new written in it](02-1/media/image48.png)
 
-7.  Select **Assigned**.
+7.  **Assigned** を選択します。
 
 ![A Screenshot with an arrow pointing to the assigned option in the column where new is written](02-1/media/image49.png)
 
-8.  Click on the column again and select **In progress**.
+8.  列をもう一度クリックして、**In Progress** を選択します。
 
-9.  The filter should now look like the image below. Click **OK**.
+9.  フィルタは次の画像のようになります。 **OK** をクリックします。
 
 ![A screenshot of the edit filters window with status reason equals, new, assigned, and in progress](02-1/media/image50.png)
 
-10. Click **Save**.
+10. **Save** をクリックします。
 
-#### Task 3: Create view from existing
+#### タスク3：既存のビューからビューを作成する
 
-In this task, you will create a new view from the Active Problem Reports view.
+このタスクでは、アクティブな問題レポートビューから新しいビューを作成します。
 
-1.  Click **Edit filters**.
+1.  **Edit filters** を選択します。
 
 ![A Screenshot with an arrow pointing to the edit filters buttton](02-1/media/image51.png)
 
-2.  Remove **In Progress** from the filter.
+2.  フィルタから **In Progress** を削除します。
 
 ![A Screenshot with an arrow pointing to the in progress box in the 3rd column in the edit filters window](02-1/media/image52.png)
 
-3.  Remove **Assigned** and **New** values form the filter.
+3.  フィルタから **Assigned** 値と **New** 値を削除します。
 
-4.  Select **Completed**.
+4.  **Completed** を選択します。
 
 ![A Screenshot with an arrow pointing to the completed button from the drop down in the 3rd column](02-1/media/image53.png)
 
-5.  Add **Won’t Fix** and **Inactive** values to filter.
+5.  フィルタリングする **Won't Fix** および **Inactive** の値を追加します。
 
-6.  The filter should now look like the image below. Click **OK**.
+6.  フィルタは次の画像のようになります。 **OK** をクリックします。
 
 ![A screenshot of the edit filters window with the following; status reason equals, completed, won't fix, inactive](02-1/media/image54.png)
 
-7.  Click on the chevron button next to the save button and select **Save As**.
+7.  保存ボタンの横にある山形ボタンをクリックし、**Save As** を選択します。
 
 ![A Screenshot with an arrow pointing to the save drop down chevron icon and a border around the save as button](02-1/media/image55.png)
 
-8.  Enter **Resolved Problems** for **Name** and click **Save**.
+8.  **Name** に **Resolved Problems** と入力し、**Save** をクリックします。
 
 ![A screenshot of the save as window](02-1/media/image56.png)
 
-9.  Click on the **Back Button** of your browser to go back to the solution.
+9.  ブラウザの **Back Button** をクリックして、ソリューションに戻ります。
 
 ![A Screenshot with an arrow pointing to the back button](02-1/media/image57.png)
 
-10. Go to the solution by clicking on the solution name.
+10. ソリューション名をクリックして、ソリューションに移動します。
 
 ![A Screenshot with an arrow pointing to the solution name company 311](02-1/media/image58.png)
 
-11. Click **Publish all customizations** and wait for the publishing to complete.
+11. **Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
 ![A screenshot of a border around the publish all customizations button](02-1/media/image59.png)
 
-### Exercise 4: Compose model-driven application
+### 演習4：モデル駆動型アプリケーションを作成する
 
-In this exercise, you will create model-driven application.
+この演習では、モデル駆動型アプリケーションを作成します。
 
-#### Task 1: Create new model-driven application
+#### タスク1：新しいモデル駆動型アプリケーションを作成する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
 
-2.  Select Solutions and click to open the **Company 311** solution.
+2.  [ソリューション]を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Click **+ New | App | Model-driven app**.
+3.  **+ New | App | Model-driven app** をクリックします。
 
 ![A screenshot of a border around the Model-driven app button](02-1/media/image60.png)
 
-4.  Select **Modern app designer** and click **Create**.
+4.  **Modern app designer** を選択し、**Create** をクリックします。
 
-5.  Enter **Company 311 Admin** for name and click **Create**.
+5.  名前に **Company 311 Admin** と入力し、**Create** をクリックします。
 
 ![A screenshot of the New model-driven app window](02-1/media/image61.png)
 
-6. Select **Navigation** from left menu.
+6. 左側のメニューから **Navigation** を選択します。
 
    ![A screenshot of the Pages selection pane with a red arrow pointing to the tree icon in the navigation pane](02-1/media/image102.png)
 
-7. Select the **Area1**.
+7. **Area1** を選択します。
 
 ![A Screenshot with an arrow pointing to area 1 selected](02-1/media/image63.png)
 
-8. Go to the **Properties** pane, enter **Manage Problems** for **Title**, and enter **area\_manage\_problems** for **ID**.
+8. **Properties** ペインに移動し、**Title** に**Manage Problems** と入力し、**ID** に **area\_manage\_problems** と入力します。
 
 ![A screenshot of the properties pane with the title and ID changed](02-1/media/image64.png)
 
-9. Select the **Group1**.
+9. **Group1** を選択します。
 
 ![A screenshot of group 1 selected](02-1/media/image65.png)
 
-10. Go to the **Properties**, enter **Problems** for **Title**, and enter **group\_problems** for **ID**.
-11. Select the **Subarea1**.
-12. Go to the **Properties** pane, select **Table** for **Content Type**, and select **Problem Report** for **Table**, and enter **Problem reports** for **Title**.
-
+10. **Properties** に移動し、**Title** に **Problems** を入力し、**ID** に **group\_problems** を入力します。
+11. **Subarea1** を選択します。
+12. **Properties** ペインに移動し、**Content Type** に**Table** を選択し、**Table** に **Problem report** を選択し、**Problem report** を入力します。
+13. 
 ![A screenshot of the properties pane and the content type, table, and title changed](02-1/media/image68.png)
 
 > [!NOTE]
-> The new app designer doesn't provide a way to add new sitemap area yet.
+> 新しいアプリデザイナーは、新しいサイトマップエリアを追加する方法をまだ提供していません。
 
-13. Click **Save**.
-14. Click **Switch to classic**
+13. **Save** をクリックします。
+14. **Switch to classic** をクリックします。
 
 ![A Screenshot with an arrow pointing to the Switch to classic link](02-1/media/image69.png)
 
-15. Select **Save and Continue**.
+15. **Save and Continue** を選択します。
 
 > [!NOTE] 
-> If the pop-ups are not enabled on the browser, the classic view will not open. Make sure that you have enabled open popups and redirects on the browser tab. 
+> ブラウザでポップアップが有効になっていない場合、クラシックビューは開きません。 ブラウザタブで開いているポップアップとリダイレクトが有効になっていることを確認してください。
 
 ![Select Save and continue - screenshot](02-1/media/image103.png)
 
-16. Click **Edit** on the Site Map.
+16. サイトマップの**Edit** をクリックします。
 
 ![A Screenshot with an arrow pointing to the pencil icon to edit the site map](02-1/media/image70.png)
 
-17.   Click **+ Add** and select **Area**.
+17.   **+ Add** をクリックして、**Area** を選択します。
 
 ![A Screenshot with an arrow pointing to the add button and a border around the area button](02-1/media/image96.png)
 
-18.   Select the **New Area** you just added.
+18.   追加した**New Area** を選択します。
 
-19. Go to the **Properties** pane, enter **Settings** for **Title**, and enter **area\_settings** for **ID**.
+19. **Properties** ペインに移動し、**Title** に **Settings** を入力し、**ID**に**area\_settings** を入力します。
 
 ![A screenshot of the properties pane with the title and ID changed](02-1/media/image97.png)
 
-20.  Click **Save and close** to close the sitemap editor.
+20.  **Save and close** をクリックして、サイトマップエディタを閉じます。
 
-21.  Click **Save and close** again to close the classic app designer.
+21.  もう一度 **Save and close** をクリックして、クラシックアプリデザイナーを閉じます。
 
-22. You should now be back to the new app designer. **Refresh** the browser. Switch to **Navigation** menu.
+22. これで、新しいアプリデザイナーに戻るはずです。 ブラウザを **Refresh** します。 **Navigation** メニューに切り替えます。
 
-23.  The new **Settings** area should now be visible in the new app designer. Select the **Setting** area.
+23.  新しい **Settings** 領域が新しいアプリデザイナーに表示されます。 **Setting** エリアを選択します。
 
-24. Click **+ Add** and select **Group**.
+24. **+ Add** をクリックし、**Group** を選択します。
 
 ![A Screenshot with an arrow pointing to the add drop down menu and a border around the group button](02-1/media/image98.png)
 
-25.  Select the **New Group** you just added.
+25.  追加した **New Group** を選択します。
 
-26.  Go to the **Properties** pane, enter **Taxonomy** for **Title**, and enter **group\_taxonomy** for **ID**.
+26.  **Properties** ペインに移動し、**Title** に **Taxonomy** と入力し、**ID** に **group\_taxonomy** と入力します。
 
 ![A screenshot of the properties pane with the title and ID changed](02-1/media/image72.png)
 
