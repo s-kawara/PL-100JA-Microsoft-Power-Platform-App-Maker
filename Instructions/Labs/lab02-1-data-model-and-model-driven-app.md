@@ -11,29 +11,29 @@ lab:
 >
 
 
-# Lab 02.1: Data model and model-driven app
+# ラボ02.1：データモデルとモデル駆動型アプリ
 
-In this lab you will be implementing the data model for the solution and building a model-driven app that will be used for fixing problems or managing the overall effort.
+このラボでは、ソリューションのデータモデルを実装し、問題の修正や全体的な取り組みの管理に使用されるモデル駆動型アプリを構築します。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - Create Tables, Columns, and relationships
+  - テーブル、列、リレーションシップを作成する
 
-  - Create a model-driven app
+  - モデル駆動型アプリを作成する
 
-  - Create a site map
+  - サイトマップを作成する
 
-  - Create and configure Table forms
+  - テーブルフォームを作成して構成する
 
-  - Create and configure Table views
+  - テーブルビューを作成および構成する
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-  - Exercise 1 – Create publisher and solution  
+  - 演習1 - 公開元とソリューションを作成する
 
-  - Exercise 2 – Implement the data model 
+  - 演習2 – データモデルを実装する
     
-      - Data Model 
+      - データモデル
         
           - Building 
           
@@ -41,89 +41,89 @@ In this lab you will be implementing the data model for the solution and buildi
           
           - Problem Report 
 
-  - Exercise 3 – Configure forms and views 
+  - 演習3 – フォームとビューを構成する 
 
-  - Exercise 4 – Compose a basic model-driven app 
+  - 演習4 – 基本的なモデル駆動型アプリを作成する 
 
-  - Exercise 5 – Input data and refine some views, import some problem reports 
+  - 演習5 – データを入力していくつかのビューを調整し、いくつかの問題レポートをインポートします
 
-## Detailed steps
+## 詳細な手順
 
-### Exercise 1: Create publisher and solution
+### 演習1：公開元とソリューションを作成する
 
-In this exercise, you will create a custom solution publisher and a solution. This solution will be used in all the labs for this course to keep all the components together.
+この演習では、カスタムソリューションパブリッシャーとソリューションを作成します。 このソリューションは、このコースのすべてのラボで使用され、すべてのコンポーネントをまとめます。
 
-#### Task 1: Create publisher and solution
+#### タスク1：公開元とソリューションを作成する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the practice environment you created.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、作成した Practice 環境にいることを確認します。
 
-2.  Select **Solutions** and click **+ New solution**.
+2.  **Solutions** を選択し、**+ New solution** をクリックします。
 
-3.  Enter **Company 311** for **Display name** and click.
+3.  **Display name** に **Company 311** を入力しし、クリックします。
 
-4.  Click on the **Publisher** dropdown and select **+ Publisher**.
+4.  **Publisher** ドロップダウンをクリックし、 **+ Publisher** を選択します。
 
 ![A Screenshot with an arrow pointing to the new publisher button](02-1/media/image1.png)
 
-5.  Enter **Lamna Healthcare** for **Display name**, **lamnahealthcare** for **Name**, **lh** for **Prefix**, **88186** for Choice value prefix, and click **Save**.
+5.  **Display name** に **Lamna Healthcare** を入力し、**Name** に **lamnahealthcare** 、**Prefix** に **lh** 、選択値に **88186** を入力し、 **Save** をクリックします。
 
 ![A screenshot of the new publisher properties pane](02-1/media/image105.png)
 
-6.  Click on the **Publisher** dropdown again and select the **Lamna Healthcare** publisher you created.
+6.  **Publisher** ドロップダウンを再度クリックし、作成した **Lamna Healthcare** を選択します。
 
-8.  Click **Create**.
+8.  **Create** をクリックします。
 
 ![A screenshot of the new solution pane](02-1/media/image3.png)
 
-9.  You should now see the solution you created in the solution list.
+9.  これで、作成したソリューションがソリューションリストに表示されます。
 
 ![A screenshot with a border around your solution](02-1/media/image4.png)
 
-### Exercise 2: Implement data model
+### 演習2：データモデルを実装する
 
-In this exercise, you will create Tables, Columns, and the Relationships you identified when you designed the data model for the Company 311 app.
+この演習では、Company 311アプリのデータモデルを設計したときに特定したテーブル、列、および関係を作成します。
 
-#### Task 1: Create Tables
+#### タスク1：テーブルを作成する
 
-1.  In the [Power Apps maker portal](https://make.powerapps.com/) select **Solutions** and click to open the **Company 311** solution you created in Exercise 1.
+1.  [Power Apps maker portal](https://make.powerapps.com/) で、 **Solutions** を選択し、演習1 で作成した **Company 311** ソリューションを開きます。
 
-2.  Click **+ New** and select **Table**.
+2.  **+ New** をクリックし、 **Table** を選択します。
 
-3.  Enter **Building** for **Display name** and click **Create**.
+3.  **Display name** に **Building** を入力し、 **Create** をクリックします。
 
 ![A screenshot of the new table window with the relevant value in each field](02-1/media/image5.png)
 
-4.  Go back to the solution by clicking on the solution name.
+4.  ソリューション名をクリックして、ソリューションに戻ります。
 
-5.  Click **+ New** and select **Table** again.
+5.  **+ New** をクリックし、 **Table** を再度選択します。
 
-6.  Enter **Department** for **Display name** and click **Create**.
+6.  **Display name** に **Department** を入力し、 **Create** をクリックします。
 
 ![A screenshot of the new table window with the relevant value in each field](02-1/media/image7.png)
 
-7.  Go back to the solution by clicking on the solution name.
+7.  ソリューション名をクリックして、ソリューションに戻ります。
 
 ![Building Table properties - screenshot](02-1/media/image99.png)
 
-8.  Click **+ New** and select **Table** one more time.
+8.  **+ New** をクリックし、再度、 **Table** を選択します。
 
-9.  Enter **Problem Report** for **Display name**, change the **Primary Column** **Display name** to **Title**, and click **More settings**.
+9.  **Display name** に **Problem Report** を入力し、**Primary Column** の **Display name** を **Title** に変更し、 **More settings** をクリックします。
 
 ![A screenshot with a border around the primary name column settings: display name and name. There is also an arrow pointing to the more settings button below](02-1/media/image8.png)
 
-10. Click to expand the **Collaboration** section.
+10. **Collaboration** をクリックし、セクションを展開します。
 
 ![A Screenshot with an arrow pointing to the collaboration button](02-1/media/image9.png)
 
-11. Check the **Enable queues** checkbox and click **Create**. Enabling queues allows Problem Report Rows to be associated with one or more queues to help facilitate routing to the different departments.
+11. **Enable queues** チェックボックスをオンにして、 **Create** をクリックします。キューを有効にすると、問題レポート行を１つ以上のキューに関連付けて、様々な部門へのルーティングを容易にすることができます。
 
 ![A screenshot of the enable queues checkbox highlighted](02-1/media/image10.png)
 
-12. Click **Okay** on the **Confirm changes** popup.
+12. **Confirm changes** ポップアップで、 **Okay** をクリックします。
 
 ![A screenshot of the confirm changes popup](02-1/media/image11.png)
 
-#### Task 2: Add Columns
+#### タスク2：列を追加する
 
 In this task, you will add Columns to the Problem Report Table.
 
