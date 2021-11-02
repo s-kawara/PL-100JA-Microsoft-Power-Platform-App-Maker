@@ -125,232 +125,232 @@ lab:
 
 #### タスク2：列を追加する
 
-In this task, you will add Columns to the Problem Report Table.
+このタスクでは、Problem Report テーブルに列を追加します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。
 
-2.  Select **Solutions** and click to open the **Company 311** solution you created in exercise 1.
+2.  **Solutions** を選択し、演習1で作成した **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Report** Table.
+3.  **Problem Report** テーブルを探して、開きます。
 
 ![A screenshot of a border around the problem report button](02-1/media/image12.png)
 
-4.  Select the **Columns** tab and click **+ Add Column**.
+4.  **Columns** タブを選択し、 **+ Add Column** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add column button](02-1/media/image13.png)
 
-5.  Enter **Location** for **Display name**, select **Text** for **Data type**, and click **Advanced options**.
+5.  **Display name** に **Location** を入力し、**Data type** から **Text** を選択し、 **Advanced options** をクリックします。
 
 ![A Screenshot with an arrow pointing to the advanced options at the bottom of the location window](02-1/media/image14.png)
 
-6.  Change **Max length** to **150** and click **Done**.
+6.  **Max length** に **150** を入力し、 **Done** をクリックします。
 
 ![A screenshot showing the max length at a value of 150](02-1/media/image15.png)
 
-7.  Click **+ Add Column** again.
+7.  再度 **+ Add Column** をクリックします。
 
-8.  Enter **Details** for **Display name**, select **Multiline text** for **Data type**, make the Column **Required**, and click **Done**.
+8.  **Display name** に **Details** を入力し、**Data type** で **Multiline text** を選択し、 **Required** を選択し、 **Done** をクリックします。
 
 ![A screenshot of the details window with the relevant values in each field](02-1/media/image16.png)
 
-9.  Click **+ Add Column** again.
+9.  再度 **+ Add Column** をクリックします。
 
-10. Enter **Photo** for **Display name**, select **Image** for **Data type**, and click **Done**.
+10. **Display name** に **Photo** を入力し、**Data type** をから **Image** を選択し、 **Done** をクリックします。
 
-11. Click **+ Add Column**.
+11. **+ Add Column** をクリックします。
 
-12. Enter **Resolution** for **Display name**, select **Multiline text** for **Data type**, and click **Done**.
+12. **Display name** に **Resolution** を入力し、 **Data type** で **Multiline text** を選択し、 **Done** をクリックします。
 
-13. Click **+ Add Column**.
+13. **+ Add Column** をクリックします。
 
-14. Enter **Resolved On** for **Display name**, select **Date and time** for **Data type**, and click **Done**.
+14. **Display name** に **Resolved On** を入力し、 **Data type** で **Date and time** を選択し、 **Done** をクリックします。
 
-15. Click **Default** Filter and select **Custom**. (For small screen devices, default dropdown goes into the **ellipsis**).
+15. **Default** フィルターを選択し、**Custom** クリックをします。(小画面デバイスの場合、デフォルトのドロップダウンは**ellipsis**になります).
 ![A Screenshot with an arrow pointing to the default dropdown menu and a border around the custom button](02-1/media/image17.png)
 
-16. You should now see the 5 new Columns you created. Click **Save Table**.
+16. これで、作成した5つの新しい列が表示されます。 **Save Table** をクリックします。
 
 ![A screenshot showing the 5 new columns you have created: details, location, photo, resolution, and resolved on](02-1/media/image18.png)
 
-17. Go back to the solution by clicking on the solution name.
+17. ソリューション名をクリックして、ソリューションに戻ります。
 
-18. Click **Publish all customizations** and wait for the publishing to complete.
+18. [**Publish all customizations**]をクリックして、公開が完了するのを待ちます。
 
-19. Do not navigate away from this page until all customizations have been published successfully.
+19. すべてのカスタマイズが正常に公開されるまで、このページから移動しないでください。
 
-#### Task 3: Edit status reason Choice
+#### タスク3：ステータス理由の編集選択
 
-In this task, you will edit the status reason Column of the problem report Table.
+このタスクでは、問題レポートテーブルのステータス理由列を編集します。
 
-1.  Make sure you are in the **Company 311** solution.
+1.  **Company 311** ソリューションを使用していることを確認してください。
 
-2.  Click to open the **Problem Report** Table.
+2.  クリックして **Problem Report** テーブルを開きます。
 
-3.  Click on the **… More commands** button and select **Switch to classic**.
+3.  **… More commands** ボタンをクリックし、**Switch to classic** を選択します。
 
 > [!NOTE]  
-> You are switching to classic because the modern solution explorer does not support editing status reason yet but will in the future.
+> 最新のソリューションエクスプローラーはステータス理由の編集をまだサポートしていませんが、将来的にサポートするため、クラシックに切り替えています。
 
 ![A Screenshot with an arrow pointing to the ellipses icon for more options next to AI builder and a border around the switch to classic button](02-1/media/image19.png)
 
-4.  Select **Fields** and look for **Status Reason** in the Display Name column, double click to open the **Status Reason** Column.
+4.  **Fields** を選択し、表示名列で **Status Reason** を探し、ダブルクリックして **Status Reason** 列を開きます。
 
 > [!NOTE]  
-> If the pop-ups are not enabled on the browser, the pop-up window for updating the column will not open. Make sure that you have enabled open popups and redirects on the browser tab. 
+> ブラウザでポップアップが有効になっていない場合、列を更新するためのポップアップウィンドウは開きません。 ブラウザタブで開いているポップアップとリダイレクトが有効になっていることを確認してください。 
 
 ![A screenshot with a border around the fields button and an arrow pointing to the display name of status code](02-1/media/image20.png)
 
-5.  Make sure **Active** is selected for **Status** and double click to open the **Active** option.
+5.  **Status** で **Active** が選択されていることを確認し、ダブルクリックして**Active** オプションを開きます。
 
 ![A Screenshot with an arrow pointing to the status with a border emphasizing it is active](02-1/media/image21.png)
 
-6.  Change the **Label** value to **New** and click **OK**.
+6.  **Label** の値を **New** に変更し、**OK** をクリックします。
 
 ![A screenshot of the modify list value window](02-1/media/image22.png)
 
-7.  Click **Add**.
+7.  **Add** をクリックします。
 
 ![A screenshot of the type window and a border around the add button](02-1/media/image23.png)
 
-8.  Enter **Assigned** for **Label** and click **OK**.
+8.  **Label** に **Assigned** と入力し、**OK** をクリックします。
 
 ![A screenshot of the add list value window](02-1/media/image24.png)
 
-9.  Click **Add** again.
+9.  再度 **Add** をクリックします。
 
-10. Enter **In Progress** for **Label** and click **OK**.
+10. **Label** に **In Progress** と入力し、**OK** をクリックします。
 
-11. Click **Add** again.
+11. 再度 **Add** をクリックします。
 
-12. Enter **Completed** for **Label** and click **OK**.
+12. **Label** に **Completed** と入力し、**OK** をクリックします。
 
-13. Click **Add** one more time.
+13. 再度 **Add** をクリックします。
 
-14. Enter **Won’t Fix** for **Label** and click **OK**.
+14. **Label** に **Won't Fix** と入力し、**OK* をクリックします。
 
-15. You should now have 5 options. Select **New** for **Default Value** and click **Save and Close**.
+15. これで、5つのオプションがあります。 **Default** で **New** を選択し、**Save and Close** をクリックします。
 
 ![A Screenshot with an arrow pointing to the save and close button](02-1/media/image25.png)
 
-16. Click **Publish** and wait for the publishing to complete.
+16. **Publish** をクリックして、公開が完了するのを待ちます。
 
-17. Click **Save and Close** to close the classic editor.
+17. **Save and Close** をクリックして、クラシックエディタを閉じます。
 
-18. You should now be back on the **Power Apps Maker** portal.
+18. これで、**Power Apps Maker** ポータルに戻るはずです。
 
 ![A screenshot of the Power Apps Maker portal](02-1/media/image26.png)
 
-#### Task 4: Relationships
+#### タスク4：リレーションシップ
 
-In this task, you will create many to one relationships between the problem report Table and the building and department Tables.
+このタスクでは、問題レポートテーブルと建物および部門のテーブルの間に多対1の関係を作成します。
 
-1.  Make sure you are in the **Problem Report** Table.
+1.  **Problem Report** のテーブルにいることを確認してください。
 
-2.  Select the **Relationships** tab and click **+ Add relationship**.
+2.  **Relationships** タブを選択し、**+ Add relationship** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add relationship button](02-1/media/image27.png)
 
-3.  Select **Many-to-one**.
+3.  **Many-to-one** を選択します。
 
 ![A screenshot of a border around the many to one button](02-1/media/image28.png)
 
-4.  Select **Building** for **Related (One) Table** and click **Done**.
+4.  **Related (One) Table**　の　**Building** を選択し、**Done** をクリックします。
 
 ![A screenshot of the many-to-one relationship settings](02-1/media/image29.png)
 
-5.  Click **+ Add relationship** again.
+5.  **+ Add relationship** を再度クリックします。
 
-6.  Select **Many-to-one**.
+6.  **Many-to-one** を選択します。
 
-7.  Select **Department** for **Related (One) Table** and click **Done**.
+7.  **Related (One) Table**　の　**Department** を選択し、**Done** をクリックします。
 
-8.  Click **Save Table**.
+8.  **Save Table** をクリックします。
 
-9.  Go back to the solution by clicking on the solution name.
+9.  ソリューション名をクリックして、ソリューションに戻ります。
 
-10. Click **Publish all customizations** and wait for the publishing to complete.
+10. **Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
-### Exercise 3: Configure form and views
+### 演習3：フォームとビューを構成する
 
-In this exercise, you will configure form and views for the problem report Table.
+この演習では、Problem Report Table のフォームとビューを構成します。
 
-#### Task 1: Configure form
+#### タスク1：フォームを構成する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
 
-2.  Select Solutions and click to open the **Company 311** solution.
+2.  [ソリューション]を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Report** Table.
+3.  **Problem Report** テーブルを探し、開きます。
 
-4.  Select the **Forms** tab and click to open the **Information** form of type **Main**.
+4.  **フォーム** タブを選択し、**Main** タイプの **Information** フォームを開きます。
 
 ![A screen shot of a border around the main form under the forms tab](02-1/media/image30.png)
 
-5.  Use the Zoom control at the bottom of the form to make the form large enough for you to work easily. Select the **form section**.
+5.  フォームの下部にあるズームコントロールを使用して、簡単に作業できるようにフォームを十分に大きくします。 **form section** を選択します。
 
 ![A Screenshot with an arrow pointing to the selection of the form section](02-1/media/image31.png)
 
-6.  Go to the **Properties** pane, change the **Label** to **Problem details**, and enter **section\_problem\_report** for **Name**.
+6.  **Properties** ペインに移動し、**Label** を **Problem details** に変更し、**Name** に**section\_problem\_report** と入力します。
 
 ![A screenshot of the properties pain with the relevant text in each field](02-1/media/image32.png)
 
-7.  While you still have the section selected, go to the **Table Columns** pane, and click on the **Building** Column. The Building Column will be added to the form.
+7.  セクションを選択したまま、**Table Columns** ペインに移動し、**Building** 列をクリックします。 Building 列がフォームに追加されます。
 
 ![A screenshot with a border around the table columns icon and an arrow pointing to the building column](02-1/media/image33.png)
 
-8.  Add the **Details**, and **Photo** Columns to the form.
+8.  **Details** 列と **Photo** 列をフォームに追加します。
 
-9.  Your form should now look like the image below. Select the **Details** Column.
+9.  これで、フォームは次の画像のようになります。 **Detail** 列を選択します。
 
 ![A screenshot with the details column selected](02-1/media/image34.png)
 
-10. Go to the **Properties** pane and click to expand the **Formatting** section.
+10. **Properties** ペインに移動し、クリックして **Formatting** セクションを展開します。
 
 ![A Screenshot with an arrow pointing to the formatting button](02-1/media/image35.png)
 
-11. Change the **Form field height** to **4**.
+11. **form field height** を **4** に変更します。
 
 ![A screenshot of the form field height set to 4](02-1/media/image36.png)
 
-12. Select the **Components** from the toolbar.
+12. ツールバーから **Components** を選択します。
 
 ![A Screenshot with an arrow pointing to the components icon](02-1/media/image37.png)
 
-13. Select **1-Column section.**
+13. **1-Column section** を選択します。
 
 ![A Screenshot with an arrow pointing to the 1-column section button](02-1/media/image38.png)
 
-14. A new section should be added to the form. Select the **new section**.
+14. 新しいセクションをフォームに追加する必要があります。 **new section** を選択します。
 
 ![A Screenshot with an arrow pointing to the new section selected](02-1/media/image39.png)
 
-15. Go to the **Properties** pane, change the **Section label** to **Resolution details**, and enter **section\_resolution\_details** for **Name**.
+15. **Properties** ペインに移動し、**Section Label** を **Resolution details** に変更し、**Name** に **section\_resolution\_details** と入力します。
 
 ![A screenshot of the properties pane with the relevant text in each field](02-1/media/image40.png)
 
-16. Select **Table columns** from the toolbar.
+16. ツールバーから **Table columns** を選択します。
 
-17. Add **Department**, **Status Reason**, **Resolved on**, and **Resolution** Columns to the **Resolution details** section.
+17. **Department**、**Status Reason**、**Resolved on**、および **Resolution** 列を **Resolution details** セクションに追加します。
 
 ![A screenshot of the Resolution details section with the Resolution column highlighted](02-1/media/image100.png)
 
-18. Select the **Resolution** Column.
+18. **Resolution** 列を選択します。
 
-19. Go to the **Properties** pane and click to expand the **Formatting** section.
+19. **Properties** ペインに移動し、クリックして **Formatting** セクションを展開します。
 
-20. Change the **Form field height** to **4**.
+20. **Form field height** を **4** に変更します。
 
-21. You form should now look like the image below. Click **Save**.
+21. フォームは下の画像のようになります。 **Save** をクリックします。
 
 ![A Screenshot of the Problem Report form with an arrow pointing to the Save button](02-1/media/image101.png)
 
-22. Click **Publish** and wait for the publishing to complete.
+22. **Publish** をクリックして、公開が完了するのを待ちます。
 
-23. Click on the **<- Back** button.
+23. **Back** ボタンをクリックします。
 
 ![A Screenshot with an arrow pointing to the back button arrow icon](02-1/media/image43.png)
 
-24. You should now be back to the Table.
+24. これで、テーブルに戻るはずです。
 
 #### Task 2: Edit view
 
