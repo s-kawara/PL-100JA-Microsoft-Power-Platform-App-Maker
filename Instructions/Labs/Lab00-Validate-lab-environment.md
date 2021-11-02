@@ -28,11 +28,11 @@ lab:
 1. 許可された Lab Hoster から、あなたの **Microsoft 365 credentials** をコピーします。
 2. [Power Apps](https://.<powerapps.microsoft.com) に移動し、**Start free** をクリックします。
 3. **Work email** の下で、Microsoft 365 Credentials から Eメールアドレスを入力し、 **Next** をクリックします。
-4. Microsoftの既存のアカウントを持っていることを示すプロンプトが表示されます。 ** Sign in**を選択します。
+4. Microsoftの既存のアカウントを持っていることを示すプロンプトが表示されます。 **Sign in**を選択します。
 5. 認定ラボ ホスティング業者から提供されたパスワードを入力します。
-6. サインイン を継続するには、** Yesはい ** を選択します。
-7. 国または地域と電話番号を入力してください。 ** Get Started ** を選択します。
-8. 再度、** Get Started ** を選択します。
+6. サインイン を継続するには、**Yes** を選択します。
+7. 国または地域と電話番号を入力してください。 **Get Started** を選択します。
+8. 再度、**Get Started** を選択します。
 
 > [!NOTE]
 > If you encounter an error: "Sorry, there's been a disconnect", you can follow the steps below. If not, you can continue to **Exercise 2**.
@@ -45,19 +45,19 @@ lab:
 演習2 - 環境を作成する
 ------------------------------------------
 
-この演習では、このトレーニングのラボ作業の大部分を実行するために使用する** 演習 ** 環境を作成します。
+この演習では、このトレーニングのラボ作業の大部分を実行するために使用する　**Practice** 環境を作成します。
 
 ### タスク1 - 環境を作成する
 
 1.  [Power Platform 管理センター]<https://admin.Powerplatform.microsoft.com）に移動し、再度プロンプトが表示されたら、Microsoft365の資格情報を使用してログインします。
 
-2. ** Environment ** を選択し、** + 新規 ** を選択します。
+2. **Environment** を選択し、**+ 新規** を選択します。
 
-    - **　Name ** から **[my initials] Practice**　を入力します。(例: AJ Practice.)
+    - **Name** から **[my initials] Practice**　を入力します。(例: AJ Practice.)
     
-    - ** Type ** から **Trial** を選択します。
+    - **Type** から **Trial** を選択します。
     
-    - **　Create a database for this environment?** を **Yes** に変更します。
+    - **Create a database for this environment?** を **Yes** に変更します。
     
     - 他の項目すべてをデフォルトのままにして **Next** を選択します。
 
@@ -65,6 +65,6 @@ lab:
 
 3. **Practice** 環境が、環境リストに表示されます。 
 
-4. ご利用の環境では、プロビジョニングに数分かかる場合があります。必要に応じてページを更新します。環境の準備ができたら、名前の横にある楕円をクリックしてドロップダウンメニューを展開し、** Setting** を選択し、 ** Practice ** を選択します。
+4. ご利用の環境では、プロビジョニングに数分かかる場合があります。必要に応じてページを更新します。環境の準備ができたら、名前の横にある楕円をクリックしてドロップダウンメニューを展開し、**Setting** を選択し、 **Practice** を選択します。
 
-5.  関心ある内容を変更を加えないで、 ** Settings ** を確認します。
+5.  関心ある内容を変更を加えないで、 **Settings** を確認します。
