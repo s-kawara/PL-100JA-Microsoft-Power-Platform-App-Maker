@@ -28,11 +28,11 @@ lab:
 1. 許可された Lab Hoster から、あなたの **Microsoft 365 credentials** をコピーします。
 2. [Power Apps](https://.<powerapps.microsoft.com) に移動し、**Start free** をクリックします。
 3. **Work email** の下で、Microsoft 365 Credentials から Eメールアドレスを入力し、 **Next** をクリックします。
-4. You will see a prompt that you have an existing account with Microsoft. Select **Sign in**.
-5. Enter the password provided by the Authorized Lab Hoster. 
-6. Select **Yes** to stay signed in.
-7. Enter your country or region and Phone Number. Select **Get Started**.
-8. Click **Get Started** again.
+4. Microsoftの既存のアカウントを持っていることを示すプロンプトが表示されます。 ** Sign in**を選択します。
+5. 認定ラボ ホスティング業者から提供されたパスワードを入力します。
+6. サインイン を継続するには、** Yesはい ** を選択します。
+7. 国または地域と電話番号を入力してください。 ** Get Started ** を選択します。
+8. 再度、** Get Started ** を選択します。
 
 > [!NOTE]
 > If you encounter an error: "Sorry, there's been a disconnect", you can follow the steps below. If not, you can continue to **Exercise 2**.
@@ -42,29 +42,29 @@ lab:
 >3. Select **Plan(s)** and verify if you have **Power Apps Per User Plan Trial**. 
 > 4. If you have the above mentioned license, please proceed to **Exercise 2** otherwise repeat **Exercise 1**.
 
-Exercise 2 - Create your environment 
+演習2 - 環境を作成する
 ------------------------------------------
 
-In this exercise, you will create a **Practice** environment that you will use to do the majority of the lab work in this training.
+この演習では、このトレーニングのラボ作業の大部分を実行するために使用する** 演習 ** 環境を作成します。
 
-### Task 1 – Create environment
+### タスク1 - 環境を作成する
 
-1.  Navigate to [Power Platform admin center](<https://admin.Powerplatform.microsoft.com) and log in with your Microsoft 365 credentials if prompted again.
+1.  [Power Platform 管理センター]<https://admin.Powerplatform.microsoft.com）に移動し、再度プロンプトが表示されたら、Microsoft365の資格情報を使用してログインします。
 
-2. Select **Environments** and click **+ New**.
+2. ** Environment ** を選択し、** + 新規 ** を選択します。
 
-    - For **Name**, enter **[my initials] Practice**. (Example: AJ Practice.)
+    - **　Name ** から **[my initials] Practice**　を入力します。(例: AJ Practice.)
     
-    - For **Type**, select **Trial**.
+    - ** Type ** から **Trial** を選択します。
     
-    - Change the toggle on **Create a database for this environment?** to **Yes**.
+    - **　Create a database for this environment?** を **Yes** に変更します。
     
-    - Leave all other selections as default and click **Next**.
+    - 他の項目すべてをデフォルトのままにして **Next** を選択します。
 
-    - On the next tab, leave all selections to default and click **Save**.
+    - 次のタブで、すべての項目をデフォルトのままにして、 **Save** を選択します。
 
-3. Your **Practice** environment should now show in the list of Environments. 
+3. **Practice** 環境が、環境リストに表示されます。 
 
-4. Your environment may take a few minutes to provision. Refresh the page if needed. When your environment is prepared, select your **Practice** environment by clicking on the ellipses next to its name to expand the drop down menu and select **Settings.** 
+4. ご利用の環境では、プロビジョニングに数分かかる場合があります。必要に応じてページを更新します。環境の準備ができたら、名前の横にある楕円をクリックしてドロップダウンメニューを展開し、** Setting** を選択し、 ** Practice ** を選択します。
 
-5.  Explore the different areas in **Settings** that you are interested in but do not make any changes. 
+5.  関心ある内容を変更を加えないで、 ** Settings ** を確認します。
