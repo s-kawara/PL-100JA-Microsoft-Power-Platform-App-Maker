@@ -11,239 +11,239 @@ lab:
 >
 
 
-# Lab 01: Design the solution
+# ラボ01：ソリューションを設計する
 
-In this lab you will be shaping your idea into something that can be implemented on the Power Platform.   As part of this you will meet with other people in your organization to get more clarity on how your idea could be implemented.  Using this information, you will identify what applications and automations need to be built.
+このラボでは、PowerPlatformに実装できるものにアイデアを形作ります。 その一環として、組織内の他の人と会って、アイデアをどのように実装できるかをより明確にします。 この情報を使用して、構築する必要のあるアプリケーションと自動化を特定します。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - How to identify gaps and requirements for an idea
+  - アイデアのギャップと要件を特定する方法
 
-  - How to map a problem domain to the Power Platform 
+  - 問題のあるドメインをPowerPlatformにマッピングする方法
 
-  - How to determine required Tables for a data model 
+  - データモデルに必要なテーブルを決定する方法
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-  - Exercise 1 - Scenario overview 
+  - 演習1 - シナリオの概要
 
-  - Exercise 2 - Extract needs from interview with a co-worker and facility staff
+  - 演習2 - 同僚や施設のスタッフへのインタビューからニーズを抽出する
 
-  - Exercise 3 - Design a data model
+  - 演習3 - データモデルを設計する
 
-  - Exercise 4 - Identify apps and automation that are needed 
+  - 演習4 - 必要なアプリと自動化を特定する
 
-  - Exercise 5 - User story, mockup the app UI 
+  - 演習5 - ユーザーストーリー、アプリUIのモックアップ
 
-## Detailed steps
+## 詳細な手順
 
-### Exercise 1: Scenario Overview
+### 演習1：シナリオの概要
 
-In this exercise, you will get up to speed on the scenario you will be building in this series of labs.
+この演習では、この一連のラボで構築するシナリオについて理解します。
 
-#### Task 1: Read the scenario
+#### タスク1：シナリオを読む
 
-Read the following scenario and make note of any key points you think might be important later.
+次のシナリオを読み、後で重要になると思われる重要なポイントをメモします。
 
-> You are an employee at Lamna Healthcare Company and work in the billing department.
+> あなたはLamnaHealthcare Companyの従業員であり、請求部門で働いています。
 > 
-> As you were walking out to your car from work you noticed the company digital sign by the exit was still welcoming participants of the 2019 convention.  You would tell someone, but you have no idea who to tell.  So often you find something in your company that should be fixed but have no way to tell anyone. 
+> 仕事から車に向かって歩いていると、出口のそばにある会社のデジタル署名がまだ2019年の大会の参加者を歓迎していることに気づきました。 あなたは誰かに言うでしょう、しかしあなたは誰に言うべきか分かりません。 ですから、あなたはあなたの会社で修正されるべきであるが誰にも言う方法がない何かを見つけることがよくあります。 
 > 
-> As you were driving home sitting in traffic you had an idea. What if there was an app you could use to report things like this?  You could report a location, a category and even a picture of the problem so someone could easily locate and fix it.  The only problem was if you got people to report things who would be listening?
+> あなたが交通の中で座って家に帰っていたとき、あなたは考えを持っていました。 このようなことを報告するために使用できるアプリがあったとしたらどうでしょうか。 場所、カテゴリ、さらには問題の写真を報告して、誰かが簡単に見つけて修正できるようにすることができます。 唯一の問題は、聞いている人に報告してもらうかどうかでした。
 > 
-> The next day at work you met with your friend in the facility department and shared your idea.  She was excited too because today there is no coordinated way she can get problems like these reported and fixed. She explained how often they involve different departments and must be routed and followed up to find out the status.  She had looked at commercial options, but they had been too complex and inflexible, overengineered, and expensive. She did however give you an example of a 311-system used by cities for their citizens to report problems.  Based on that example, you decided you would call it Company 311.
+> 翌日、あなたは施設部門で友人と会い、アイデアを共有しました。 今日、彼女がこれらのような問題を報告して修正することができる調整された方法がないので、彼女も興奮していました。 彼女は、それらがさまざまな部門に関与する頻度を説明し、ステータスを確認するためにルーティングおよびフォローアップする必要があります。 彼女は商用オプションを検討していましたが、それらは複雑すぎて柔軟性がなく、過剰に設計されており、高価でした。 ただし、彼女は、市民が問題を報告するために都市で使用されている311システムの例を示しました。 その例に基づいて、Company311と呼ぶことにしました。
 
-### Exercise 2: Extract needs from interviews
+### 演習2：インタビューからニーズを抽出する
 
-In this exercise, you review the text from an interview you had with a couple of colleagues. In each of these interviews you shared your idea for a Company 311 solution and got feedback from your coworkers. You should use this information to shape the solution design.
+この演習では、数人の同僚とのインタビューのテキストを確認します。 これらのインタビューのそれぞれで、Company 311ソリューションのアイデアを共有し、同僚からフィードバックを得ました。 この情報を使用して、ソリューション設計を形成する必要があります。
 
-#### Task 1: Interview \#1
+#### タスク1：面接\#1メモ
 
-Review the following discussion with your coworker and take notes of any of the key things you learned from the interaction. This Interview is from a coworker in your same Department that you are friends with.
+同僚との次のディスカッションを確認し、やり取りから学んだ重要なことをメモします。 このインタビューは、あなたが友達である同じ部門の同僚からのものです。
 
-> **You**:   I wanted to get your thoughts on the idea for a Company 311 that we talked about.  I am thinking of starting to build that app. What do you think we need to include when we submit a problem report?
+> **You**:   私たちが話し合った311社のアイデアについてあなたの考えを聞きたいと思いました。 そのアプリの作成を始めようと思っています。 問題報告を提出する際に何を含める必要があると思いますか？
 > 
-> **Coworker**: Well you have to capture where the problem is - we have so many buildings.  What department should fix it.   Oh, and a picture. 
+> **Coworker**: 問題がどこにあるかを把握する必要があります。建物がたくさんあります。 どの部門がそれを修正する必要があります。 ああ、そして写真。
 > 
-> **You**:   Do you think building is enough to identify where the problem is? 
+> **You**: 問題がどこにあるかを特定するには、建物で十分だと思いますか？
 > 
-> **Coworker**:   Maybe allow them to describe where in the building... 
+> **Coworker**: たぶん、彼らが建物のどこにいるのかを説明できるように...
 > 
-> **You**:  After you report a problem what do you expect to happen? 
+> **You**: 問題を報告した後、何が起こると思いますか？
 > 
-> **Coworker**:  Them to fix it of course\!  
+> **Coworker**: もちろんそれを修正するためにそれら\!  
 > 
-> **You**: No, I mean in the app, what do you see after you click submit problem? 
+> **You**: いいえ、アプリでは、[問題の送信]をクリックすると何が表示されますか？
 > 
-> **Coworker**: I want to know that someone got it and it’s being worked on and when fixed. Actually, not always but most of the time...maybe let me choose to be notified? 
+> **Coworker**: 誰かがそれを手に入れ、それが作業中であり、いつ修正されるのか知りたいです。 実際、常にではありませんが、ほとんどの場合...通知を受け取ることを選択させてください。
 > 
-> **You**: So perhaps a list of all your items submitted? 
+> **You**: それで、おそらくあなたの提出されたすべてのアイテムのリスト？
 > 
-> **Coworker**: Yeah that would be great\! 
+> **Coworker**: うん、それは素晴らしいだろう\! 
 > 
-> **You**: perfect, I will let you know when you can try the app\! 
+> **You**: 完璧です、アプリを試すことができるときにお知らせします\! 
 
-After you complete reading this and have your notes compare them to our notes in the next task to see if you missed anything.
+これを読み終えたら、メモを次のタスクのメモと比較して、何か見落としがないかどうかを確認します。
 
-#### Task 2: Interview \#1 Notes
+#### タスク2：面接\#1メモ
 
-In this task, you will compare your notes from Interview \#1 with our notes.
+このタスクでは、インタビューからのメモを比較します\#1メモ
 
-The following are our notes from Interview \#1
+以下はインタビュー\#1からのメモです
 
-  - Need to be able to pick a building for each problem
+  - 問題ごとに建物を選択できる必要があります
 
-  - Need to capture which department needs to fix it when you submit the problem
+  - 問題を提出するときに、どの部門がそれを修正する必要があるかを把握する必要があります
 
-  - Need a photo of the problem
+  - 問題の写真が必要
 
-  - Need a freeform text description of the problem location within the building
+  - 建物内の問題の場所の自由形式のテキスト説明が必要です
 
-  - Need a way to indicate if you want to be notified when completed
+  - 完了時に通知を受け取るかどうかを示す方法が必要
 
-  - Need to see all the problems you submitted and their status
+  - 提出したすべての問題とそのステータスを確認する必要があります
 
-#### Task 3: Interview \#2
+#### タスク3：面接\#2
 
-Review the following discussion with your coworker and take notes of any of the key things you learned from the interaction. This Interview is from a coworker in facilities management that you are friends with. You believe most of the problem reports will be handled by them.
+同僚との次のディスカッションを確認し、やり取りから学んだ重要なことをメモします。 このインタビューは、あなたが友達である施設管理の同僚からのものです。 あなたは問題報告のほとんどが彼らによって処理されると信じています。
 
-> **You**: I wanted to get your thoughts on the idea for a Company 311 that we talked about. I am thinking of starting to build that app. What do you think needs to be included when people submit a problem report?
+> **You**: 私たちが話し合った311社のアイデアについてあなたの考えを聞きたいと思いました。 そのアプリの作成を始めようと思っています。 人々が問題報告を提出するときに何を含める必要があると思いますか？
 > 
-> **Coworker**: As much details as possible, a photo would be nice. Oftentimes we get reports that are just a very vague indication of the problem that if we had a picture it would be 1000 times clearer.
+> **Coworker**: できるだけ詳細に、写真がいいでしょう。 多くの場合、問題の非常に漠然とした兆候であるレポートを受け取ります。写真があれば、1000倍鮮明になるということです。
 > 
-> **You**: What do you think about allowing them to pick which department they think will fix the problem?
+> **You**: 問題を解決すると思われる部門を選択できるようにすることについてどう思いますか？
 > 
-> **Coworker**: Now that is funny\! Most people have no idea who fixes it and think it is just magic. I would suggest that people just submit the problem report without a department and then one of our facilities people would assign the department it needs to address the problem.
+> **Coworker**: 今それは面白いです\! ほとんどの人は誰がそれを修正するのかわからず、それはただの魔法だと思います。 部門なしで問題レポートを提出するだけで、施設の担当者の1人が問題に対処するために必要な部門を割り当てることをお勧めします。
 > 
-> **You**: Perfect\! Do you fix all the problems that get reported?
+> **You**: 完全\! 報告されるすべての問題を修正しましたか？
 > 
-> **Coworker**: Many of them are duplicates and do not get fixed; others will cost too much and must get manager approval. If they are not approved they don't get fixed.
+> **Coworker**: それらの多くは重複しており、修正されません。 他の人はコストがかかりすぎて、マネージャーの承認を得る必要があります。 それらが承認されない場合、それらは修正されません。
 > 
-> **You**: How do you do that approval today?
+> **You**: 今日、その承認をどのように行いますか？
 > 
-> **Coworker**: If I get one that I think is going to be expensive I have to try to track down the manager for approval, and sometimes if I can’t get it right away it gets set aside till I remember.
+> **Coworker**: 費用がかかると思われるものを入手した場合は、承認を得るためにマネージャーを追跡する必要があります。すぐに入手できない場合は、覚えるまで取っておかれることがあります。
 > 
-> **You**: Ok, so if we could include approval that might help. I will let you know when you can try the app\!
+> **You**: わかりました。役立つ可能性のある承認を含めることができれば。 アプリを試すことができたらお知らせします\!
 
-After you complete reading this and have your notes compare them to our notes in the next task to see if you missed anything.
+これを読み終えたら、メモを次のタスクのメモと比較して、何か見落としがないかどうかを確認します。
 
-#### Task 4: Interview \#2 Notes
+#### タスク4：インタビュー\#2メモ
 
-In this task, you will compare your notes from Interview \#2 with our notes.
+このタスクでは、インタビュー\#2のメモを私たちのメモと比較します。
 
-The following are our notes from Interview \#2
+以下はインタビューからの\#2メモ
 
-  - Having a photo would be helpful
+  - 写真を持っていると役に立ちます
 
-  - Department should not be provided by user but assigned after submitting
+  - 部門はユーザーが提供するのではなく、送信後に割り当てる必要があります
 
-  - Approval required over specific amount, would be helpful to automate
+  - 特定の金額を超える承認が必要です。自動化に役立ちます
 
-### Exercise 3: Design a data model
+### 演習3：データモデルを設計する
 
-In this exercise, you will create the data model to support the apps you will be building.
+この演習では、構築するアプリをサポートするデータモデルを作成します。
 
-#### Task 1: Evaluate what you know already about the data
+#### タスク1：データについてすでに知っていることを評価する
 
-In this task, you will be evaluating the information you already collected about your proposed solution and trying to identify what data Tables are needed and how they are related. If you want, you can do this task concurrently with the next task where you draw the data model.
+このタスクでは、提案されたソリューションに関してすでに収集した情報を評価し、必要なデータテーブルとそれらがどのように関連しているかを特定しようとします。 必要に応じて、データモデルを描画する次のタスクと同時にこのタスクを実行できます。
 
-  - Identify the main data that will be managed by the solution. This will typically become one or two Tables and will be the focus of the app you build. Other data is typically related to and supports these Tables.
+  - ソリューションによって管理される主なデータを特定します。 これは通常、1つまたは2つのテーブルになり、作成するアプリの焦点になります。 他のデータは通常、これらのテーブルに関連し、これらのテーブルをサポートします。
 
-  - Identify related Tables needed to support your scenario.
+  - シナリオをサポートするために必要な関連テーブルを特定します。
 
-  - Identify how Tables should be connected using relationships.
+  - リレーションシップを使用してテーブルを接続する方法を特定します。
   
-  - Evaluate what should be Columns and what should be Tables. For example, how should the photo be stored or the location within the building?
+  - 何が列で何がテーブルであるかを評価します。 たとえば、写真をどのように保存するか、建物内の場所をどのように保存する必要がありますか？
 
-#### Task 2: Draw a draft data model
+#### タスク2：ドラフトデータモデルを描画する
 
-Use whatever tools you have available; you can use a whiteboard, Visio, PowerPoint, OneNote, or you can even use it piece of paper and pen. The goal here is not to be picture perfect but to allow you to think through what the data model should look like and possibly share it with others and get their ideas. This data model will typically be your guide when you are creating the Tables in the maker portal. You could, of course, just start creating the Tables in the portal, but creating a diagram helps ensure it's more carefully planned out.
+利用可能なツールを使用してください。 ホワイトボード、Visio、PowerPoint、OneNoteを使用することも、紙とペンを使用することもできます。 ここでの目標は、完璧な画像ではなく、データモデルがどのように見えるかを考え、他の人と共有してアイデアを得ることができるようにすることです。 このデータモデルは通常、メーカーポータルでテーブルを作成する際のガイドになります。 もちろん、ポータルでテーブルの作成を開始することもできますが、図を作成すると、より慎重に計画を立てることができます。
 
-1.  Draw your data model, including relationships and any relationship behaviors. Your drawing should look like the following example, except yours should be for your Company 311 solution.
+1.  関係や関係の振る舞いを含むデータモデルを描画します。 図面は次の例のようになりますが、Company311ソリューション用である必要があります。
     
     ![Whiteboard drawing of an example data model containing entities Course and Module and 1:N parental raltionship from Course to Module](01/media/image1.png)
 
 
-#### Task 3: Compare data models
+#### タスク3：データモデルを比較する
 
-1.  Compare the data model you created in the previous task with the one we prepared. If there are significant differences you should discuss those with your instructor.
+1.  前のタスクで作成したデータモデルを、準備したデータモデルと比較します。 大きな違いがある場合は、インストラクターと話し合う必要があります。
 
 ![A close up of text on a whiteboard with a data model showing problem report, department and building](01/media/image2.png)
 
-### Exercise 4: Identify apps and automation needed
+### 演習4：必要なアプリと自動化を特定する
 
-In this exercise, you will be looking at the information you collected and deciding what apps and automations are required to implement the solution. The goal is not to identify every feature of the application or automation but to identify if you need one app or ten apps, and what style app they should be.
+この演習では、収集した情報を確認し、ソリューションを実装するために必要なアプリと自動化を決定します。 目標は、アプリケーションまたは自動化のすべての機能を特定することではなく、1つのアプリまたは10のアプリが必要かどうか、およびそれらがどのスタイルのアプリであるかを特定することです。
 
-#### Task 1: Evaluate what apps are needed
+#### タスク1：必要なアプリを評価する
 
 In this task you are going to look at how the users interact with the applications and decide if you need one or multiple applications and what style they're going to be, i.e. canvas or model-driven. There is no single right answer to how to accomplish this, but by asking the right questions you can design a better solution for your users. As you go through the following steps make some notes about your Company 311 solution.
 
-1.  Identify who will be using the app.
+1.  アプリを使用するユーザーを特定します。
 
-2.  Identify how each set of users will be accessing the app. Will it be mostly from for mobile device or desktop?
+2.  ユーザーの各セットがアプリにアクセスする方法を特定します。 それは主にモバイルデバイスまたはデスクトップ用ですか？
 
-3.  Of the overall functionality you are going to provide, are there specific subsets that some users use all the time?
+3.  提供する全体的な機能のうち、一部のユーザーが常に使用する特定のサブセットはありますか？
 
-4.  Is there any device usage that would lend itself to one type of application versus another?
+4.  あるタイプのアプリケーションと別のタイプのアプリケーションに適したデバイスの使用法はありますか？
 
-5.  Model-driven apps are great for data management. Is there any functionality that would lend itself more to a model-driven app?
+5.  モデル駆動型アプリはデータ管理に最適です。 モデル駆動型アプリにより適した機能はありますか？
 
-6.  Considering your answers to the above questions and make notes of how many apps you will be building, the type of app, and what each app will do and who it will be used by.
+6.  上記の質問への回答を考慮して、作成するアプリの数、アプリの種類、各アプリの機能と使用者をメモします。
 
-#### Task 2: Compare your notes on apps
+#### タスク2：アプリに関するメモを比較する
 
-In this task, you should compare your notes from the previous task with our prepared notes. If there are big differences you should discuss them with your instructor.
+このタスクでは、前のタスクのメモを準備したメモと比較する必要があります。 大きな違いがある場合は、インストラクターと話し合う必要があります。
 
-1.  Identify who will be using the app:
+1.  アプリを使用するユーザーを特定する:
     
-      - Group 1 – Any employee in the company
+      - グループ1 - 会社のすべての従業員
     
-      - Group 2 - Facilities staff and anyone in the different departments that fix problems
+      - グループ2 - 施設のスタッフと問題を解決するさまざまな部門の人
 
-2.  For each set of users will they be accessing it mostly from for mobile device or desktop?
+2.  ユーザーのセットごとに、主にモバイルデバイスまたはデスクトップからアクセスしますか？
     
-      - Group 1 – Probably mostly on their mobile devices
+      - グループ1 - おそらく主にモバイルデバイス上
     
-      - Group 2 - Mostly on their desktop but sometimes on mobile
+      - グループ2 - 主にデスクトップ上にありますが、モバイル上にある場合もあります
 
-3.  Of the overall functionality you are going to provide are there specific subsets that some users use all the time?
+3.  提供する全体的な機能のうち、一部のユーザーが常に使用する特定のサブセットはありますか？
     
-      - Group 1 – Most important functionality is submitting a problem report, they do not do anything to manage the list of buildings or departments
+      - グループ1 – 最も重要な機能は、問題レポートの送信です。建物や部門のリストを管理するために何もしません。
     
-      - Group 2 - Most important functionality is routing and resolving problem reports and managing the reference data associated with buildings and apartments
+      - グループ2 - 最も重要な機能は、問題レポートのルーティングと解決、および建物とアパートに関連する参照データの管理です。
 
-4.  Is there any device usage that would lend itself to one type of application versus another?
+4.  あるタイプのアプリケーションと別のタイプのアプリケーションに適したデバイスの使用法はありますか？
     
-      - Easy use of camera or photo upload from mobile device
+      - モバイルデバイスからのカメラまたは写真のアップロードの簡単な使用
 
-5.  Is any of the functionality more data management that would lend itself more to a model-driven app?
+5.  モデル駆動型アプリに適したデータ管理機能はありますか？
     
-      - The management of reference data for buildings and apartments would be easy to do in a model driven app.
+      - 建物やアパートの参照データの管理は、モデル駆動型アプリで簡単に実行できます。
     
-      - The routing and assignment of problem reports to different users would be easy to handle in a model driven app.
+      - さまざまなユーザーへの問題レポートのルーティングと割り当ては、モデル駆動型アプリで簡単に処理できます。
 
-6.  Considering your answers to the above questions make notes of how many apps you will be building, the type of app, and what each app will do and how it will be used by.
+6.  上記の質問への回答を考慮して、作成するアプリの数、アプリの種類、各アプリの機能と使用方法をメモします。
     
-      - App 1 – Company 311 - This will be a canvas application used to submit new problem reports and see a list of any problem reports submitted.
+      - アプリ1 - Company 311 - これは、新しい問題レポートを送信し、送信された問題レポートのリストを表示するために使用されるキャンバスアプリケーションになります。
     
-      - App 2 – Company 311 Admin - This will be a model driven application used by all those that route and resolve problem reports. this application will also manage all the reference data like buildings and department lists.
+      - アプリ2 – Company 311 Admin – これは、問題レポートをルーティングおよび解決するすべてのユーザーが使用するモデル駆動型アプリケーションになります。 このアプリケーションは、建物や部門リストなどのすべての参照データも管理します。
 
-### Exercise 5: User story, app UI mockup
+### 演習5：ユーザーストーリー、アプリUIモックアップ
 
-In this exercise, you will review a user story that describes a user interacting with the app to submit a problem report.
+この演習では、ユーザーがアプリを操作して問題レポートを送信することを説明するユーザーストーリーを確認します。
 
-#### Task 1: User Story
+#### タスク1：ユーザーストーリー
 
-Review the following user story:
+次のユーザーストーリーを確認する:
 
-> As a user I want to be able to quickly open the app and submit a problem report. I should be able to pick a building, give a location that describes where the problem is. The app should allow me to provide one line title and details of the problem. I should be able to optionally provide a photo. I should be able to easily switch over and see the list of problems that I already submitted and their status.
+> ユーザーとして、アプリをすばやく開いて問題レポートを送信できるようにしたいと考えています。 私は建物を選び、問題がどこにあるかを説明する場所を与えることができるはずです。 アプリでは、1行のタイトルと問題の詳細を提供できるはずです。 オプションで写真を提供できるはずです。 簡単に切り替えて、すでに送信した問題のリストとそのステータスを確認できるはずです。
 
-1.  Using any of the tools you have available, such as a whiteboard, Visio, OneNote or even a piece of paper and a pen, draw a mockup of the user interface to satisfy the above user story.
+1.  ホワイトボード、Visio、OneNote、さらには紙とペンなど、利用可能なツールのいずれかを使用して、上記のユーザーストーリーを満たすためにユーザーインターフェイスのモックアップを描画します。
 
-2.  After you have completed your drawing of the mockup go ahead to the next task and compare it to the one we provide.
+2.  モックアップの描画が完了したら、次のタスクに進み、提供されているタスクと比較します。
 
-#### Task 2: Compare mockup
+#### タスク2：モックアップを比較する
 
-The following is an example UI mockup showing both the add new item an My reports list. There is no single answer to what this has to look like and there are possibly many examples you could come up with. The goal for UI markup is to be able to quickly demonstrate what you want to build and show it to somebody and without having to actually build it. Depending on the tool you used you can often make changes quickly as you evolve the mockup. The markup is used to help you build the actual applications screens quicker with less rework.
+以下は、新しいアイテムの追加とマイレポートリストの両方を示すUIモックアップの例です。 これがどのように見えるべきかについての単一の答えはありません、そしてあなたが思いつくことができる多くの例があるかもしれません。 UIマークアップの目標は、実際にビルドしなくても、ビルドしたいものをすばやくデモンストレーションして誰かに見せることができるようにすることです。 使用したツールによっては、モックアップを進化させながらすばやく変更を加えることができます。 マークアップは、手間をかけずに実際のアプリケーション画面をすばやく構築するために使用されます。
 
 ![A close up of text on a whiteboard showing a UI mockup of the add and my reports list](01/media/image3.png)
