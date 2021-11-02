@@ -12,22 +12,22 @@ lab:
 >
 
 
-Module 0: Course introduction
+モジュール0：コース紹介
 =================================
 
-## Practice Lab – Validate lab environment
+## 実験室 - ラボ環境を検証します
 
-Scenario
+シナリオ
 --------
 
-In this Module 0 lab, you will acquire a Power Platform trial tenant and access the Power Platform admin center. In the admin center, we will create an individual environment for configuration during the course.
+このモジュール0ラボでは、Power Platform の試用テナントを取得し、Power Platform管理センターにアクセスします。 管理センターでは、コース中に設定のための個々の環境を作成します。
 
-Exercise 1 – Acquire your Power Platform trial tenant 
+練習1  - あなたの Power Platform の試用テナントを取得します 
 ------------------------------------------
 
-1. Copy your **Microsoft 365 credentials** from the Authorized Lab Hoster.
-2. Navigate to [Power Apps](https://.<powerapps.microsoft.com) and click **Start free**.
-3. Under **Work email**, enter the email address from your Microsoft 365 credentials and click **Next**.
+1. 許可された Lab Hoster から、あなたの **Microsoft 365 credentials** をコピーします。
+2. [Power Apps](https://.<powerapps.microsoft.com) に移動し、**Start free** をクリックします。
+3. **Work email** の下で、Microsoft 365 Credentials から Eメールアドレスを入力し、 **Next** をクリックします。
 4. You will see a prompt that you have an existing account with Microsoft. Select **Sign in**.
 5. Enter the password provided by the Authorized Lab Hoster. 
 6. Select **Yes** to stay signed in.
