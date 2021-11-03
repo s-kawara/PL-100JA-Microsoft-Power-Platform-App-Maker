@@ -10,352 +10,352 @@ lab:
 > - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 >
 
-# Lab 06: Power Virtual Agents in Teams
+# ラボ06：チーム内の仮想エージェントに電力を供給する
 
-## Scenario
+## シナリオ
 
- Your organization is trying to recycle E-waste and decided to schedule a quarterly E-waste pickup service. Facilities department created an Excel file in OneDrive for business and want employees to be able to add their name and information about the item they want to get picked up to the list.
- In this exercise, you will create a Power Virtual Agents bot that will get the information from users and add them to the pickup list.
+ あなたの組織はE-wasteのリサイクルを試みており、四半期ごとにE-wasteピックアップサービスをスケジュールすることにしました。 施設部門は、OneDrive for businessでExcelファイルを作成し、従業員が自分の名前と、ピックアップしたいアイテムに関する情報をリストに追加できるようにしたいと考えています。
+  この演習では、ユーザーから情報を取得してピックアップリストに追加するPower VirtualAgentsボットを作成します。
 
-## Requirement
+## 要件
 
- 1. Bot should be able to get information about the item.
- 2. Bot should be able to get information about the user.
- 3. Bot should be able to add the new item to the list.
+ 1. ボットはアイテムに関する情報を取得できる必要があります。
+ 2. ボットはユーザーに関する情報を取得できる必要があります。
+ 3. ボットは新しいアイテムをリストに追加できるはずです。
 
 ## What you will learn
 
- 1.	How to create a Power Virtual Agents in Teams.
- 2. How to publish Power Virtual Agents.
- 3. How to use Power Virtual Agents flow template.
+ 1.	TeamsでPower Virtual Agentを作成する方法。
+ 2. Power Virtual Agentを公開する方法。
+ 3. Power Virtual Agentsフローテンプレートの使用方法。
 
-## Detailed steps
+## 詳細な手順
 
-### Exercise 1 – Create PVA bot
+### 演習1–PVAボットを作成する
 
-#### Task 1 - Add Excel file to OneDrive
-In this task, you will add an Excel file to your OneDrive for business and add new rows to this file using PVA and Power Automate.
+#### タスク1 - ExcelファイルをOneDriveに追加する
+このタスクでは、ExcelファイルをOneDrive for businessに追加し、PVAとPowerAutomateを使用してこのファイルに新しい行を追加します。
 
-1. Navigate to [Microsoft Teams](https://teams.microsoft.com)
-2. Click on the **App launcher** and select **OneDrive**.
+1. [Microsoft Teams](https://teams.microsoft.com) に移動します 
+2. **App launcher** をクリックして、**OneDrive** を選択します。
 
 ![A Screenshot with an arrow pointing to the app launcher icon and a box around the Onedrive option in the app launcher](06/media/ex1-t1-image1.png)
 
-3. Click **Upload** and select **Files**.
+3. **Upload** をクリックして、**Files** を選択します。
 
 ![A screenshot with a box around the files option in the dropdown from the upload button](06/media/ex1-t1-image2.png)
 
-4. Browse to the lab resources folder, select the **Recycle.xlsx** file, and click Open.
-5. Click to open the file you just added.
+4. ラボリソースフォルダーを参照し、**Recycle.xlsx** ファイルを選択して、開くをクリックします。
+5. 追加したファイルをクリックして開きます。
 
 
 ![A Screenshot with an arrow pointing to the recycle.xlsx file](06/media/ex1-t1-image3.png)
 
-6. The should have just headers. Close the file and OneDrive browser tabs.
+6. ヘッダーだけが必要です。 ファイルとOneDriveブラウザのタブを閉じます。
 
 ![A screenshot of an excel spreadsheet with four headers in the first row: name, email, location, and description](06/media/ex1-t1-image4.png)
 
 
 
-#### Task 2 - Install PVA
+#### タスク2 - PVAをインストールする
 
-In this task, you will install PVA.
+このタスクでは、PVAをインストールします。
 
-1. Navigate to [Microsoft Teams](https://teams.microsoft.com)
-2. Click on the **...More added apps**, search for **power virtual**, and select **Power Virtual Agents**.
+1. [Microsoft Teams](https://teams.microsoft.com) に移動します。
+2. **...More added apps** をクリックし、**power virtual** を検索して、**Power Virtual Agents** を選択します。
 
 ![A Screenshot with an arrow pointing to the ellipsis icon on the left side of the window and a box around the power virtual agents option](06/media/ex1-t2-image1.png)
 
-3. Click **Add**.
-4. Right click on the **Power Virtual Agents** and select **Pin**. (If the **Power Virtual Agents** menu is not coming on the left menu, then click again on **...More added aaps** and pin it from the recents.)
+3. **Add** をクリックします。
+4. **Power Virtual Agents** を右クリックし、**Pin** を選択します。 （**Power Virtual Agents** メニューが左側のメニューに表示されない場合は、**...More added aaps** をもう一度クリックして、最近のものから固定します。）
 
 ![A Screenshot with an arrow pointing to the power virtual agents icon and a box around the pin button](06/media/ex1-t2-image2.png)
 
-5. Do not navigate away from this page.
+5. このページから離れないでください。
 
-#### Task 3 - Create bot
+#### タスク3 - ボットを作成する
 
-In this task, you will create the bot.
+このタスクでは、ボットを作成します。
 
-1. Select **Power Virtual Agents** and click **Start now**.
+1. **Power Virtual Agents** を選択し、**Start now** をクリックします。
 
 ![A Screenshot with an arrow pointing to the start now button](06/media/ex1-t3-image1.png)
 
-2. Select the **Green** team you created and click **Continue**.
-3. Enter **Green Bot** for name and click **Create**.
-4. Wait for the bot to be created.
-5. Click **Explore bot**.
-6. Type **Hello** in the text box located in the bottom left and click **Send**. If you don't see the textbox click the **Test your bot** button located in the bottom left.
-7. The bot should respond with the default greeting. You will edit this greeting in the next task.
+2. 作成した **Green** チームを選択し、**Continue** をクリックします。
+3. 名前に **Green Bot** と入力し、**Create** をクリックします。
+4. ボットが作成されるのを待ちます。
+5. **Explore bot** をクリックします。
+6. 左下のテキストボックスに **Hello** と入力し、**Send** をクリックします。 テキストボックスが表示されない場合は、左下にある **Test your bot** ボタンをクリックしてください。
+7. ボットはデフォルトの挨拶で応答する必要があります。 この挨拶は次のタスクで編集します。
 
 ![A screenshot with a box around the bot's default greeting reading: "Hi! I'm a virtual agent. I can help with account questions, orders, store information and more. If you'd like to speak to a human agent, let me know at any time. So what can I help you with today?"](06/media/ex1-t3-image2.png)
 
-8. You can show/hide the bot by clicking on the bot icon located in the bottom left. This will give the authoring canvas more room.
+8. 左下にあるボットアイコンをクリックすると、ボットを表示/非表示にできます。 これにより、オーサリングキャンバスにより多くのスペースが与えられます。
 
 ![A Screenshot with an arrow pointing to the hide bot button](06/media/ex1-t3-image3.png)
 
-9. Do not navigate away from this page.
+9. このページから離れないでください。
 
 
-#### Task 4 - Edit greeting
-In this task, you will edit the default greeting.
+#### タスク4 - あいさつを編集する
+このタスクでは、デフォルトのグリーティングを編集します。
 
-1. Select **Topics** and click to open the **Greeting** topic
+1. **Topics** を選択し、クリックして **Greeting** トピックを開きます。
 
 ![A Screenshot with an arrow pointing to the greeting topic in the topics menu](06/media/ex1-t4-image1.png)
 
-2. Take a look and see the trigger phrases for this topic.
-3. Click on the **Go to authoring canvas** button.
+2. このトピックのトリガーフレーズを見てください。
+3. **Go to authoring canvas** ボタンをクリックします。
 
 ![A Screenshot with an arrow pointing to the go to authoring canvas button](06/media/ex1-t4-image2.png)
 
-4. Go to the first **Message** and replace the message with the text below.
+4. 最初の **Message** に移動し、メッセージを以下のテキストに置き換えます。
 
 ```Hi! I'm a virtual agent. I can help you recycle e-waste by posting items to the Upcycle application or add them to the quarterly e-waste pickup list.```
 
 ![A screenshot of the greeting message replaced with the aforementioned text](06/media/ex1-t4-image3.png)
 
-5. Click **Save**.
-6. Click **Test your bot** to show the bot.
-7. Type **Hey** and click **Send**.
-8. The bot should now use your updated message.
+5. **Save** をクリックします。
+6. **Test your bot** をクリックしてボットを表示します。
+7. **Hey** と入力し、**Send** をクリックします。
+8. これで、ボットは更新されたメッセージを使用するはずです。
 
 ![A screenshot of the updated bot greeting message](06/media/ex1-t4-image4.png)
 
 9. Hide the bot.
-10. Do not navigate away from this page.
+10. このページから離れないでください。
 
-#### Task 5 - Create topic
-In this task, you will create a new topic for the bot so it can respond to inquiries.
+#### タスク5 - トピックを作成する
+このタスクでは、ボットが問い合わせに応答できるように、ボットの新しいトピックを作成します。
 
-1. Select **Topics** and click **+ New topic**.
+1. **Topics** を選択し、**+ New topic** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new topic button](06/media/ex1-t5-image1.png)
 
-2. Enter **Recycle Reuse Reduce** for Name.
-3. Enter **Recycle** for trigger phrase and click **Add**.
+2. 名前に **Recycle Reuse Reduce** と入力します。
+3. トリガーフレーズに **Recycle** を入力し、**Add** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add button](06/media/ex1-t5-image2.png)
 
-4. Type **E-waste** as another trigger phrase and click **Add**.
-5. Type **Green** as another trigger phrase and click **Add**.
-6. Type **Add me** as another trigger phrase and click **Add**.
-7. Type **Upcycle** as another trigger phrase and click **Add**.
-8. Type **Reuse** as another trigger phrase and click **Add**.
-9. Type **Reduce** as another trigger phrase and click **Add**.
-10. Type **Recycle list** as another trigger phrase and click **Add**.
-11. You should now have at least 8 trigger phrases. Click **Save topic**.
+4. 別のトリガーフレーズとして **E-waste** と入力し、**Add** をクリックします。
+5. 別のトリガーフレーズとして **Green** と入力し、**Add** をクリックします。
+6. 別のトリガーフレーズとして **Add me** と入力し、**Add** をクリックします。
+7. 別のトリガーフレーズとして **Upcycle** と入力し、**Add** をクリックします。
+8. 別のトリガーフレーズとして **Reuse** と入力し、**Add** をクリックします。
+9. 別のトリガーフレーズとして **Reduce** と入力し、**Add** をクリックします。
+10. 別のトリガーフレーズとして **Recycle list** と入力し、**Add** をクリックします。
+11. これで、少なくとも8つのトリガーフレーズが必要になります。 **Save topic** をクリックします。
 
 ![A Screenshot with an arrow pointing to the test bot button](06/media/ex1-t5-image3.png)
 
-9. Click on the **Go to authoring canvas button**.
-10. Type **I can help you with that.** for message and click on the **+ Add node** button.
+9. **Go to authoring canvas button** をクリックします。
+10. メッセージに **I can help you that* と入力し、**+ Add node** ボタンをクリックします。
 
 ![A Screenshot with an arrow pointing to the plus icon to add a node](06/media/ex1-t5-image4.png)
 
-11. Select **Ask a question**.
+11. **Ask a question** を選択します。
 
 ![A Screenshot with an arrow pointing to the ask a question button](06/media/ex1-t5-image5.png)
 
-12. Enter the text below in the Ask a question textbox.
+12. 質問するテキストボックスに以下のテキストを入力します。
 
 ```I can add your item to the Upcycle application or to the e-waste pick-up list. What would you like me to do?```
 
-13.  Make sure you have **Multiple choice options** selected for Identity, type **Add to the Upcycle app** for first option and click **+ New option**.
+13.  IDに **Multiple choice options** が選択されていることを確認し、最初のオプションとして**Add to the Upcycle app** と入力し、**+ New option** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new option button](06/media/ex1-t5-image6.png)
 
-14. Type **Add to the pick-up list** as another option.
-15. You should now have two conditions. Click on the **...** Options button of one of the conditions and click **Delete**.
+14. 別のオプションとして **Add to the pick-up list** と入力します。
+15. これで、2つの条件があります。 いずれかの条件の **...** オプションボタンをクリックし、**Delete** をクリックします。
 
 ![A Screenshot with an arrow pointing to the three dots icon and a red box around the delete button](06/media/ex1-t5-image7.png)
 
-16. Delete the other condition. We are deleting the conditions because adding item to the pick-up list and adding item to the Upcycle application required similar information.
+16. 他の条件を削除します。 ピックアップリストへのアイテムの追加とUpcycleアプリケーションへのアイテムの追加には同様の情報が必要だったため、条件を削除します。
 
-17. Change the second input value in Condition menu to **has value**.
+17. 条件メニューの2番目の入力値を **has value** に変更します。
 
     ![has value - screenshot](06/media/image1.png)
 
-18. Click on the edit variable icon.
+18. 変数の編集アイコンをクリックします。
 
 ![A Screenshot with an arrow pointing to the pencil icon in the box under the text save response as](06/media/ex1-t5-image8.png)
 
-18. Change the variable name to **UserOption** and close the variable properties pane.
+18. 変数名を **UserOption** に変更し、変数のプロパティペインを閉じます。
 
 ![A Screenshot with an arrow pointing to the cross icon in the top right corner of the pane](06/media/ex1-t5-image9.png)
 
-19. Click **+ Add node** and select **Ask a question**
-20. Enter the text below in the Ask a question textbox.
+19. **+ Add node** をクリックし、**Ask a question** を選択します。
+20. 質問するテキストボックスに以下のテキストを入力します。
 
 ```What is the name of the item?```
 
-21.   Click on the **Identify** dropdown and select **User's entire response**.
+21.   **Identify** ドロップダウンをクリックして、**User's entire response** を選択します。
 
 ![A Screenshot with an arrow pointing to the drop down icon in the identify field and a box around the user's entire response button](06/media/ex1-t5-image10.png)
 
-22.  Click on the **Edit variable** icon.
+22.  **Edit variable** アイコンをクリックします。
 
 ![A Screenshot with an arrow pointing to the pencil icon in the box under the text save response as](06/media/ex1-t5-image11.png)
 
-23. Change the variable Name to **ItemName** and close the variable properties pane.
-24. Click **+ Add node** after the question.
-25. Select **Ask a question** again.
-26. Enter the text below in the Ask a question textbox.
+23. 変数名を **ItemName** に変更し、変数のプロパティペインを閉じます。
+24. 質問の後に **+ Add node** をクリックします。
+25. もう一度 **Ask a question** を選択します。
+26. 質問するテキストボックスに以下のテキストを入力します。
 
 ```What is the description of this item?```
 
-27. Click on the **Identify** dropdown and select **User's entire response** again.
-28. Click on the **Edit variable** icon again.
-29. Change the variable Name to **Description** and close the variable properties pane.
-30. Click **+ Add node** after the question.
-31. Select **Ask a question** one more time.
-32. Enter the text below in the Ask a question textbox.
+27. **Identify** ドロップダウンをクリックして、**User's entire response** をもう一度選択します。
+28. **Edit variable** アイコンをもう一度クリックします。
+29. 変数名を **Description** に変更し、変数のプロパティペインを閉じます。
+30. 質問の後に **+ Add node** をクリックします。
+31. もう一度 **Ask a question** を選択します。
+32. 質問するテキストボックスに以下のテキストを入力します。
 
 ```What is the location of this item?```
 
-33. Click on the **Identify** dropdown and select **User's entire response** again.
-34. Click on the **Edit variable** icon again.
-35. Change the variable Name to **Location** and close the variable properties pane.
-36. The three questions should now look like the image below. Click **Save**
+33. **Identify** ドロップダウンをクリックして、 **User's entire response** をもう一度選択します。
+34. **Edit variable** アイコンをもう一度クリックします。
+35. 変数の名前を **Location** に変更し、変数のプロパティペインを閉じます。
+36. 3つの質問は次の画像のようになります。 **Save** をクリックします。
 
 ![A Screenshot with an arrow pointing to the save button in the top right corner](06/media/ex1-t5-image12.png)
 
-37. Do not navigate away from this page.
+37. このページから離れないでください。
 
 
-#### Task 6 - Create flow
+#### タスク6 - フローを作成する
 
-In this task, you will create a flow that will add the item to the recycle list or to the Upcycle application depending on the user option.
+このタスクでは、ユーザーオプションに応じて、アイテムをリサイクルリストまたはアップサイクルアプリケーションに追加するフローを作成します。
 
-1.  Go to the last question, click **+ Add node** and select **Call an action**.
+1.  最後の質問に移動し、**+ Add node** をクリックして、**Call an action** を選択します。
 
 ![A screenshot of a box around the call an action button](06/media/ex1-t6-image1.png)
 
-2.  Click **Create a flow**.
-3.  Select **Power Virtual Agents Flow Template**
+2.  **Create a flow** をクリックします。
+3.  **Power Virtual Agents Flow Template** を選択します。
 
 ![A screenshot of a box around the power virtual agents flow template option](06/media/ex1-t6-image2.png)
 
-4.  Rename the flow **Add item to app or list** and click **+ Add an input**.
+4.  フローの名前を　**Add item to app or list** し、**+ Add an input** をクリックします。
 
 ![A screenshot of a box around the add item to app or list button and an arrow pointing to the add an input button under power virtual agents](06/media/ex1-t6-image3.png)
 
-5.  Select **Text**.
-6.  Enter **User ID** and click **+ Add an input** again.
+5.  **Text** を選択します。
+6.  **User ID**　を入力し、**+　Add an input** をもう一度クリックします。
 
 ![A Screenshot with an arrow pointing to the add an input button](06/media/ex1-t6-image4.png)
 
-7.  Select **Text**.
-8.  Enter **UserOption** and click **+ Add an input** one more time.
-9.  Select **Text**.
-10. Enter **ItemName** and click **+ Add an input** one more time.
-11. Select **Text**.
-12. Enter **Description** and click **+ Add an input** one more time.
-13. Select **Text**.
-14. Enter **Location**.
-15. You should now have five inputs.
-16. Click **+ Insert a new step** and select **Add an action**.
+7.  **Text** を選択します。
+8.  **UserOption** と入力し、**+ Add an input** をもう一度クリックします。
+9.  **Text** を選択します。
+10. **ItemName** と入力し、**+ Add an input** をもう一度クリックします。
+11. **Text** を選択します。
+12. **Description** と入力し、**+ Add an input** をもう一度クリックします。
+13. **Text** を選択します。
+14. **Location** を入力します。
+15. これで、5つの入力があります。
+16. **+ Insert a new step** をクリックし、**Add an action** を選択します。
 
 ![A Screenshot with an arrow pointing to the plus icon at the bottom of the power virtual agents pane and a box around the add an action button](06/media/ex1-t6-image5.png)
 
-17.  Search for initialize and select **Initialize variable**.
+17.  Initialize を検索し、**Initialize variable** を選択します。
 
 ![A screenshot with a box around the initialize variable button](06/media/ex1-t6-image6.png)
 
-18.  Enter **Response to bot** for Name, select **String** for Type.
-19.  Click Insert a new step and select **Add an action**.
+18.  名前に **Response to bot** と入力し、Typeに **String** を選択します。
+19.  新しいステップを挿入をクリックして、**Add an action** を選択します。
 
 ![A Screenshot with an arrow pointing to the plus icon at the bottom of the initialize variable pane and a box around the add an action button](06/media/ex1-t6-image7.png)
 
-20.  Click  **+ Insert a new step** again and select **Add an action**.
-21.  Search for get user profile and select **Get user profile (V2)**.
+20.  **+ Insert a new step** をもう一度クリックし、**Add an action** を選択します。
+21.  get user profile andを検索し、**Get user profile (V2)** を選択します。
 
 ![A screenshot with a box around the get user profile V2 button](06/media/ex1-t6-image8.png)
 
-22.  Click on the **User (UPN)** field and select **User ID** from the dynamic content pane.
+22.  **User (UPN)** フィールドをクリックし、動的コンテンツペインから **User ID** を選択します。
 
 ![A screenshot with a box around the user ID box in the user UPN field. There is also an arrow pointing to the user ID option in the dynamic content pane](06/media/ex1-t6-image9.png)
 
-23.  Click **+ Insert a new step** again and select **Add an action**.
-24.  Search for condition and select **Condition**.
-25.  Click on the first **Choose a value** field and select **UserOption** from the dynamic content pane.
+23.  **+ Insert a new step** をクリックし、再度、 **Add an action** を選択します。
+24.  条件を検索し、**Condition** を選択します。
+25.  最初の **Choose a value** フィールドをクリックし、動的コンテンツペインから **UserOption** を選択します。
 
 ![A Screenshot with an arrow pointing to the UserOption in the dynamic content pane. There is also a box around the user option box in the condition pane](06/media/ex1-t6-image10.png)
 
-26.  Select **is equal to** and type **Add to the Upcycle app**.
-27.  Go to the **if no** branch and click **Add an action**.
+26.  **is equal to** を選択し、**Add to the Upcycle app** と入力します。
+27.  ** f no** ブランチに移動し、**Add an action** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add an action button in the if no window](06/media/ex1-t6-image11.png)
 
-28.  Search for add a row and select **Add a row into a table** from Excel Online (Business).
+28.  行の追加を検索し、Excel Online（ビジネス）から **Add a row into a table** を選択します。
 
 ![A screenshot with a box around the add a row into a table button](06/media/ex1-t6-image12.png)
 
-29.  Select **OneDrive for Business** for Location, **OneDrive** for Document Library, **Recycle.xlsx** for File and **PickupTable** for table.
-30.   Click on the **Name** field and select **Display Name** from the dynamic content pane.
+29.  場所には **OneDrive for Business**、ドキュメントライブラリには **OneDrive**、ファイルには **Recycle.xlsx**、テーブルには **PickupTable** を選択します。
+30.  **Name** フィールドをクリックし、動的コンテンツペインから **Display Name** を選択します。
 
 ![A screenshot of a box around the display name box in the name field. There is also an arrow pointing to the dynamic content pane and the display name button](06/media/ex1-t6-image13.png)
 
-31.  Click on the **Email** field and select **Mail** from the dynamic content pane.
-32.  Click on the **Location** field and select the **Location** dynamic content from the Power Virtual Agents step in the dynamic content pane.
+31.  **Emal** フィールドをクリックし、動的コンテンツペインから **Mail** を選択します。
+32.  **Location** フィールドをクリックし、動的コンテンツペインの Power VirtualAgents ステップから **Location** 動的コンテンツを選択します。
 
 ![A screenshot with a box around the power virtual agents part of the dynamic content pane and an arrow pointing to the location button. There is also a box around the location box in the location field](06/media/ex1-t6-image14.png)
 
-33.  Click on the **Description** field and select **Description**  from the dynamic content pane.
-34.  The flow step should now look like the image below. Click **Add an action**
+33.  **Description** フィールドをクリックし、動的コンテンツペインから **Description** を選択します。
+34.  フローステップは次の画像のようになります。 **Add an action** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add an action button](06/media/ex1-t6-image15.png)
 
-35.  Search for set variable and select **Set variable**.
-36.  Select **Response to bot** for name, click Value field and select **ItemName** from the dynamic content pane.
+35.  set variableを検索し、**Set variable** を選択します。
+36.  名前として **Response to bot** を選択し、値フィールドをクリックして、動的コンテンツペインから **ItemName** を選択します。
 
 ![A Screenshot with an arrow pointing to the item name option in the dynamic content pane](06/media/ex1-t6-image16.png)
 
-37. Add the text below after the ItemName.
+37. ItemNameの後に以下のテキストを追加します。
 
 ``` was added to the e-waste pick-up list.```
 
-38. Go to the **If yes** branch and click **Add an action**.
+38. **If yes** ブランチに移動し、**Add an action** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add an action button](06/media/ex1-t6-image17.png)
 
-39. Search for add new row and select **Add a new row** from Microsoft Dataverse.
+39. Add new row を検索し、Microsoft Dataverse から**Add a new row** を選択します。
 
 ![A screenshot with a box around the add a new row microsoft dataverse button](06/media/ex1-t6-image18.png)
 
-40. Select **Gadgets** for the table name.
-41. Click on the Location field and select **Location** from the dynamic content pane.
-42. Click on the Name field and select **ItemName** from the dynamic content pane.
-43. Click **Show advanced options**.
+40. テーブル名として **Gadgets** を選択します。
+41. Location フィールドをクリックし、動的コンテンツペインから **Location** を選択します。
+42. Name フィールドをクリックし、動的コンテンツペインから **ItemName** を選択します。
+43. **Show advanced options** をクリックします。
 
 
 ![A Screenshot with an arrow pointing to the show advanced options button](06/media/ex1-t6-image19.png)
 
-44. Select **Available** for Availability, click on the Description field and select **Description** from the dynamic content pane.
-45. Click **Add an action** after the add a new row step.
-46. Search for set variable and select **Set variable**.
-47. Select **Response to bot** for Name, click on the Value field and select **ItemName** from the dynamic content pane.
-48. Add the text below after the ItemName.
+44. 可用性で **Available** を選択し、Description フィールドをクリックして、動的コンテンツペインから **Description** を選択します。
+45. 新しい行の追加ステップの後で、**Add an action** をクリックします。
+46. set variableを検索し、**Set variable** を選択します。
+47. 名前で **Response to bot** を選択し、値フィールドをクリックして、動的コンテンツペインから **ItemName** を選択します。
+48. ItemNameの後に以下のテキストを追加します。
 
 ``` was added to the Upcycle application.```
 
-48. The two branches of the condition should now look like the image below. Click to expand the **Return value(s) to Power Virtual Agents** step.
+48. 条件の2つのブランチは、次の画像のようになります。 クリックして、**Return value(s) to Power Virtual Agents** ステップを展開します。
 
 ![A Screenshot with an arrow pointing to the return values to power virtual agents box beneath the if yes and if no conditions boxed](06/media/ex1-t6-image20.png)
 
-49. Click **+ Add an output**.
-50. Select **Text**.
-51. Enter **Response**, click on the value field, and select **Response to bot** from the dynamic content pane.
+49. **+ Add an output** をクリックします。
+50. **Text** を選択します。
+51. **Response** と入力し、値フィールドをクリックして、動的コンテンツペインから **Response to bot** を選択します。
 
 ![A Screenshot with an arrow pointing to the response to bot option in the dynamic content pane under variables](06/media/ex1-t6-image21.png)
 
-52. Click **Save** to save the flow.
-53. Click on the **<-** back button next to the flow name.
+52. **Save** をクリックしてフローを保存します。 
+53. フロー名の横にある **<-** 戻るボタンをクリックします。
 
 ![Back to PVA button - screenshot](06/media/ex1-t6-image22.png)
 
-54. You should now be back to the bot authoring canvas.
-55. Do not navigate away from this page.
+54. これで、ボットオーサリングキャンバスに戻るはずです。
+55. このページから離れないでください。
 
 #### Task 7 - Call flow 
 In this task, you will call the flow as an action from the Power Virtual Agents bot.
