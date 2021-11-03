@@ -11,385 +11,385 @@ lab:
 >
 
 
-# LAB 05: Power BI
+# ラボ05：Power BI
 
-In this lab, you will build a Power BI dashboard that visualizes data about problems reported by company employees.
+このラボでは、会社の従業員から報告された問題に関するデータを視覚化するPowerBIダッシュボードを作成します。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - How to connect to Dataverse 
-  - How to refine the data model and prepare it for reporting
-  - How to create a Power BI visualization 
-  - How to embed a Power BI report in Microsoft Teams
+  - Dataverseに接続する方法
+  - データモデルを改良し、レポート用に準備する方法
+  - PowerBIビジュアライゼーションを作成する方法
+  - PowerBIレポートをMicrosoft Teamsに埋め込む方法
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-We will follow the below steps to design and create the Power BI dashboard:
+以下の手順に従って、PowerBIダッシュボードを設計および作成します。
 
--   Connect to tables in Microsoft Dataverse 
--   Transform the data to include user-friendly descriptions for the related Rows (lookups)
--    Create and publish a report with various visualizations of the information about problem reports
--    User natural language query to build additional visualizations
--    Build mobile view
--    Embed the Company 311 Power BI report to Microsoft Teams
+-   Microsoft Dataverseのテーブルに接続します
+-   データを変換して、関連する行（ルックアップ）のわかりやすい説明を含めます
+-    問題レポートに関する情報をさまざまに視覚化したレポートを作成して公開します
+-    追加の視覚化を構築するためのユーザー自然言語クエリ
+-    モバイルビューを構築する
+-    Company 311 PowerBIレポートをMicrosoft Teamsに埋め込みます
 
-## Prerequisites
+## 前提条件
 
-* Must have completed **Lab 02.1: Data model and model-driven app**
-* Permissions to install programs on your computer (required for Power BI Desktop installation)
+* **ラボ02.1：データモデルとモデル駆動型アプリ** を完了している必要があります
+* コンピューターにプログラムをインストールするためのアクセス許可（Power BI Desktopのインストールに必要）
 
-## Things to consider before you begin
+## 始める前に考慮すべきこと
 
--   Who is the target audience of the report?
--   How will the audience consume the report? Typical device? Location?
--   Do you have sufficient data to visualize?
--   What are the possible characteristics you can use to analyze data about the visits?
+-   レポートの対象読者は誰ですか？
+-   聴衆はどのようにレポートを消費しますか？ 典型的なデバイス？ 位置？
+-   視覚化するのに十分なデータがありますか？
+-   訪問に関するデータを分析するために使用できる可能性のある特性は何ですか？
 
-## Detailed steps
+## 詳細な手順
 
-### Exercise 1: Prepare environment & data  
+### 演習1：環境とデータを準備する  
 
-**Objective:** In this exercise, you will install and configure Power BI Desktop and configure a connection to Microsoft Dataverse. 
-
-> [!IMPORTANT]
-> If you do not have required permissions to install desktop applications or experience difficulties in configuring Power BI Desktop and connecting it to the data, follow **Addendum: Import sample data** and then continue on **Exercise 2** but using Power BI service instead of Power BI Desktop.
-
-#### Task 1: Configure Power BI Desktop
-
-1. If you do not have Power BI Desktop installed, navigate to [https://aka.ms/pbidesktopstore](https://aka.ms/pbidesktopstore) to download and install Power BI app.
+**目的：** この演習では、Power BI Desktopをインストールして構成し、Microsoft Dataverseへの接続を構成します。
 
 > [!IMPORTANT]
-> If you experience issues installing Power BI Desktop using Microsoft Store, try standalone installer that can be downloaded from [https://aka.ms/pbiSingleInstaller](https://aka.ms/pbiSingleInstaller).
+> デスクトップアプリケーションをインストールするために必要なアクセス許可がない場合、またはPower BI Desktopの構成とデータへの接続で問題が発生した場合は、**補遺：サンプルデータのインポート**を実行してから**演習2 **に進みますが、PowerBIを使用します Power BIDesktopの代わりにサービス。
 
-2. Open Power BI Desktop.
-2. If you signed in into Power BI Desktop previously, select **File | Sign out** 
-3. Sign in if prompted or select **File | Sign in** to sign in.  
-4. If you're signing in for the first time you may receive the following prompt
+#### タスク1：PowerBIデスクトップを構成する
+
+1. Power BI Desktopがインストールされていない場合は、[https://aka.ms/pbidesktopstore](https://aka.ms/pbidesktopstore) に移動して、Power BI アプリをダウンロードしてインストールします。
+
+> [!IMPORTANT]
+> Microsoft Storeを使用したPowerBI Desktopのインストールで問題が発生した場合は、[https://aka.ms/pbiSingleInstaller](https://aka.ms/pbiSingleInstaller) からダウンロードできるスタンドアロンインストールを試してください。
+
+2. Power BIデスクトップを開きます。
+3. 以前にPowerBI Desktopにサインインしたことがある場合は、**File | Sign out** を選択します。  
+4. プロンプトが表示されたらサインインするか、**File | Sign in** してサインインします。 
+5. 初めてサインインする場合は、次のプロンプトが表示される場合があります。
 
 ![A screenshot of a prompt to sign up for a Power Bi account if it is your first time](05/media/image-6-2.png)
 
-5. Select **Sign up for Power BI** and follow the prompts to complete the sign up 
+6. **Sign up for Power BI** を選択し、プロンプトに従ってサインアップを完了します。 
 
-#### Task 2: Prepare Data
+#### タスク2：データを準備する
 
-1.  Find out your organization URL
+1.  組織URLを確認する
 
-    * Navigate to [Power Platform Admin Center](https://aka.ms/ppac).
-    * In the left navigation page, select Environments, and then click on the target environment.
-    * Right mouse click **Environment URL** on the **Details** panel, then select **Copy link**.
+    * [Power Platform Admin Center](https://aka.ms/ppac) に移動します。 
+    * 左側のナビゲーションページで、環境を選択し、ターゲット環境をクリックします。
+    * **Details** パネルで **Environment URL** を右クリックし、**Copy link** を選択します。
 
 ![A Screenshot with an arrow pointing to the environment URL and another arrow pointing to the copy link button](05/media/image-6-1.png)
 
-2. Switch to Power BI desktop.
-3. Select **Get data | More...**
+2. PowerBIデスクトップに切り替えます。
+3. **Get data | More...** を選択します。
 
 ![A Screenshot with an arrow pointing to the get data button and another arrow pointing to the more button at the bottom of the get data drop down](05/media/image-6-3.png)
 
-4. Select **Power Platform**, then select **Dataverse** and press **Connect**.
+4. **Power Platform** を選択し、次に **Dataverse** を選択して、**Connect** を押します。
 
 ![A screenshot of the dataverse selected in the power platform window](05/media/image-6-4.png)
 
-5. Paste the environment URL you copied earlier without the https://, select **DirectQuery**, and click **OK**.
+5. 以前にコピーした環境URLをhttps：//なしで貼り付け、**DirectQuery** を選択して、**OK** をクリックします。
 
 ![A screenshot of environment URL pasted into the environment domain field](05/media/image-6-5.png)
 
-6. The connection details dialog will open up. If you are not signed in, click **Sign in** and follow the prompts to sign in. Press **Connect**. 
+6. 接続の詳細ダイアログが開きます。 サインインしていない場合は、**Sign in** をクリックし、プロンプトに従ってサインインします。**Connect** を押します。
 
-7. Expand environment node, select **lh_Building**, **lh_Department**, **lh_ProblemReport** tables and select **Load**. Wait until the load is complete.
+7. 環境ノードを展開し、**lh_Building**、**lh_Department**、**lh_ProblemReport** テーブルを選択して、**Load** を選択します。
 
 ![A Screenshot with an arrow pointing to the load button](05/media/image-6-7.png)
 
-8. Click **Model** icon on the left vertical toolbar.
+8. 左側の垂直ツールバーの **Model* アイコンをクリックします。
 
 ![A Screenshot with an arrow pointing to the model icon on the left vertical toolbar](05/media/image-6-8.png)
 
-9. Power BI should detect the relationship between the table. The relationship should look like the image below.
+9. Power BIは、テーブル間の関係を検出する必要があります。 関係は下の画像のようになります。
 
 ![A screenshot of the relationship between the table. There should be three main panels, Ih_building, Ih_problemreport, and Ih_department](05/media/image-6-9.png)
 
-10.  Select **Report** icon on the left toolbar.
+10.  左側のツールバーの **Report** アイコンを選択します。
 
 ![A Screenshot with an arrow pointing to the report icon on the left toolbar](05/media/image-6-10.png)
 
-11. Expand **lh_ProblemReports** node in the **Fields** panel.
+11. **Fields** パネルで **lh_ProblemReports** ノードを展開します。
 
-12. Click on the **...** More options button of the **lh_ProblemReports** table.
+12. **lh_ProblemReports** テーブルの **...** その他のオプションボタンをクリックします。
 
 ![A Screenshot with an arrow pointing to the ellipsis for more options](05/media/image-6-11.png)
 
-13. Select **New column**.
+13. **New column** を選択します。
 
 ![A screenshot of a border around the new column button](05/media/image-6-12.png)
 
-14. Complete the formula as below and press ENTER or click checkmark button. That will add a new column with the building name into the problem report data.
+14. 以下の式を完成させ、ENTERを押すか、チェックマークボタンをクリックします。 これにより、建物名の新しい列が問題レポートデータに追加されます。
 
 ```Building = RELATED(lh_Building[lh_name])```
 
 ![A Screenshot with an arrow pointing to the checkmark icon](05/media/image-6-13.png)
 
-15. Repeat the three previous steps on **lh_problemreports** node to add a column **Department** with the below formula.
+15. **lh_problemreports** ノードで前の3つの手順を繰り返して、次の式で列 **Department** を追加します。
 
 ```Department = RELATED(lh_Department[lh_name])```
 
-16.  Click ... next on the **lh_problemreportid** column of the **lh_problemreport** table and select **Rename**. Enter **Problem Report** as the column name.
-17.  Click ... next on the **statuscodename** column and select **Rename**. Enter **Status** as the column name.
-18.  Save work in progress by pressing **File &#124; Save** and enter **Problem management** as a filename.
+16.  **lh_problemreport** テーブルの **lh_problemreportid** 列で ... をクリックし、**Rename** を選択します。 列名として **Problem Report** を入力します。
+17.  **statuscodename** 列で ... をクリックし、**Rename** を選択します。 列名として **Status** を入力します。
+18.  **File &#124; Save** を押して、進行中の作業を保存します。 **Save** し、ファイル名として **Problem management** を入力します。
 
-### Exercise 2: Create Power BI Report 
+### 演習2：PowerBIレポートを作成する
 
-**Objective:** In this exercise, you will create a Power BI report based on data from Microsoft Dataverse tables.
+**目的：** この演習では、MicrosoftDataverseテーブルのデータに基づいてPowerBIレポートを作成します。
 
-#### Task 1: Create Chart and Time Visualizations
+#### タスク1：チャートと時間の視覚化を作成する
 
-1. Click on **Pie chart** icon in the **Visualizations** panel to insert the chart.
+1. **Visualizations** パネルの **Pie chart** アイコンをクリックして、グラフを挿入します。
 
 ![A Screenshot with an arrow pointing to the pie chart icon](05/media/image-6-14.png)
 
-2. Drag **Building** Column and drop it into **Legend** target box.
-3. Drag **Problem Report** Column and drop it into **Values** target box.
+2. **Building** 列をドラッグし、**Legend** ターゲットボックスにドロップします。
+3. **Problem Report** 列をドラッグして、**Values** ターゲットボックスにドロップします。
 
 ![A Screenshot with an arrow pointing to the direction the problem report needs to be dragged from the fields column into the values field](05/media/image-6-15.png)
 
-4. Resize the pie chart using corner handles so that all chart components are visible. Your report should now look like this:
+4. すべてのグラフコンポーネントが表示されるように、コーナーハンドルを使用して円グラフのサイズを変更します。 レポートは次のようになります。
 
 ![A screenshot with a border around the legend next to pie chart after resizing to make all your components visible](05/media/image-6-16.png)
 
-5. Click **New visual** on the Power BI ribbon then select **stacked column** chart in **Visualizations** pane. 
+5. Power BIリボンの **New visual** をクリックし、**Visualizations** ペインで **stacked column** グラフを選択します。 
 
 ![A Screenshot with an arrow pointing to the stacked column chart icon](05/media/image-6-17.png)
 
-6. Drag **Problem Report** Column and drop it into **Values** target box.
-7. Drag **Status** Column and drop it into **Axis** target box.
-8. Resize the chart as required using the corner handles.
-9. Test the report interactivity:
+6. **Problem Report** 列をドラッグして、**Values** ターゲットボックスにドロップします。
+7. **Status** 列をドラッグして **Axis** ターゲットボックスにドロップします。
+8. コーナーハンドルを使用して、必要に応じてグラフのサイズを変更します。
+9. レポートの双方向性をテストします:
 
-    * Select various building slices on the pie chart and observe changes on the stacked column chart.
-    * Select various bars on the stacked column chart and observe changes on the pie report.
+    * 円グラフでさまざまな建物のスライスを選択し、積み上げ縦棒グラフで変化を観察します。
+    * 積み上げ縦棒グラフでさまざまな棒を選択し、円グラフの変化を観察します。
 
 ![A Screenshot with an arrow pointing to the pie chart to observe changed to the data after changing data on the stacked column chart](05/media/image-6-18.png)
 
-10. Select the **Insert**, and click **Q&A**.
+10. **Insert** を選択し、**Q＆A** をクリックします。
 
 ![A Screenshot with an arrow pointing to the Q&A button](05/media/image-6-addbutton.png)
 
-11.  Select **Turn on Q&A** and wait for the Q&A to get ready.
-12.  Type **bar count of problem reports by building** and hit enter. You should see a bar chart.
+11.  **Turn on Q&A** を選択し、Q＆Aの準備が整うのを待ちます。
+12.  **bar count of problem reports by building** と入力し、Enterキーを押します。 棒グラフが表示されます。
 
 ![A screenshot of the relevant text typed into the Q&A field](05/media/image-6-QAchart.png)
 
-13.  The dashboard now has Q&A enabled. Click on the **...** More options button of the Q&A visual and click **Remove**.
+13.  ダッシュボードでQ＆Aが有効になりました。 Q＆Aビジュアルの **...** その他のオプションボタンをクリックし、**Remove** をクリックします。
 
 ![A Screenshot with an arrow pointing to the ellipsis icon for more options and a border around the remove button](05/media/image-6-removevisual.png)
 
-14.  Save work in progress by selecting **File | Save**.
+14.  **File | Save** を選択して、進行中の作業を保存します。
 
 
-### Exercise 3: Create Power BI Dashboard
+### 演習3：PowerBIダッシュボードを作成する
 
-#### Task 1: Publish Power BI Report
+#### タスク1：PowerBIレポートを公開する
 
-1. Navigate to [Power BI Service](https://app.powerbi.com)
-2. Select **Workspaces** and click **Create a workspace**.
+1. [Power BI Service](https://app.powerbi.com) に移動します。
+2. **Workspaces** を選択し、**Create a workspace** をクリックします。
 
 ![A Screenshot with a box around the workspaces button and an arrow pointing to the create a workspace button](05/media/image-6-createworkspace.png)
 
-3. Enter **311 Workspace** for Workspace name and click **Save**.
-4. Go back to the Power BI desktop application, select the **Home** tab, and click **Publish** .
+3. ワークスペース名に **311 Workspace** と入力し、**Save** をクリックします。
+4. Power BIデスクトップアプリケーションに戻り、**Home** タブを選択して、**Publish** をクリックします。
 
 ![A Screenshot with an arrow pointing to the publish button](05/media/image-6-19.png)
 
-5. Select **311 Workspace** as the destination, then click **Select**.
+5. 宛先として**311 Workspace** を選択し、**Select** をクリックします。
 
-6. Wait until publishing is complete and click **Open \<name of your report\>.pbix in Power BI**.
+6. 公開が完了するまで待ち、**Open \<name of your report\>.pbix in Power BI** をクリックします。
 
 ![A Screenshot with an arrow pointing to the button to open your report](05/media/image-6-20.png)
 
-This will open the published report in the browser.
+これにより、公開されたレポートがブラウザで開きます。
 
 > [!NOTE]
-> If you are getting an error on PowerBI Service with message "the data source is missing credentials and cannot be accessed", follow the below steps:
+> PowerBIサービスで「データソースに資格情報がないためアクセスできません」というエラーが表示される場合は、次の手順に従ってください:
 >
-> 1. Select 311 Workspace and select Problem Management dataset.
-> 2. Expand Refresh dropdown and select Schedule refresh.
-> 3. Expand Data Source credentials section and select Edit Credentials.
-> 4. Select OAuth2 for Authentication Method and Organizational for Privacy level setting.
-> 5. Select Sign In. This will resolve the issue for report and it should display properly on Power BI Service.
+> 1. 311ワークスペースを選択し、問題管理データセットを選択します。
+> 2. 更新ドロップダウンを展開し、更新のスケジュールを選択します。
+> 3. データソースの資格情報セクションを展開し、資格情報の編集を選択します。
+> 4. 認証方法にはOAuth2を選択し、プライバシーレベル設定には組織を選択します。
+> 5. サインインを選択します。 これにより、レポートの問題が解決され、PowerBIサービスに正しく表示されるはずです。
 
-#### Task 2: Create Power BI Dashboard
+#### タスク2：PowerBIダッシュボードを作成する
 
-1. Expand **311 Workspace**.
-2. Select the **Problem management** report under **Reports** heading.
+1. **311 Workspace** を展開します。
+2. **Reports** の見出しの下にある **Problem management** レポートを選択します。
 
 ![A screenshot with a border around the problem management option under reports](05/media/image-6-21.png)
 
-3. Select **Pin to a dashboard** on the menu. Depending on the layout you may need to press **...** to show additional menu items.
+3. メニューで **Pin to a dashboard** を選択します。 レイアウトによっては、追加のメニュー項目を表示するために**...** を押す必要がある場合があります。
 
 ![A Screenshot with an arrow pointing to the ellipsis icon for more options and a border around the pin to dashboard option](05/media/image-6-22.png)
 
-4. Select **New dashboard** on **Pin to dashboard** prompt.
-5. Enter **Problem Management Dashboard** as a **Dashboard name**, select **Pin live**.
+4. **Pin to dashboard** プロンプトで **New dashboard** を選択します。
+5. **Dashboard name** として**Problem Management Dashboard** を入力し、**Pin live** を選択します。
 
 ![A screenshot of the pin to dashboard prompt and the dashboard name changed](05/media/image-6-23.png)
 
-6. Select **311 Workspace** node, select **Problem Management Dashboard**.
-7. Test interactivity of the pie and bar charts that are displayed.
+6. **311 Workspace** ノードを選択し、**Problem Management Dashboard** を選択します。
+7. 表示される円グラフと棒グラフの対話性をテストします。
 
-#### Task 3: Add Visualizations Using Natural Language
+#### タスク3：自然言語を使用して視覚化を追加する
 
-1. Select **Ask a question about your data** on top of the dashboard.
+1. ダッシュボードの上部にある **Ask a question about your data** を選択します。
 
 ![A Screenshot with an arrow pointing to the ask a question about your data button at the top of your dashboard](05/media/image-6-24.png)
 
-2. Enter **funnel count of problem reports by status** in Q&A area. The funnel chart will be displayed.
-3. Select **Pin visual**.
+2. Q＆Aエリアに **funnel count of problem reports by status** を入力します。 ファンネルチャートが表示されます。
+3. **Pin visual** を選択します。
 
 ![A Screenshot with an arrow pointing to the pin visual button](05/media/image-6-25.png)
 
-4. Select **Existing dashboard**, select **Problem Management dashboard**, select **Pin**.
+4. **Existing dashboard** を選択し、**Problem Management dashboard** を選択し、**Pin** を選択します。
 
-#### Task 4: Build Mobile Phone View
+#### タスク4：携帯電話ビューを作成する
 
-1. Select the **Problem Management dashboard** from **Dashboards** area.
-2. Click **Edit** and then select **Mobile view** from the drop down box.
-3. Rearrange tiles as desired.
+1. **Dashboards** 領域から **Problem Management dashboard** を選択します。
+2. **Edit** をクリックし、ドロップダウンボックスから **Mobile view** を選択します。
+3. 必要に応じてタイルを再配置します。
 
 ![A photo of the mobile phone layout with tiles rearrange to display data](05/media/image-6-26.png)
 
-4. Select your report under **311 Workspace | Reports**
-5. Select **File** and then select **Generate QR Code** from the drop down box.
+4. **311 Workspace | Reports** でレポートを選択します。
+5. **File** を選択し、ドロップダウンボックスから **Generate QR Code** を選択します。
 
 ![A Screenshot with an arrow pointing to the file button and a border around the generate a QR code button](05/media/image-6-27.png)
 
-6. If you have a mobile device, scan the code using a QR scanner app available on both iOS and Android platforms.
+6. モバイルデバイスをお持ちの場合は、iOSプラットフォームとAndroidプラットフォームの両方で利用可能なQRスキャナーアプリを使用してコードをスキャンします。
 
 > [!NOTE]
-> To access the dashboard and report you will have to sign in on the phone as the same user.
+> ダッシュボードとレポートにアクセスするには、同じユーザーとして電話にサインインする必要があります。
 
-7. Navigate and explore reports and dashboards on a mobile device. 
+7. モバイルデバイスでレポートとダッシュボードをナビゲートして探索します。 
 
-### Exercise 4: Embed Power BI report
+### 演習4：Power BIレポートを埋め込む
 
-In this exercise, you will add the Company 311 Power BI report to Microsoft Teams and to the Company 311 Admin Model-driven application as a way for management and staff to be able to view the reports from directly within Teams and the Model-driven application. 
+この演習では、管理者とスタッフがTeamsとモデル駆動型アプリケーション内から直接レポートを表示できるようにする方法として、Company 311 PowerBIレポートをMicrosoftTeamsとCompany311Adminモデル駆動型アプリケーションに追加します。 
 
-#### Task 1: Setup Company 311 Team
+#### タスク1：Company 311 チームをセットアップする
 
-In this task you will setup a Microsoft Teams team for the Lamna Healthcare Company, if you have not done so previously.
+このタスクでは、Lamna HealthcareCompanyのMicrosoftTeamsチームをセットアップします（これまでにセットアップしたことがない場合）。
 
-1.  Navigate to [Microsoft Teams](https://teams.microsoft.com) and sign in with the credentials you have been using previously.
+1.  [Microsoft Teams](https://teams.microsoft.com) に移動し、以前に使用した資格情報を使用してサインインします。 
 
-2.  Select **Use the web app instead** on the welcome screen.
+2.  ようこそ画面で **Use the web app instead** を選択します。
 
 ![A screenshot of the Microsoft Teams landing page and a border around the use the web app instead button](05/media/image-6-teams.png)
 
-3.  When the Microsoft Teams window opens, dismiss the welcome messages.
+3.  Microsoft Teamsウィンドウが開いたら、ウェルカムメッセージを閉じます。
 
-4.  On the bottom left corner, choose **Join or create a team**.
+4.  左下隅で、**Join or create a team** を選択します。
 
-5.  Select **Create a team**.
+5.  **Create a team** を選択します。
 
 ![A screenshot with a border around the join or create team button at the bottom of the window and another border around the create a team button](05/media/image-6-createteam.png)
 
-6.  Press **From scratch**.
+6.  **From scratch** を押します。
 
-7.  Select **Public**.
+7.  **Public** を選択します。
 
-8.  For the Team name choose **Company 311** and select **Create**.
+8.  チーム名として **Company 311** を選択し、**Create** を選択します。
 
-9.  Select **Skip** adding members to Company 311.
+9.  Company 311 にメンバーを追加する **Skip** を選択します。
 
 
-#### Task 2: Embed Power BI report to Teams
+#### タスク2：PowerBIレポートをチームに埋め込む
 
-1.  Navigate to [Microsoft Teams](https://teams.microsoft.com).
+1.  [Microsoft Teams](https://teams.microsoft.com) に移動します。 
 
-2.  Select the **General** channel of the **Company 311** team.
+2.  **Company 311** チームの **General** チャネルを選択します。
 
-3.  On the top of the page, press the **+** symbol to add a new tab.
+3.  ページの上部にある **+** 記号を押して、新しいタブを追加します。
 
 ![A screenshot of the general channel of the company 311 team](05/media/image-6-addpowerbitab.png)
 
-4.  Search for **power** and select **Power BI** from the results.
+4.  **power** を検索し、結果から **Power BI** を選択します。
 
-5.  Expand **311 Workspace** and select the report you created earlier in this lab and click **Save**.
+5.  **311 Workspace** を展開し、このラボで以前に作成したレポートを選択して、**Save** をクリックします。
 
 ![A screenshot of a prompt to which appears once you select Power BI](05/media/image-6-choosepowerbireport.png)
 
-6.  You should now see your Power BI report in a tab in Microsoft Teams
+6.  これで、MicrosoftTeamsのタブにPowerBIレポートが表示されます。
 
 ![A screenshot of your Power BI report in a tab in Microsoft Teams](05/media/image-6-powerbi.png)
 
 
-#### Task 3: Embed Power BI report to Model-driven app
+#### タスク3：PowerBIレポートをモデル駆動型アプリに埋め込む
 
-1. Navigate to [Power BI](https://app.powerbi.com/home).
-2. Click to select **Datasets**.
+1. [Power BI](https://app.powerbi.com/home) に移動します。 
+2. クリックして **Datasets** を選択します。
 
 ![A screenshot of a border around the datasets button](05/media/image-6-datasets.png)
 
-3. Hover over the dataset you created, click on the **...** More options button, and select **Settings**.
+3. 作成したデータセットにカーソルを合わせ、**...** その他のオプション ボタンをクリックして、**Settings** を選択します。
 
 ![A Screenshot with an arrow pointing to the ellipses button for more options and a border around the settings button](05/media/image-6-datasetsettings.png)
 
-4. Click **Edit credentials**  located in the Data source credentials section.
-5. Select **OAuth2** for Authentication method, select **Organizational** for Privacy level setting, and click **Sign in**.
+4. データソースの資格情報セクションにある **Edit credentials** をクリックします。
+5. 認証方法として **OAuth2** を選択し、プライバシーレベル設定として **Organizational** を選択して、**Sign in** をクリックします。
 
 ![A screenshot of the edit credentials window with all relevant text in each field](05/media/image-6-datasetconfiguration.png)
 
-6. Provide your credentials.
-7. Navigate to [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in your practice environment.
-8. Select **Solutions** and click to open the **Company 311** solution.
-9. Click **+ New** and select **Dashboard | Power BI embedded**.
+6. クレデンシャルを入力します。
+7. [Power Apps maker portal](https://make.powerapps.com/) に移動し、練習環境にいることを確認します。 
+8. **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
+9. **+ New** をクリックして、**Dashboard | Power BI embedded** を選択します。
 
 ![A Screenshot with an arrow pointing to the new button, dashboard selected, and a border around the Power Bi embedded option](05/media/image-6-newpowerbiembeddeddash.png)
 
-10.  Enter **Problem management** for Display name, select **Power BI report** for type, select **311 Workspace** for Power BI workspace, select **Problem management** for Power BI report and click **Save**.
+10.  表示名に **Problem management** を入力し、タイプに **Power BI report** を選択し、PowerBIワークスペースに **311 Workspace** を選択し、PowerBIレポートに **Problem management** を選択して **Save** をクリックします。
 
 ![A screenshot of the New Power BI embedded data window with all relevant text in each field](05/media/image-6-powerbidashprop.png)
 
-11.  Click **Publish all customizations** and wait for the publishing to complete.
-12.  While still in the Company 311 solution, click to open the the **Company 311 Admin** Model-driven application.
+11.  **Publish all customizations** をクリックして、公開が完了するのを待ちます。
+12.  Company 311ソリューションを使用しているときに、クリックして **Company 311 Admin** モデル駆動型アプリケーションを開きます。
 
 ![A Screenshot with an arrow pointing to the company 311 admin option with another border around model-driven application in the type column in line with the correct company 311 admin option](05/media/image-6-editmodeldrivenapp.png)
 
-13.  Click on the **Edit** icon of the Sitemap.
+13.  サイトマップの **Edit** アイコンをクリックします。
 
 ![A Screenshot with an arrow pointing to the pencil icon to edit the sitemap](05/media/image-6-editsitemap.png)
 
-14.  Click **+ Add** and select **Group**.
+14.  **+ Add** をクリックし、**Group** を選択します。
 
 ![A Screenshot with an arrow pointing to the add button and a border around the group button](05/media/image-6-eddgroup.png)
 
-16.  Go to the **Properties** pane and enter **Reports** for Title.
-17.  Select the **Reports** group you just created, click **+ Add** and select **Subarea**.
+16.  **Properties** ペインに移動し、タイトルに **Report** と入力します。
+17.  作成した **Reports** グループを選択し、**+ Add** をクリックして、**Subaea** を選択します。
 
 ![A Screenshot with an arrow pointing to the add button and a border around the subarea button](05/media/image-6-eddsubarea.png)
 
-18.   Go to the **Properties** pane, select **Dashboard** for Type, select **Problem management** for Default dashboard, and enter **Problem report** for Title.
+18.   **Properties** ペインに移動し、タイプに **Dashboard** を選択し、デフォルトダッシュボードに **Problem management** を選択し、タイトルに **Problem report** と入力します。
 
 ![A screenshot of the subarea window with the relevant option selected in each field](05/media/image-6-subareaprop.png)
 
-19.  Drag the new **Reports** group and drop it before the **Problems** group.
-20.  The groups in the **Manage Problems** area should now look like the image below.
+19.  新しい **Reports** グループをドラッグし、**Problems** グループの前にドロップします。
+20.  **Manage Problems** 領域のグループは次の画像のようになります。
 
 ![A screenshot of the manage problems area with reports and problems being the two items in this area](05/media/image-6-areagroups.png)
 
-21.  Click **Save and Close** to close the sitemap editor.
-22.  Click **Save and Close** again to close the app designer.
-23.  Click **Done**.
-24.  Click **Publish all customizations** and wait for the publishing to complete.
-25.  Select **Apps** and click to launch the **Company 311 Admin** Model-driven application.
-26.  The report should load.
+21.  **Save and Close** をクリックして、サイトマップエディタを閉じます。
+22.  もう一度 **Save and Close** をクリックして、アプリデザイナーを閉じます。
+23.  **Done** をクリックします。
+24.  **Publish all customizations** をクリックして、公開が完了するのを待ちます。
+25.  **Apps** を選択し、クリックして **Company 311 Admin** モデル駆動型アプリケーションを起動します。
+26.  レポートが読み込まれるはずです。
 
 ![A screenshot of your problem management report](05/media/image-6-PowerBIinModel.png)
 
-27.  Interact with report and make sure it behaves as expected.
+27.  レポートを操作して、期待どおりに動作することを確認します。
 
-### Exercise 5: Power BI embedded canvas
+### 演習5：Power BI 埋め込みキャンバス
 
-In this exercise, you will add embedded canvas application to Power BI as a visual.
+この演習では、埋め込みキャンバスアプリケーションをビジュアルとしてPower BIに追加します。
 
 
-#### Task 1: Add canvas
+#### タスク1：キャンバスを追加する
 
 1. Navigate to [Power BI](https://app.powerbi.com).
 2. Select **Workspaces** and then select to open **311 Workspace**.
