@@ -119,75 +119,75 @@ lab:
 
 26. **[ENTER]** キーを押します。
 
-27. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click **OK**. This expression will show the label of the choice instead of the value.
+27. **Current Status:** と入力し、動的ペインに移動して、**Expression** タブを選択し、下に式を貼り付けて、**OK** をクリックします。 この式は、値の代わりに選択したラベルを表示します。
 
 `triggerOutputs()?['body/_statuscode_label']`
 
 ![A Screenshot with an arrow pointing to the ok button under the expression tab with the relevant expression pasted into it](04/media/image6.png)
 
-28. Click on the **… Menu** button of the new step and select **Rename**.
+28. 新しいステップの **… Menu** ボタンをクリックし、**Rename** を選択します。
 
-29. Rename the **Notify problem creator**.
+29. **Notify problem creator** の名前を変更します。
 
-30. The step should now look like the image below.
+30. ステップは次の画像のようになります。
 
 ![A screenshot of the modify problem creator window being to primary email, the subject being problem report status change notification, and the body being "The status of the problem you reported has changed" with the problem title and current status as trigger outputs below that](04/media/image7.png)
 
-31. Scroll up change the flow name from Untitled to **Notify Problem Creator.**
+31. 上にスクロールして、フロー名を **Notify Problem Creator** に変更します。
 
-32. Click **Save** and wait for the flow to be saved.
+32. **Save** をクリックして、フローが保存されるのを待ちます。
 
 ![A screenshot of the current flow](04/media/image8.png)
 
-33. **Close** the flow designer browser window or tab.
+33. フローデザイナのブラウザウィンドウまたはタブを **閉じる**。
 
-34. Click **Done** on the popup window.
+34. ポップアップウィンドウで **Done** をクリックします。
 
-#### Task 2: Test the flow
+#### タスク2：フローをテストする
 
-In this task, you will test the notify problem creator flow.
+このタスクでは、問題の作成者に通知するフローをテストします。
 
-1.  Make sure you are still on the [Power Apps maker portal](https://make.powerapps.com/) site and you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) サイトにアクセスし、正しい環境にいることを確認してください。 
 
-2.  Select **Apps**, and then select the **Company 311 Admin** Model-driven application. Click **Play**.
+2.  **Apps** を選択してから、**Company 311 Admin** モデル駆動型アプリケーションを選択します。 **Play** をクリックします。
 
-3.  Click **+ New**.
+3.  **+ New** をクリックします。
 
-4.  Enter **Flow test** for **Title**, select **London Paddington** for **building**, enter **This is a flow test** for **Details**, and click **Save**.
+4.  **Title** に **Flow test** を入力し、**Building** に **London Paddington** を選択し、**Details** に **This is a flow test** を入力して、**Save** をクリックします。
 
-5.  Scroll down and change the **Status Reason** value to **In Progress** and save again.
+5.  下にスクロールして、**Status Reason** の値を **In Progress** に変更し、もう一度保存します。
 
-6.  Close the application browser window or tab.
+6.  アプリケーションブラウザのウィンドウまたはタブを閉じます。
 
-7.  You should now be back to the [Power Apps maker portal](https://make.powerapps.com/)
+7.  これで、[Power Apps maker portal](https://make.powerapps.com/) に戻るはずです。 
 
-8.  Select **Solutions** and click to open the **Company 311** solution.
+8.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-9.  Locate and click to open the **Notify Problem Creator** flow you created.
+9.  作成した **Notify Problem Creator** フローを見つけてクリックして開きます。
 
-10. You should see a succeeded flow run in the **28-day run history section**. Click to open the run.
+10. **28-day run history section** に成功したフロー実行が表示されます。 クリックして実行を開きます。
 
 ![A Screenshot with an arrow pointing to the start date of the 28-day run history section](04/media/image9.png)
 
-11. All the flow steps should have a **green** check mark.
+11. すべてのフローステップには、**green** のチェックマークが付いている必要があります。
 
-12. Click **App launcher** and select **Outlook**.
+12. **App launcher** をクリックし、**Outlook** を選択します。
 
 ![A Screenshot with an arrow pointing to the app launcher and a border around outlook](04/media/image10.png)
 
-13. You should get an email from the flow. Click to open the email.
+13. フローからメールが届くはずです。 クリックしてメールを開きます。
 
-14. The email should look like the image below.
+14. メールは下の画像のようになります。
 
 ![A screenshot of the email you should receive with the status of the problem, problem title, and its current status](04/media/image11.png)
 
-### Exercise 2: Build escalation flow
+### 演習2：エスカレーションフローを作成する
 
-In this exercise, you create add two new Columns to the problem report Table and create escalation flow.
+この演習では、問題レポートテーブルに2つの新しい列を追加し、エスカレーションフローを作成します。
 
-#### Task 1: Add Columns
+#### タスク1：列を追加する
 
-In this task, you add a new Columns to the problem report Table.
+このタスクでは、問題レポートテーブルに新しい列を追加します。
 
 1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
 
