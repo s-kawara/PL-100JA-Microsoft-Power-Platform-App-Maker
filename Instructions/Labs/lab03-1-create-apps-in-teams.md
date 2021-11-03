@@ -192,238 +192,238 @@ You are asked to create an application where users can post devices they no long
 
 ![A Screenshot with an arrow pointing to the lock icon under the advanced tab](03-1/media/ex2-t4-image5_2.png)
 
-11.   Search for display and change the **DisplayMode** value to **DisplayMode.View**.
+11.   displayを検索し、**DisplayMode** の値を **DisplayMode.View** に変更します。
 
 ![A screenshot with a border around the display mode field](03-1/media/ex2-t4-image5_3.png)
 
-12.  Select the **Browse gallery**.
-13. Select **Items** form the formula bar and replace the value with formula below. This formula will filter the gadgets to show only the available gadgets
+12.  **Browse gallery** を選択します。
+13. 数式バーから **Items** を選択し、値を以下の数式に置き換えます。 この数式は、ガジェットをフィルタリングして、使用可能なガジェットのみを表示します。
 
     ```Filter(Gadgets, Availability <> 'Availability (Gadgets)'.'Picked up')```
 
 ![Filter data - screenshot](03-1/media/ex2-t4-image6.png)
 
-14.  Select the **Image** inside the gallery.
+14.  ギャラリー内の **Image** を選択します。
 
 ![A Screenshot with an arrow pointing to image 1 inside the gallery](03-1/media/ex2-t4-image7.png)
 
-15.  Go to the formula bar and change the value of the Image to the formula below.
+15.  数式バーに移動し、画像の値を次の数式に変更します。
 
 ```ThisItem.Photo```
 
 ![A screenshot of the relevant command put into the formula bar](03-1/media/ex2-t4-image8.png)
 
-16.   Select the **Data** tab, click on the **...More actions** button of the **Gadgets** table and select **Refresh**.
+16.   **Data** タブを選択し、**Gadgets** テーブルの **...More actions** ボタンをクリックして、**Refresh** を選択します。
 
 ![A Screenshot with an arrow pointing to the ellipsis icon for more actions and a border around the refresh button](03-1/media/ex2-t4-image9.png)
 
-17.  Click **Save** and wait for the app to be saved.
-18.  Click **Preview**.
-19.  Click **+ New record**.
+17.  **Save** をクリックして、アプリが保存されるのを待ちます。
+18.  **Preview** をクリックします。
+19.  **+ New record** をクリックします。
 
 ![A screenshot of a border around the new record button](03-1/media/ex2-t4-image10.png)
 
-20.  Fill out the form and click **Tap or click to add a picture**.
+20.  フォームに記入し、**Tap or click to add a picture** をクリックします。
 
 ![A Screenshot with an arrow pointing to the tap or click to add a picture button](03-1/media/ex2-t4-image11.png)
 
-21.  Provide your own photo or select one from the lab resources folder.
-22.  Click **Save**.
+21.  自分の写真を提供するか、ラボのリソースフォルダーから写真を選択します。
+22.  **Save** をクリックします。
 
 ![A Screenshot with an arrow pointing to the tick icon to save](03-1/media/ex2-t4-image12.png)
 
-23.  Add few more items.
-24.  Your app should now look like the image below. Close the preview.
+23.  さらにいくつかのアイテムを追加します。
+24.  これで、アプリは次の画像のようになります。 プレビューを閉じます。
 
 ![A screenshot of the running app with an arrow pointing to the cross icon to close the preview](03-1/media/ex2-t4-image13.png)
 
-25.  Do not navigate away from this page.
+25.  このページから離れないでください。
 
 
-#### Task 5: Update Dataverse rows
-In this task, you will add buttons that will let users reserve and/or pick up item, you will also update the rows in Dataverse as reserved or picked up.
+#### タスク5：Dataverse行を更新する
+このタスクでは、ユーザーがアイテムを予約および/またはピックアップできるようにするボタンを追加します。また、Dataverseの行を予約済みまたはピックアップ済みとして更新します。
 
-1. Select **App** from the Tree view and set the **OnStart** value to the formula below. This formula will create a variable named CurrentUser and set its value to the first user that matches the logged in user's email.
+1. ツリービューから **App** を選択し、**OnStart** 値を次の式に設定します。 この式は、CurrentUser という名前の変数を作成し、その値を、ログインしたユーザーの電子メールに一致する最初のユーザーに設定します。
 
 ```Set(CurrentUser, First(Filter(Users, 'Primary Email' = User().Email)))```
 
 ![A screenshot with a border around app selected in the screens tab on the left and another border around the formula bar with the relevant command typed in](03-1/media/ex2-t5-image1.png)
 
-2. Select App, select **ellipsis** and select **Run OnStart**.
-3. Select the **RightContainer**.
+2. アプリを選択し、**ellipsis** を選択して、**Run OnStart** を選択します。
+3. **RightContainer** を選択します。
 
 ![A screenshot with a border around the RightContainer1 element selected](03-1/media/ex2-t5-image2.png)
 
-3. Click on the **+** Insert button and select **Button**.
+3. **+** 挿入ボタンをクリックし、**Button** を選択します。
 
 ![A Screenshot with an arrow pointing to the plus icon to insert and a border around the button option](03-1/media/ex2-t5-image3.png)
 
-4. Select the **Tree view**, double click on the button you just added and rename it **Reserve Button**.
+4. **Tree view** を選択し、追加したボタンをダブルクリックして、名前を **Reserve Button** に変更します。
 
 ![A screenshot with the text "Reserve Button" highlighted as the new name for the button you added](03-1/media/ex2-t5-image4.png)
 
-5. Set the **Text** value of the Reserve Button to **Reserve**.
-6. Move the Reserve Button and place it next to the Image.
+5. 予約ボタンの **Text** 値を **Reserve** に設定します。
+6. 予約ボタンを移動して、画像の横に配置します。
 
 ![A screenshot of the Reserve button selected and moved next to the image on the right hand side](03-1/media/ex2-t5-image5.png)
 
-7. Set the **DisplayMode** value of the Reserve Button to the formula below. This formula will disable the button if the selected item is not available.
+7. 予約ボタンの **DisplayMode** 値を次の式に設定します。 この式は、選択したアイテムが利用できない場合にボタンを無効にします。
 
 ```If(BrowseGallery1.Selected.Availability = 'Availability (Gadgets)'.Available, DisplayMode.Edit, DisplayMode.Disabled)```
 
-8. Set the **OnSelect** value of the Reserve Button to the formula below. This formula will update the selected record by setting the reserved by value to the current user and the availability value to reserved.
+8. 予約ボタンの **OnSelect** 値を次の式に設定します。 この式は、予約済みの値を現在のユーザーに設定し、可用性の値を予約済みに設定することにより、選択したレコードを更新します。
 
 ```Patch(Gadgets, BrowseGallery1.Selected, {Availability: 'Availability (Gadgets)'.Reserved, 'Reserved by': CurrentUser})```
 
-9. Set the **Visible** value of the Reserve Button to the formula below. This formula will hide the button if the user is creating a new record.
+9. 予約ボタンの **Visible** 値を次の式に設定します。 この式は、ユーザーが新しいレコードを作成している場合にボタンを非表示にします。
 
 ```If(EditForm1.Mode = FormMode.View, true, false)```
 
-10. Select the **RightContainer** again.
-11. Click on the **+** Insert button and select **Button** again.
-12. Select the **Tree view**, double click on the button you just added and rename it **Picked Up Button**.
+10. **RightContainer** をもう一度選択します。
+11. **+** 挿入ボタンをクリックして、**Button** をもう一度選択します。
+12. **Tree view** を選択し、追加したボタンをダブルクリックして、名前を **Picked Up Button** に変更します。
 
 ![A screenshot with the text "Picked Up Button" highlighted as the name new for button you added](03-1/media/ex2-t5-image6.png)
 
-12. Set the **Text** value of the Reserve Button to **Picked up**.
-13. Adjust the width and move the Picked Up Button and place it to the right of the Reserve Button.
+12. 予約ボタンの **Text** 値を **Picked up** に設定します。
+13. 幅を調整し、ピックアップボタンを移動して、予約ボタンの右側に配置します。
 
 ![A screenshot showing the Picked Up button selected and moved to the right of the Reserve button](03-1/media/ex2-t5-image7.png)
 
-14. Set the **DisplayMode** value of the Picked Up Button to the formula below. This formula will disable the button if the selected item is reserved and the reserved by user is not the current user.
+14. PickedUp ボタンの **DisplayMode** 値を次の式に設定します。 この式は、選択したアイテムが予約されていて、ユーザーによって予約されているのが現在のユーザーではない場合、ボタンを無効にします。
 
  ```If(BrowseGallery1.Selected.Availability = 'Availability (Gadgets)'.Reserved And BrowseGallery1.Selected.'Reserved by'.'Primary Email' <> CurrentUser.'Primary Email', DisplayMode.Disabled, DisplayMode.Edit)```
 
-15. Set the **OnSelect** value of the Picked Up Button to the formula below. This formula will update the selected record by setting the reserved by value to the current user and the availability value to picked up. The second formula will select the first item of the gallery.
+15. ピックアップ ボタンの **OnSelect** 値を次の式に設定します。 この式は、予約済みの値を現在のユーザーに設定し、可用性の値を取得するように設定することで、選択したレコードを更新します。 2番目の数式は、ギャラリーの最初のアイテムを選択します。
 
 ```Patch(Gadgets, BrowseGallery1.Selected, {Availability: 'Availability (Gadgets)'.'Picked up', 'Reserved by': CurrentUser});Select(BrowseGallery1,1)```
 
-16. Set the **Visible** value of the Picked Up Button to the formula below. This formula will hide the button if the user is creating a new record.
+16. ピックアップ ボタンの **Visible** 値を次の式に設定します。 この式は、ユーザーが新しいレコードを作成している場合にボタンを非表示にします。
 
 ```If(EditForm1.Mode = FormMode.View, true, false)```
 
- 17. Click **Save** to save your changes.
- 18. Do not navigate away from this page.
+ 17. **Save** をクリックして変更を保存します。
+ 18. このページから離れないでください。
 
 
-#### Task 6: Add search
-In this task, you will add search capability to your application.
+#### タスク6：検索を追加する
+このタスクでは、アプリケーションに検索機能を追加します。
 
-1. Select the **RightContainer**.
-2. Click on the **+** Insert menu and select **+ Add icon**.
-3. Place the icon above the form.
+1. **RightContainer** を選択します。
+2. **+** 挿入メニューをクリックし、**+ Add icon** を選択します。
+3. フォームの上にアイコンを配置します。
 
 ![A screenshot of the plus icon selected](03-1/media/ex2-t6-image1.png)
 
-4. Select the icon, go to the **Properties** and select **Search** for Icon.
+4. アイコンを選択し、**Properties** に移動して、アイコンの **Search** を選択します。
 
 ![A screenshot with a border around the Search option selected as the icon](03-1/media/ex2-t6-image2.png)
 
-5. Click on the **+** Insert menu and select **Text box**.
-6. Select the **Tree view**.
-7. Select the text box you just added and rename it **Search box**.
+5. **+** 挿入メニューをクリックし、**Text box** を選択します。
+6. **Tree view** を選択します。
+7. 追加したテキストボックスを選択し、名前を **Search box** に変更します。
 
 ![A screenshot of the words "Search Box" highlighted as the new name for the text box you added](03-1/media/ex2-t6-image3.png)
 
-8. Place the Search Box to the right of the icon.
+8. アイコンの右側に検索ボックスを配置します。
 
 ![A screenshot of the Search Box placed to the right of the icon](03-1/media/ex2-t6-image4.png)
 
-9.  Select the **Search Box** and set **OnChange** value to the formula below. This formula will reset the gallery.
+9.  **Search Box** を選択し、**OnChange** の値を次の式に設定します。 この数式はギャラリーをリセットします。
 
 ```Reset(BrowseGallery1)```
 
-10. Select the **BrowseGallery** and change the **Items** formula to the formula below. The formula is incomplete, we will complete it in the next step.
+10. **BrowserGallery** を選択し、**Items** 式を以下の式に変更します。 数式は不完全です。次のステップで完成させます。
 
 ```Filter(Search(Gadgets, 'Search Box'.Value, ), Availability <> 'Availability (Gadgets)'.'Picked up')```
 
-11. Place your cursor after **'Search Box'.Value** and type name. You should see a suggestion with crxxx_name, select the suggested column.
+11. **'Search Box'.Value** の後にカーソルを置き、名前を入力します。 crxxx_nameの提案が表示されたら、提案された列を選択します。
 
 ![A screenshot with a border around the words "crefe4_name"](03-1/media/ex2-t6-image5.png)
 
-12. Add comma after the name column you just selected and type **description** and select the suggested column again.
+12. 選択した名前の列の後にカンマを追加し、**description** と入力して、提案された列をもう一度選択します。
 
 ![A screenshot with a border around the worlds "crfe4_description"](03-1/media/ex2-t6-image6.png)
 
-13. Your formula should now look like the image below. This formula will search the name and description columns of the gadgets table for whatever the user types in the text box and filter out the picked up items.
+13. これで、数式は次の画像のようになります。 この数式は、ガジェットテーブルの名前と説明の列で、ユーザーがテキストボックスに入力した内容を検索し、選択したアイテムを除外します。
 
 ![Suggested description column - screenshot](03-1/media/ex2-t6-image7.png)
 
-14.  Select the **Search Box**.
-15.  Go to the formula bar and remove the **Value** text.
+14.  **Search Box** を選択します。
+15.  数式バーに移動し、**Value** のテキストを削除します。
 
 ![A screenshot with a border around the formula bar](03-1/media/ex2-t6-image8.png)
 
-16.  Click **Save** to save your changes.
+16.  **Save** をクリックして変更を保存します。
 
-### Exercise 3: Test and publish application
-In this exercise, you will test, publish and give colleagues permission to use the application.
+### 演習3：アプリケーションをテストして公開する
+この演習では、アプリケーションをテスト、公開し、同僚に使用許可を与えます。
 
-#### Task 1: Test application
-In this task, you will test the application.
+#### タスク1：アプリケーションをテストする
+このタスクでは、アプリケーションをテストします。
 
-1. Click on the **Preview** button.
+1. **Preview** ボタンをクリックします。 
 
 ![A screenshot with an arrow pointing to the Preview button](03-1/media/ex3-t1-image1.png)
 
-2. The **Reserve** and **Picked up** button should be visible and enabled.
-3. Search for cable. The gallery should show items that have the text **cable** in the name or description column.
+2. **Reserve** および **Picked up** ボタンが表示され、有効になっている必要があります。
+3. ケーブルを検索します。 ギャラリーには、名前または説明の列に **cable** というテキストが含まれるアイテムが表示されます。
 
 ![A screenshot with the word cable in the search bar and a gallery showing items that have the text cable in their name or description column on the left side of the window](03-1/media/ex3-t1-image2.png)
 
-4. Select one of the items, the **Reserved by** column value should be empty.
-5. Click on the **Reserve** button.
+4. 項目の1つを選択します。**Reserved by** 列の値は空である必要があります。
+5. **Reserve** ボタンをクリックします。 
 
 ![A screenshot of a border around the Reserved by field and an arrow pointing to the Reserve button](03-1/media/ex3-t1-image3.png)
 
-6. The **Reserve** button should become disabled and the **reserved by** value will be set to your username. Click on the **Picked up** button.
+6. **Reserve** ボタンが無効になり、**reserved by** の値がユーザー名に設定されます。
 
 ![A screenshot with a border around the reserved by field with your username and another border around the now-disabled reserve button](03-1/media/ex3-t1-image4.png)
 
-7. The item should no longer show up on the gallery and the first item of the gallery should get selected.
-8. Close the preview.
-9. Do not navigate away from this page.
+7. アイテムがギャラリーに表示されなくなり、ギャラリーの最初のアイテムが選択されます。
+8. プレビューを閉じます。
+9. このページから離れないでください。
 
 
-#### Task 2: Publish application
-In this task, you will publish the application to Teams.
+#### タスク2：アプリケーションを公開する
+このタスクでは、アプリケーションをTeamsに公開します。
 
-1. Click on the **Publish to Teams** button.
+1. **Publish to Teams** ボタンをクリックします。
 
 ![A Screenshot with an arrow pointing to the publish to teams button](03-1/media/ex3-t2-image1.png)
 
-2. Click **Next**.
-3. Click **+** add app as a tab.
+2. **Next** をクリックします。
+3. **+** をクリックしてアプリをタブとして追加します。
 
 ![A Screenshot with an arrow pointing to the plus icon for add app as a tab in the general box](03-1/media/ex3-t2-image2.png)
 
-4. Click **Save and close**
-5. Select **Teams** and select the new **Upcycle** tab.
+4. **Save and close** をクリックします。
+5. **Teams** を選択し、新しい **Upcycle** タブを選択します。
 
 ![A Screenshot with an arrow pointing to the upcycle button](03-1/media/ex3-t2-image3.png)
 
-6. The app should load. If the app is not loaded, refresh the page.
+6. アプリが読み込まれるはずです。 アプリが読み込まれていない場合は、ページを更新してください。
 
 ![A screenshot of the loaded app](03-1/media/ex3-t2-image4.png)
 
-7. Test the application in Teams and make sure it behaves as you expected.
+7. Teamsでアプリケーションをテストし、期待どおりに動作することを確認します。
 
 
 #### Task 3: Give permissions
-In this task, you will give your colleagues permission to create new items, edit items they created, delete items they created and read items created by other people.
+このタスクでは、同僚に、新しいアイテムの作成、作成したアイテムの編集、作成したアイテムの削除、および他の人が作成したアイテムの読み取りを許可します。
 
-1. Select **Power Apps** and click on the **See more** link.
+1. **Power Apps** を選択し、**See more** リンクをクリックします。
 
 ![A screenshot with a border around the power apps button on the left side of the window and an arrow pointing to the see more link in the recent apps](03-1/media/ex3-t3-image1.png)
 
-2. Click to open the **Gadget** table.
-3. Click **Manage permissions**.
+2. クリックして **Gadget** テーブルを開きます。
+3. **Manage permissions** をクリックします。
 
 ![A Screenshot with an arrow pointing to the manage permissions button](03-1/media/ex3-t3-image2.png)
 
-4. Select **Members**, select **Collaborate** permission and click **Save**
+4. **Members** を選択し、**Collaborate** 権限を選択して、**Save** をクリックします。
 
 ![A screenshot of the collaborate permission selected](03-1/media/ex3-t3-image3.png)
 
-5. You may test the application with another user and see how it behaves.
+5. 別のユーザーでアプリケーションをテストして、その動作を確認できます。
 
