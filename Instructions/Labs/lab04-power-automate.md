@@ -397,19 +397,19 @@ lab:
 9.  Company 311 メンバーを追加する **Skip** を選択します。
 
 
-#### Task 2: Modify flow to send adaptive card in Teams chat
+#### タスク2：フローを変更してTeamsチャットでアダプティブカードを送信する
 
-In this task you will replace the approval sent by email with the adaptive card.
+このタスクでは、電子メールで送信された承認をアダプティブカードに置き換えます。
 
-1. Locate **Start and wait for an approval** step created earlier in **Exercise 2, Task 2**.
-2. Select **...** then select **Delete**.
-3. Click **+** between the steps to insert a new step then select **Add an action**.
-4. Search for **approval** and select **Create an approval**.
-5. Select **Approve/Reject - Everyone must approve** for **Approval type**.
-6. Enter **Cost approval required** for **Title**.
-7. Click to select the **Assigned to** Column.
-8. Go to the **Dynamic content** pane and select **Primary Email** from the **Get user** step.
-9. Paste the markdown text below in the **Details** Column.
+1. **演習2、タスク2 ** で作成した **Start and wait for an approval** ステップを待ちます。
+2. **...** を選択してから、**Delete** を選択します。
+3. ステップ間で **+** をクリックして新しいステップを挿入し、**Add an Action** を選択します。
+4. **approval** を検索し、**Create an approval** を選択します。
+5. **Approval type** の **Approve/Reject - Everyone must approve** を選択する必要があります。
+6. **Title** に **Cost approval required** と入力します。
+7. **Assigned to** 列をクリックして選択します。
+8. **Dynamic content** ペインに移動し、**Get user** ステップから **Primary Email** を選択します。
+9. 以下のマークダウンテキストを**Details** 列に貼り付けます。
 
 > \*\*{title}\*\*
 >
@@ -421,99 +421,99 @@ In this task you will replace the approval sent by email with the adaptive card.
 >
 > This is a \_very\_ expensive item with the estimated cost of
 
-10. Select **{title}** placeholder, go to the **Dynamic content** pane, locate and select **Title** Column from **When a problem report is created or updated** step.
+10. **{title}** プレースホルダーを選択し、**Dynamics content** ペインに移動し、**When a problem report is created or updated** のステップから **Title** 列を見つけて選択します。
 
-11. Select **{details}** placeholder, go to the **Dynamic content** pane, locate and select **Details** Column from **When a problem report is created or updated** step.
+11. **{details}** プレースホルダーを選択し、**Dynamic content** ペインに移動し、**When a problem report is created or updated** ステップから**Details** 列を見つけて選択します。
 
-12. Place your cursor after **cost of** , go to the **Dynamic content** pane, select the **Expression** tab, paste the expression below, and click OK.
+12. **cost of** の後にカーソルを置き、**Dynamic content** ペインに移動し、**Expression** タブを選択して、下の式を貼り付け、OK をクリックします。
 
 `formatNumber(triggerOutputs()?['body/lh_estimatedcost'], 'C2')`
 
-13. Your step should look like the following:
+13. ステップは次のようになります:
 
 ![A screenshot of the create an approval window with the following. Approval type as approve/reject - everyone must approve, title as cost approval required, assigned to primary email, details as title, details, some text and format number, item link, and item link description](04/media/image-5-create-approval.png)
 
-14. Click **+** then select **Add an action**.
+14. **+** をクリックしてから、**Add an action** を選択します。
 
-15. Search for **teams** and select **Post adaptive card in a chat or channel** action.
+15. **team** を検索し、**Post adaptive card in a chat or channel** アクションでアダプティブカードを投稿するを選択します。
 
-16. Select **Flow bot** for Post as and select **Chat with Flow bot** for Post in.
-17. Click to select the **Recipient** field.
+16. 投稿で **Flow bot** を選択し、投稿で **Chat with Flow bot** を選択します。
+17. **Recipient** フィールドをクリックして選択します。
 
-18. Go to the **Dynamic content** pane and select **Primary Email** from the **Get user** step.
+18. **Dynamic content** ペインに移動し、**Get user** ステップから **Primary Email** を選択します。
 
-19. Click to select **Adaptive Card** field.
+19. **Adaptive Card** フィールドをクリックして選択します。
 
-20. Go to the **Dynamic content** pane and select **Teams Adaptive Card** from the **Create an approval** step.
-21. Post adaptive card in chat or channel should look like the image below.
+20. **Dynamic content** ペインに移動し、**Create an approval** ステップから**Teams Adaptive Card** を選択します。
+21. チャットまたはチャネルでのアダプティブカードの投稿は、次の画像のようになります。
 
 ![A screenshot of the post adaptive card in a chat or channel pane](04/media/image-5-post-adaptive-card.png)
 
-22. Select **+** then select **Add an action**.
+22. **+** を選択してから、**Add an action** を選択します。
 
-23. Search for **approval** and select **Wait for an approval** action.
+23. **approval** を検索し、**Wait for an approval** アクションを選択します。
 
-24. Select **Approval ID** Column.
+24. **Approval ID** 列を選択します。
 
-25. Go to the **Dynamic content** pane and select **Approval ID** from the **Create an approval** step.
+25. **Dynamic content** ペインに移動し、**Create an approval** ステップから**Approval ID** を選択します。
 
     ![A screenshot of the wait for an approval panel with approval ID in the approval ID field](04/media/image-5-wait-for-approval.png)
 
-26. You now have replaced **Start and wait for an approval** step with the following:
+26. これで、**Start and wait for an approval** ステップが次のように置き換えられました。
 
 ![A screenshot of the current flow with: create an approval, post adaptive card in a chat or channel, and wait for an approval](04/media/image-5-replaced-approval.png)
 
-25. Expand **Condition 2** step. The left side of the condition should be empty because it was referring the step which is now removed. 
-26. Go to the **Dynamic content** pane, search for **outcome,** and select **Outcome** from **Wait for an approval** step. 
-27. Locate **Update problem report** step under **If yes** branch.
-28. Click **Show advanced options**.
-29. Click to select the **Resolution** Column, go to the **Dynamic content** pane, and select **Response summary** from **Wait for an approval** step.
-30. Click **Save**.
-31. Close the flow designer browser window or tab.
-32. Click **Done** on the popup.
+25. **Condition 2** ステップを展開します。 条件の左側は、現在削除されているステップを参照していたため、空になっているはずです。
+26. **Dynamic content** ペインに移動し、**outcome** を検索して、**Wait for an approval** ステップから **outcome** を選択します。
+27. **If yes** ブランチの下にある **Update problem report** ステップを見つけます。
+28. **Show advanced options** をクリックします。
+29. **Resolution**　列をクリックして選択し、 **Dynamic content** ペインに移動して、 **wait for an approval** ステップから **Response summary** を選択します。
+30. **Save** をクリックします。
+31. フローデザイナのブラウザウィンドウまたはタブを閉じます。
+32. ポップアップで **Done** をクリックします。
 
-#### Task 3: Test flow
+#### タスク3：テストフロー
 
-In this task, you will test the escalation flow with the Teams and adaptive cards.
+このタスクでは、チームとアダプティブカードを使用してエスカレーションフローをテストします。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。 
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application.
+2.  **Apps** を選択し、クリックして **Company 311 Admin** アプリケーションを開きます。
 
-3.  Click to open one of the **Problem Report** Rows.
+3.  クリックして、**Problem Report** 行の1つを開きます。
 
-4.  Scroll down, enter any amount greater than **1000** for **Estimated Cost**, assign it to **yourself** (for test purposes) and click **Save**.
+4.  下にスクロールして、**Estimated Cost** に **1000** を超える金額を入力し、**yourself** に割り当てて（テスト目的で）、**Save** をクリックします。
 
-5.  Navigate to [Microsoft Teams](https://teams.microsoft.com)
+5.  [Microsoft Teams](https://teams.microsoft.com) に移動します。
 
-6.  Select **Chat**.
+6.  **Chat** を選択します。
 
-7. You should see the Cost Approval Required Adaptive Card.
+7. コスト承認が必要なアダプティブカードが表示されます。
 
 ![A screen shot of the request for cost approval pane](04/media/image-5-sample-adaptive-card.png)  
 
-8. Press **Reject** button and enter a comment of your choice in the Comments area, for example **The item is too expensive**.
+8. **Reject** ボタンを押して、コメント領域に任意のコメントを入力します。たとえば、**The item is too expensive**。
 
-9. Select **Submit**.  The card will become read-only.
+9. **Submit** を選択します。 カードは読み取り専用になります。
 
 ![A screenshot of the request once you have rejected it](04/media/image-5-readonly-card.png)
 
-10. Go back to the **Company 311 Admin** application.
+10. **Company 311 Admin** アプリケーションに戻ります。
 
-11. Change the view to **My Reports** and click to open the same Row you change the estimated cost.
+11. ビューを **My Reports** に変更し、クリックして、推定コストを変更したのと同じ行を開きます。
 
-12. The **Status Reason** should be set to **Won’t fix** and the **Resolution** should contain the details of Approver, Response, Request Date and Response Date.
+12. **Status Reason** は **Won’t fix** に設定する必要があり、**Resolution** には承認者、応答、要求日、応答日の詳細が含まれている必要があります。
 
 ![A screenshot of the status reason and resolution matching the details of your response to the request](04/media/problemreportadaptivecard.png)
 
 ## **Discussion**
 
-  - Would creating a bool Column for Approved/Rejected be better?
-  - What are the pros and cons of using Microsoft Teams over regular email?
+  - 承認/却下のブール列を作成する方が良いでしょうか？
+  - 通常の電子メールでMicrosoftTeamsを使用することの長所と短所は何ですか？
 
 ## **Bonus exercises**
 
-  - Add ability for the users to subscribe to the reported problems and only notify if there is a subscription. 
-  - Auto-subscribe creator of the problem report.
-  - How to find out previous value of status reason?
-  - Create your own adaptive card using [Adaptive Cards Designer](https://adaptivecards.io/designer/).
+  - ユーザーが報告された問題をサブスクライブし、サブスクリプションがある場合にのみ通知する機能を追加します。
+  - 問題レポートの作成者を自動購読します。
+  - ステータス理由の以前の値を見つける方法は？
+  - [Adaptive Cards Designer](https://adaptivecards.io/designer/) を使用して独自のアダプティブカードを作成します。 
