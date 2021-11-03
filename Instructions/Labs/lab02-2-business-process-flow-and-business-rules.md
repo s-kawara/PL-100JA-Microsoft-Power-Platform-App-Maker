@@ -107,181 +107,181 @@ lab:
 
 11. **+ Add** をもう一度クリックし、**Add Data Step** を選択します。
 
-12. Select the new data step, go to the **Properties** pane, select **Department** for **Data Field**, and click **Apply**.
+12. 新しいデータステップを選択し、**Properties** ペインに移動し、**Data Field** で **Department** を選択して、**Apply** をクリックします。
 
-13. The **Route** stage should now look like the image below.
+13. **Route** ステージは次の画像のようになります。
 
 ![A screenshot of the completed route stage with three data steps: building, location, and department](02-2/media/image8.png)
 
-14. Click **+ Add** and select **Add Stage**.
+14. **+ Add** をクリックし、**Add Stage** を選択します。
 
-15. Add the new stage after the **Route** stage.
+15. **Route** ステージの後に新しいステージを追加します。
 
-16. Select the stage, go to the **Properties** pane, enter **Fix** for **Display Name**, and click **Apply**.
+16. ステージを選択し、**Properties** ペインに移動し、**Display Name** に **Fix** と入力して、**Apply** をクリックします。
 
-17. Expand **Details** of the **Fix** stage.
+17. **Fix** ステージの **Details** を展開します。
 
-18. Select **Data Step \#1** of the **Fix** stage.
+18. **Fix** ステージの **Data Step \#1** を選択します。
 
-19. Go to the **Properties** pane, select **Assign to** for **Data Field** and click **Apply**.
+19. **Properties** ペインに移動し、**Data Field** で **Assign to** を選択して、**Apply** をクリックします。
 
-20. Click **+ Add** and select **Add Stage**.
+20. **+ Add** をクリックし、**Add Stage** を選択します。
 
-21. Add the new stage after the **Fix** stage.
+21. **Fix** ステージの後に新しいステージを追加します。
 
-22. Select the new stage, go to the **Properties** pane, enter **Resolve** for **Display Name** and click **Apply**.
+22. 新しいステージを選択し、**Properties** ペインに移動し、**Display Name** に **Resolve** と入力して、**Apply** をクリックします。
 
-23. Expand **Details** of the **Resolve** stage.
+23. **Resolve** ステージの **Details** を展開します。
 
-24. Select **Data Step \#1** of the **Resolve** stage.
+24. **Resolve** ステージの **Data Step \#1** を選択します。
 
-25. Go to the **Properties** pane, select **Resolution** for **Data Field** and click **Apply**.
+25. **Properties** ペインに移動し、**Data Field** で **Resolution** を選択して、**Apply** をクリックします。
 
-26. Click **+ Add** and select **Add Data Step**.
+26. **+ Add** をクリックし、**Add Data Step** を選択します。
 
-27. Add the new data step below the **Resolution** data step.
+27. **Resolution** データステップの下に新しいデータステップを追加します。
 
-28. Select the new data step, go to the **Properties** pane, select **Resolved on** for **Date Field** and click **Apply**.
+28. 新しいデータステップを選択し、**Properties** ペインに移動し、**Date Field** で **Resolved on** を選択して、**Apply** をクリックします。
 
-29. The Business process flow should now look like the image below. Click **Save**.
+29. これで、ビジネスプロセスフローは次の画像のようになります。 **Save** をクリックします。
 
 ![A Screenshot of a Business Process Designer with an arrow pointing to the save button](02-2/media/image9.png)
 
-30. Click **Activate**.
+30. **Activate** をクリックします。
 
-31. Click **Activate** again on the pop-up.
+31. ポップアップでもう一度 **Activate** をクリックします。
 
-32. Confirm that **Status: Active** on the bottom-left side of the screen.
+32. 画面の左下にある **Status: Active** を確認します。
 
     ![A screeshot of a high-level overview of a business process with the words "Status: Active" highlighted in the left bottom corner](02-2/media/image28.png)
 
-33. Close the process editor browser window or tab.
+33. プロセスエディタのブラウザウィンドウまたはタブを閉じます。
 
-#### Task 3: Add business process flow to solution
+#### タスク3：ビジネスプロセスフローをソリューションに追加する
 
-In this task, you will add the business process flow you created to the Company 311 solution.
+このタスクでは、作成したビジネスプロセスフローをCompany311ソリューションに追加します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Click **+ Add existing** and select **Process**.
+3.  **+ Add existing** を追加をクリックし、**Process** を選択します。
 
 ![A Screenshot with an arrow pointing to the drop down icon next to the add existing button and a border around the process button](02-2/media/image10.png)
 
-4.  Search for problem, select **Problem resolution process**, and click **Add**.
+4.  問題を検索し、**Problem resolution process** を選択して、**Add** をクリックします。
 
 ![A screenshot of the add existing processes window with problem resolution process selected](02-2/media/image11.png)
 
-5.  Click **Publish all customizations** and wait for the publishing to complete.
+5.  **Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
-### Exercise 2: Create business rule
+### 演習2：ビジネスルールを作成する
 
-In this exercise, you will create a business rule that will block completion of problems without resolution.
+この演習では、問題の完了を解決せずにブロックするビジネスルールを作成します。
 
-#### Task 1: Create business rule
+#### タスク1：ビジネスルールを作成する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Report** Table.
+3.  **Problem Report** テーブルを探し、開きます。
 
-4.  Select the **Business rules** tab and click **Add business rule**.
+4.  **Business rules**　タブを選択し、**Add Business rule** をクリックします。
 
 ![A screenshot of the business rules tab](02-2/media/image12.png)
 
-5.  Make sure the **Scope** is set to **Entity** and click **Show details** chevron.
+5.  **Scpe** が **Entity** に設定されていることを確認し、**Show details** シェブロンをクリックします。
 
 ![A Screenshot with an arrow pointing to the drop down icon next to the text problem report: new business rule and a border around the scope set to entity on the right hand side of the page](02-2/media/image13.png)
 
-6. Change **Business rule name** to **Completion rule** and click **Hide details** chev
+6. **Business rule name** を **Completion rule** に変更し、**Hide details** をクリックします。
 
 ![A screenshot of a business rules property pane with an arrow pointing to the shevron that collapses the entire property pane](02-2/media/image29.png)
 
-7. Select the **Condition**.
+7. **Condition** を選択します。
 
-8. Go to the **Properties** pane and change the **Display name** to **Resolution required**.
+8. **Properties** ペインに移動し、**Display name** を **Resolution required** に変更します。
 
-9. Scroll down to **Rule 1**, select **Status Reason** for **Field**, select **Equals** for **Operator**, select **Value** for **Type**, select **Completed** for **Value**, and click **Apply**.
+9. **Rule 1** まで下にスクロールし、**Field** に **Status Reason** を選択し、**Operator** に **Equals** を選択し、**Type** に**Value** を選択します。 **Value** で **Completed** を選択し、**Apply** をクリックします。
 
 ![A screenshot of the rules panel](02-2/media/image14.png)
 
-10. Click **+ New**.
+10. **+ New** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new button](02-2/media/image15.png)
 
-11. Scroll down to **Rule 2**, select **Resolution** for **Field**, select **Does not contain data** for **Operator**, make sure **And** is selected for **Rule Logic**, and click **Apply**.
+11. **Rule 2** まで下にスクロールし、**Field** に **Resolution** を選択し、**Operator** に **Does not contain data** を選択し、**And** が選択されていることを確認します
 
 ![A screenshot of the rules panel if you scroll further down with the relevant text in each field](02-2/media/image16.png)
 
-12. Click **+ Add**.
+12. **+ Add** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add button](02-2/media/image17.png)
 
-13. Select **Add show error message**.
+13. **Add show error message** を選択します。
 
-14. Add the action on the **true** path of the condition.
+14. 条件の　**true** パスにアクションを追加します。
 
 ![A Screenshot with an arrow pointing to the add button on the true path of the condition](02-2/media/image18.png)
 
-15. Select the new action, go to the **Properties** pane, enter **Show message** for **Display Name**, select **Status Reason** for **Field**, enter **The Problem must have a resolution before it can be closed** for **Message**, and click **Apply**.
+15. 新しいアクションを選択し、**Properties** ペインに移動し、**Display Name** に **Show message** と入力し、**Field** に **Status Reason** を選択して、**Message**  に **The Problem must have a resolution before it can be closed** を入力し、**適用** をクリックします。
 
 ![A screenshot of the properties panel with the relevant text in the fields](02-2/media/image19.png)
 
-16. The business rule should now look like the image below. Click **Save**.
+16. ビジネスルールは次の画像のようになります。 **Save** をクリックします。
 
 ![A Screenshot with an arrow pointing to the save button](02-2/media/image20.png)
 
-17. Click **Activate**.
-18. Click **Activate** again on the pop-up.
-19. Confirm activation.
-20. Close the process editor browser window or tab.
-21. Click **Done**.
+17. **Activate** をクリックします。
+18. ポップアップで再度 **Activate** をクリックします。
+19. アクティベーションを確認します。
+20. プロセスエディタのブラウザウィンドウまたはタブを閉じます。
+21. **Done** をクリックします。
 
-### Exercise 3: Test processes
+### 演習3：テストプロセス
 
-In this exercise, you will test the business process flow and the business rule you created.
+この演習では、作成したビジネスプロセスフローとビジネスルールをテストします。
 
-#### Task 1: Test processes
+#### タスク1：プロセスをテストする
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application.
+2.  **Apps** を選択し、クリックして**Company 311 Admin** アプリケーションを開きます。
 
 ![A Screenshot with an arrow pointing to the company 311 admin option in apps](02-2/media/image21.png)
 
-3.  Select **Problem Reports** and click **+ New**.
+3.  **Problem Reports** を選択し、**+ New** をクリックします。
 
-4.  You should see the business process flow stages. Enter **Dark parking lot** for **Title**, select **London Paddington** for **Building**, enter **There are no lights at the north end of the parking lot** for **Details**, and click **Save**.
+4.  ビジネスプロセスフローのステージが表示されます。 **Title** に **Dark parking lot** を入力し、**Building** に **London Paddington** を選択し、**Details** に **There are no lights at the north end of the parking lot** と入力します。 **Save** をクリックします。
 
 ![A screenshot of the new problem report](02-2/media/image22.png)
 
-5.  Click on the **Route** stage.
+5.  **Route** ステージをクリックします。
 
 ![A Screenshot with an arrow pointing to the route stage at the top of the page](02-2/media/image23.png)
 
-6. Enter **North-end** for **Location**, select **Facility Maintenance** for **Department** and select the **Next stage** stage.
+6. **Location** に **North-end** と入力し、**Department** に **Facility Maintenance** を選択して、**Next stage** のステージを選択します。
 
    > [!NOTE]
    >
-   > If the Next Stage option is not visible, then refresh the page.
+   > 次のステージ オプションが表示されていない場合は、ページを更新してください。
   
    ![A screenshot of the drop down from the route stage with the relevant options selected and typed in](02-2/media/image24.png)
 
-7. Select a user for **Assign to** and click **Next stage**.
+7. **Assign to** のユーザーを選択し、**Next stage** をクリックします。
 
-8. Select date and time for the **Resolved on** and leave the **Resolution** value empty.
+8. **Resolved on** の日付と時刻を選択し、**Resolution** 値を空のままにします。
 
-9. Scroll down to the resolution details section and select **Completed** for **Status Reason**. You should see the business rule error message.
+9. Resolution details セクションまで下にスクロールし、**Status Reason** で **Completed** を選択します。 ビジネスルールのエラーメッセージが表示されます。
 
 ![A screenshot of the error message under status reason](02-2/media/image25.png)
 
-10. Provide **Resolution**. The error message should go away.
+10. **Resolution** を入力します。エラーメッセージは消えるはずです。
 
 ![A screenshot of the form without the error message after resolution](02-2/media/image26.png)
 
-11. **Save** the Row.
+11. 行を **Save** します。
 
-Click **Next** to advance to the next lab.
+**Next** をクリックして、次のラボに進みます。
 
