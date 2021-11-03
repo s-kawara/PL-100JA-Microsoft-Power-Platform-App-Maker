@@ -357,126 +357,126 @@ lab:
 54. これで、ボットオーサリングキャンバスに戻るはずです。
 55. このページから離れないでください。
 
-#### Task 7 - Call flow 
-In this task, you will call the flow as an action from the Power Virtual Agents bot.
+#### タスク7 - コールフロー
+このタスクでは、Power VirtualAgentsボットからのアクションとしてフローを呼び出します。
 
-1.  Go to the last question, click **+ Add node** and select **Call an action**.
-3.  Select the **Add item to app or list** flow you created.
+1.  最後の質問に移動し、**+ Add node** をクリックして、**Call an action** を選択します。
+3.  作成した **Add item to app or list** フローを選択します。
 
 ![A Screenshot with an arrow pointing to the add item to app or list button](06/media/ex1-t7-image1.png)
 
-4.  Click on the **User ID** and select **bot.UserId**.
+4.  **User ID** をクリックし、**bot.UserId** を選択します。
 
 ![A Screenshot with an arrow pointing to the drop down icon in the field asking the user to enter or select a value. There is also a box around the variable option bot.UserId](06/media/ex1-t7-image2.png)
 
-5.  Click on the **UserOption** and select **UserOption**.
-6.  Click on the **ItemName** and select **ItemName**.
-7.  Click on the **Description** and select **Description**.
-8.  Click on the **Location** and select **Location**.
-9.  Click **+ Add node** and select **Show a message**.
+5.  **UserOption** をクリックし、**UserOption** を選択します。
+6.  **ItemName** をクリックし、**ItemName** を選択します。
+7.  **Description** をクリックし、**Description** を選択します。
+8.  **Location** をクリックし、**Location** を選択します。
+9.  **+ Add node** をクリックし、**Show a message** を選択します。
 
 ![A Screenshot with an arrow pointing to the show a message button](06/media/ex1-t7-image3.png)
 
-8.  Click on the **Insert variable** icon and select **Response**.
+8.  **Insert variable** アイコンをクリックして、**Response** を選択します。
 
 ![A Screenshot with an arrow pointing to the insert variable icon and a box around the response button in the drop down](06/media/ex1-t7-image4.png)
 
-9.  Click **+ Add node** and select **End with survey**.
-10.  The end of the bot conversation should look like the image below.
+9.  **+ Add node** をクリックし、**End with survey** を選択します。
+10.  ボットの会話の終わりは、次の画像のようになります。
 
 ![A screenshot of the end of the bot conversation which shows a message command with {x} response in the box and then an end of conversation command connected below](06/media/ex1-t7-image5.png)
 
-11.  Click **save** to save your changes and wait for the bot to be saved.
-12.  Do not navigate away from this page.
+11.  **Save** をクリックして変更を保存し、ボットが保存されるのを待ちます。
+12.  このページから離れないでください。
 
-### Exercise 2 – Test and publish the bot
+### 演習2 – ボットをテストして公開する
 
-#### Task 1 - Test bot
-In this task, you will test the bot.
+#### タスク1 - ボットのテスト
+このタスクでは、ボットをテストします。
 
-1.  **Show** the bot if it is hidden by selecting Show Bot option on the bottom left side of the screen.
-2.  Type **Recycle** and click **Send**.
-3.  The bot should ask you if you want to add the item to the e-waste list or the upcycle application. Select **Add to the Upcycle app**.
+1.  画面の左下にあるボットの表示オプションを選択して、ボットが非表示になっている場合は **Show** します。
+2.  **Recycle** と入力し、**Send** をクリックします。
+3.  ボットは、アイテムを電子廃棄物リストに追加するか、アップサイクルアプリケーションに追加するかを尋ねる必要があります。 **Add to the Upcycle app** を選択します。
 
 ![A screenshot with a box around the add to the upcycle app](06/media/ex2-t1-image1.png)
 
-4.  The bot should ask you to provide name. Enter **Bot charger** and click **Send**
-5.  The bot should ask you the description of the item. Enter **Universal bot charger** and click **Send**.
-6.  The bot should ask you the location of the item. Enter **Building 4 Room A-754** and click **Send**.
-7.  The bot should tell you the item was added to the Upcycle application and ask you if your question was answered. Click **Yes**.
+4.  ボットは名前を入力するように要求する必要があります。 **Bot charger** と入力し、**Send** をクリックします。
+5.  ボットはアイテムの説明を尋ねるはずです。 **Universal bot charger** と入力し、**Send** をクリックします。
+6.  ボットはアイテムの場所を尋ねる必要があります。 **Building 4 Room A-754** と入力し、**Send** をクリックします。
+7.  ボットは、アイテムがUpcycleアプリケーションに追加されたことを通知し、質問に回答したかどうかを尋ねる必要があります。 **Yes** をクリックします。
 
 ![A Screenshot with an arrow pointing to the yes button](06/media/ex2-t1-image2.png)
 
-7.  The bot should ask you to rate your experience. give it a rating.
-8.  The bot should thank you and ask you if it can help you with anything else. Click **Yes**.
-9.  Type **Reuse** and click **Send**.
-10. Select **Add to the pick-up list** this time.
-11. The bot should ask you to provide name. Enter **Bad bot charger** and click **Send**
-12. The bot should ask you the description of the item. Enter **Bad universal bot charger** and click **Send**.
-13. The bot should ask you the location of the item. Enter **Building 4 Room A-754** and click **Send**.
-14. The bot should tell you the item was added to the e-waste pick-up list and ask you if your question was answered. Click **Yes**.
+7.  ボットはあなたにあなたの経験を評価するように頼むべきです。 それに評価を与えます。
+8.  ボットはあなたに感謝し、それが他の何かであなたを助けることができるかどうかあなたに尋ねるべきです。 **Yes**をクリックします。
+9.  **Reuse** と入力し、**Send** をクリックします。
+10. 今回は**Add to the pick-up list** を選択します。
+11. ボットは名前を入力するように要求する必要があります。 **Bad bot Charger** と入力し、**Send** をクリックします。
+12. ボットはアイテムの説明を尋ねるはずです。 **Bad Universal bot Charger**と入力し、**Send** をクリックします。
+13. ボットはアイテムの場所を尋ねる必要があります。 **Building 4 Room A-754** と入力し、**Send**をクリックします。
+14. ボットは、アイテムが電子廃棄物ピックアップリストに追加されたことを通知し、質問に回答したかどうかを尋ねる必要があります。 **Yes** をクリックします。
 
 ![A Screenshot with an arrow pointing to the yes button](06/media/ex2-t1-image3.png)
 
-15. Rate the bot.
-16. Select **No, thanks**.
-17. The bot should end the conversation.
-18. Select **Teams**.
+15. ボットを評価します。
+16. **No, thanks** を選択します。
+17. ボットは会話を終了する必要があります。
+18. **Teams** を選択します。
 
 ![A Screenshot with an arrow pointing to the teams icon](06/media/ex2-t1-image4.png)
 
-19. Select **Green** team chat. Select the **Upcycle** tab.
-20. Search for bot. You should see the **Bot changer** the bot added to the application.
+19. **Green** チームチャットを選択します。 **Upcycle** タブを選択します。
+20. ボットを検索します。 ボットがアプリケーションに追加された **Bot changer** が表示されます。
 
 ![A screenshot with the word bot in the search bar in the upcycle tab](06/media/ex2-t1-image5.png)
 
-20. Click on the App launcher and select **OneDrive**.
+20. アプリランチャーをクリックして、**OneDrive** を選択します。
 
 ![A Screenshot with an arrow pointing to the app launcher icon and a box around the onedrive option](06/media/ex2-t1-image6.png)
 
-21.  Click to open the **Recycle.xlsx** file.
-22.  You should see the **Bad universal bot charger** added by the bot.
+21.  クリックして**Recycle.xlsx** ファイルを開きます。
+22.  ボットによって追加された **Bad universal bot charger** が表示されます。
 
 ![Excel table- screenshot](06/media/ex2-t1-image7.png)
 
-23. Close the **Excel file**.
-24. Close **OneDrive**
-25. You should now be back on the Upcycle application.
-26. Do not navigate away from this page.
+23. **Excel file** を閉じます。 
+24. **OneDrive** を閉じます。 
+25. これで、Upcycleアプリケーションに戻るはずです。
+26. このページから離れないでください。
 
-#### Task 2 - Publish and add bot
-In this task, you will publish the bot you created.
+#### タスク2 - ボットを公開して追加する
+このタスクでは、作成したボットを公開します。
 
-1.  Select **Power Virtual Agents**.
+1.  **Power Virtual Agents** を選択します。
 
 ![A Screenshot with an arrow pointing to the power virtual agents icon on the left hand side of the window](06/media/ex2-t2-image1.png)
 
-2.  Select the **Chatbots** tab and click to open the **Green Bot**.
+2.  **Chatbots** タブを選択し、クリックして **Green Bot** を開きます。
 
 ![A Screenshot with an arrow pointing to the green bot button](06/media/ex2-t2-image2.png)
 
-3.  Click **Publish**.
+3.  **Publish** をクリックします。
 
 ![A Screenshot with an arrow pointing to the publish button](06/media/ex2-t2-image3.png)
 
-4. Click **Publish** again.
-5. Click **Publish**  on the Publish latest content pop-up and wait for the publishing to complete.
-6. Click to expand **Manage** and select **Channels**.
+4. もう一度 **Publish** をクリックします。
+5. 最新のコンテンツを公開ポップアップで **Publish** をクリックし、公開が完了するのを待ちます。
+6. クリックして **Manage** を展開し、**Channels** を選択します。
 
 ![A screenshot with a box around the channels button](06/media/ex2-t2-image4.png)
 
-7. Select **Microsoft Teams**.
-8. Click **Add to Teams**.
+7. **Microsoft Teams** を選択します。
+8. **Add to Teams** をクリックします。
 
 ![A screenshot of a box around the add to teams button](06/media/ex2-t2-image5.png)
 
-9. Select **Apps**.
+9. **Apps** を選択します。
 
 ![A Screenshot with an arrow pointing to the apps icon](06/media/ex2-t2-image6.png)
 
-10. Select **Built for your org** and click on the **Green Bot** you created.
+10. **Built for your org** を選択し、作成した **Green Bot** をクリックします。
 
 ![A Screenshot with an arrow pointing to the green bot button](06/media/ex2-t2-image7.png)
 
-11. Click **Add**.
-12. The bot should greet you. You may test the bot again.
+11. **Add** をクリックします。
+12. ボットがあなたに挨拶するはずです。 ボットを再度テストできます。
