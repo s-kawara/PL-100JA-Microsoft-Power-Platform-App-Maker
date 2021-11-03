@@ -189,144 +189,144 @@ lab:
 
 このタスクでは、問題レポートテーブルに新しい列を追加します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Report** Table.
+3.  **Problem Report** テーブルを探し、開きます。
 
-4.  Make sure you have the **Columns** tab selected and click **+ Add Column**.
+4.  **Columns** タブが選択されていることを確認し、**+ Add Column** をクリックします。
 
-5.  Enter **Estimated Cost** for **Display name**, select **Currency** for **Data type** and click **Done**.
+5.  **Display name** に **Estimated Cost** を入力し、**Data type** に **Currency** を選択して、**Done** をクリックします。
 
-6.  Click the **Save Table** located on bottom right of the screen.
+6.  画面の右下にある **Save Table** をクリックします。
 
-7.  Select the **Forms** tab.
+7.  **Forms** タブを選択します。
 
-8.  Click to open the **Information** form of type **Main**.
+8.  クリックして、タイプ **Main** の **Information** フォームを開きます。
 
-9.  Add **Estimated Cost** Column to the form and place it below the **Status Reason** Column.
+9.  フォームに **Estimated Cost** 列を追加し、**Status Reason** 列の下に配置します。
 
-10. Add the **Assign to** Column and place it below the **Estimated Cost** Column.
+10. **Assign to** 列を追加し、**Estimated Cost** 列の下に配置します。
 
-11. The **Resolution details** section of the form should now look like the image below. Click **Save**.
+11. フォームの **Resolution details** セクションは、次の画像のようになります。 **Save** をクリックします。
 
 ![A Screenshot with a border around estimated cost and assign to placed correctly and an arrow pointing to the save button](04/media/image12.png)
 
-12. Click on the **Back** button located on the top left of the screen.
+12. 画面の左上にある **Back** ボタンをクリックします。
 
-13. Select **Solution**, click **Publish all customizations**, and wait for the publishing to complete.
+13. **Solution** を選択し、**Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
-#### Task 2: Build escalation flow
+#### タスク2：エスカレーションフローを構築する
 
-In this task, you will create the escalation flow.
+このタスクでは、エスカレーションフローを作成します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Click **+ New** and select **Cloud flow**.
+3.  **+ New** をクリックし、**Cloud flow** を選択します。
 
-4.  Search for **when a row is added** and select **When a row is added, modified, or deleted**  from **Microsoft Dataverse** connector.
+4.  **when a row is added** を検索し、**Microsoft Dataverse ** コネクタから **When a row is added, modified, or deleted** を選択します。
 
-5.  Select **Added or Modified** for **Change type**, select **Problem Reports** for **Table name**, select **Organization** for **Scope** and click **Show advanced options**.
+5.  **Change type** で **Added or Modified** を選択し、**Table name** で **Problem Reports** を選択し、**Scope** で **Organization** を選択し、**Show advanced options** をクリックします。
 
-6.  Enter **lh_estimatedcost,lh_assignto** for **Select columns** and click **Hide advanced options**.
+6.  **Select columns** に **lh_estimatedcost、lh_assignto ** と入力し、**Hide advanced options** をクリックします。
 
-7.  Click on the **… Menu** button of the trigger step and select **Rename**.
+7.  トリガーステップの **… Menu** ボタンをクリックし、**Rename** を選択します。
 
-8.  Rename the trigger step **When a problem report is created or updated**.
+8.  トリガーステップの名前を **When a problem report is created or updated** に変更します。
 
-9.  Click **+ New step**.
+9.  **+ New step** をクリックします。
 
-10. Search for **Condition** and Select **Condition** control.
+10. **Condition**　を検索し、**Condition**　コントロールを選択します。
 
-11. Click to select the first **Choose a value** Column.
+11. 最初の **Choose a value** 列をクリックして選択します。
 
-12. Go to the Dynamic content pane, search for **estimated** and select **Estimated Cost**.
+12. 動的コンテンツペインに移動し、**estimated** を検索して **Estimated Cost** を選択します。
 
 ![A screenshot of the dynamic content pane with the word estimated in the search bar](04/media/image13.png)
 
-13. Select **is greater than** in the second field and enter **1000** in the third field.
+13. 2番目のフィールドで **is greater than** を選択し、3番目のフィールドに **1000** と入力します。
 
-14. Rename the condition step to **Check if cost is greater than 1000**.
+14. 条件ステップの名前を **Check if cost is greater than 1000** に変更します。
 
-15. Go to the **If yes** branch and click **Add an action**.
+15. **If yes** ブランチに移動し、**Add an action** をクリックします。
 
-16. Search for **Get a row** and select **Get a row by ID** from **Microsoft Dataverse**.
+16. **Get a row** を検索し、**Microsoft Dataverse** から **Get a row by ID** を選択します。
 
-17. Select **Users** for **Table name**.
+17. **Table name** に **Users** を選択します。
 
-18. Click to select the **Row ID** Column and select **Assign to (Value)** from the **Dynamic content** pane.
+18. **Row ID** 列をクリックして選択し、**Dynamic content** ペインから **Assign to (Value)** を選択します。
 
-19. Click **Show advanced options**.
+19. **Show advanced options** をクリックします。
 
-20. Enter **internalemailaddress** for **Select columns**.
+20. **Select columns** に **internalemailaddress** を入力します。
 
-21. Click **Hide advanced option**.
+21. **Hide advanced option** をクリックします。
 
-22. Rename the **Get a Row by ID** step **Get user**.
+22. **Get a Row by ID** ステップ **Get user** の名前を変更します。
 
-23. Click **Add and action**.
+23. **Add and action** をクリックします。
 
-24. Search for **approval** and select **Start and wait for an approval**.
+24. **approval** を検索し、**Start and wait for an approval** を選択します。
 
-25. Select **Approve/Reject - Everyone must approve** for **Approval type**.
+25. **Approval type** の **Approve/Reject - Everyone must approve** する必要があります。
 
-26. Enter **Cost approval required** for **Title**.
+26. **Title** に **Cost approval required** と入力します。
 
-27. Click to select the **Assigned to** Column.
+27. **Assigned to** 列をクリックして選択します。
 
-28. Go to the **Dynamic content** pane and select **Primary Email** from the **Get user** step.
+28. **Dynamic content** ペインに移動し、**Get user** ステップから **Primary Email** を選択します。
 
-29. Paste the markdown text below in the **Details** Column.
+29. 以下のマークダウンテキストを **Details** 列に貼り付けます。
 
-> \#\# URGENT Approval Required
+> \#\# 緊急の承認が必要です
 >
-> This is \*\*very\*\* expensive item with the estimated cost of
+> これは \*\*非常に\*\* 高価なアイテムで、推定コストは
 
-30. Place your cursor after cost of, go to the Dynamic content pave, select the Expression tab, paste the expression below, and click **OK**.
+30. コストの後にカーソルを置き、動的コンテンツのペインに移動し、[式]タブを選択して、下に式を貼り付け、**OK** をクリックします。
 
 `formatNumber(triggerOutputs()?['body/lh_estimatedcost'], 'C2')`
 
 ![A Screenshot with an arrow pointing to the ok button in the expression tab under the pasted expression](04/media/image14.png)
 
-31. Click **Add an action**.
+31. **Add an action** をクリックします。
 
-32. Search for **condition** and select **Condition** control.
+32. **Condition** を検索し、**Condition** コントロールを選択します。
 
-33. Click to select the first **Choose a value** Column.
+33. 最初の**Choose a value** 列をクリックして選択します。
 
-34. Go to the **Dynamic content** pane, search for **Outcome** and select **Outcome**.
+34. **Dynamic content** ペインに移動し、**Outcome** を検索して、**Outcome** を選択します。
 
-35. Select **equals to** in the second field and type **Reject** for value in the third field.
+35. 2番目のフィールドで **equals to** を選択し、3番目のフィールドの値に **Reject** と入力します。
 
-36. Go to the **If yes** branch and click **Add an action**.
-37. Search for **update a Row** and select **Update a Row** from **Microsoft Dataverse**.
+36. **If yes** ブランチに移動し、**Add an action** をクリックします。
+37. **update a Row** を検索し、**Microsoft Dataverse** から **update a Row** を選択します。
 
-38. Select **Problem Reports** for **Table name**.
+38. **Table name** で **Problem Reports** を選択します。
 
-39. Click to select the **Row ID** Column.
+39. **Row ID** 列をクリックして選択します。
 
-40. Go to the **Dynamic content** pane, search for **problem report** and select **Problem Report**.
+40. **Dynamic content** ペインに移動し、**Problem report** を検索して、**Problem Report** を選択します。
 
-41. Click **Show advanced options**.
+41. **Show advanced options** をクリックします。
 
-42. Click to select the **Resolution** Column, go to the **Dynamic content** pane and select **Response summary**.
+42. **Resolution** 列をクリックして選択し、**Dynamics content** ペインに移動して、**Response summary** を選択します。
 
-43. Select **Won’t fix** for **Status Reason**.
+43. **Status Reason** で **Won’t fix** を選択します。
 
-44. Rename the step **Update problem report**.
+44. ステップの名前を **Update problem report** に変更します。
 
-45. Scroll up and rename the flow **Escalate Expense Approval**.
+45. 上にスクロールして、フローの名前を **Escalate Expense Approval** に変更します。
 
-46. Click **Save**.
+46. **Save** をクリックします。
 
 ![A screenshot of the current flow](04/media/image15.png)
 
-47. Close the flow designer browser window or tab.
+47. フローデザイナのブラウザウィンドウまたはタブを閉じます。
 
-48. Click **Done** on the popup.
+48. ポップアップで **Done** をクリックします。
 
 #### Task 3: Test flow
 
