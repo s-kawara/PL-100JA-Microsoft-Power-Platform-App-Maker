@@ -35,7 +35,7 @@ lab:
 
 ## 前提条件
 
-* Must have completed **Lab 02.1: Data model and model-driven app**
+* **ラボ02.1：データモデルとモデル駆動型アプリ**を完了している必要があります
 
 ## 詳細な手順
 
@@ -47,139 +47,137 @@ lab:
 
 このタスクでは、共有コンポーネントソリューションを環境にインポートします。 この共有コンポーネントライブラリは、会社の別のチームによって作成されました。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click **Import**.
+2.  **Solutions** を選択し、**Import** をクリックします。
 
 ![A Screenshot with an arrow pointing to the import button](03-2/media/image1.png)
 
-3.  Click **Browse**.
+3.  **Browse** をクリックします。
 
-4.  Go to the course resources folder, select the **Shared components** solution, and click **Open**.
+4.  コースリソースフォルダに移動し、**Shared components** ソリューションを選択して、**Open** をクリックします。
 
-5.  Click **Next**.
+5.  **Next** をクリックします。
 
-6.  Click **Import** and wait for the import to complete.
+6.  **Import** をクリックして、インポートが完了するのを待ちます。
 
-7.  Click **Publish All Customizations** and wait for the publishing to complete.
+7.  **Publish All Customizations** をクリックして、公開が完了するのを待ちます。
 
-8.  You should now see the **Shared Components** solution you imported. Click to open the **Shared Components** solution.
+8.  インポートした **Shared components** ソリューションが表示されます。 クリックして、**Shared components** ソリューションを開きます。
 
-9. The solution should have one item in it. (**Lamna Healthcare Shared Components**)
+9. ソリューションには1つの項目が含まれている必要があります。（**Lamna Healthcare Shared Components**）
 
 ![A screenshot of the shared components window with the Lamna Healthcare shared components item](03-2/media/image2.png)
 
 > [!IMPORTANT]
 > ソリューションの一部としてアプリをインポートしても、コンポーネントライブラリにアプリが追加されない場合があるという問題があります。 次の手順は、問題を解決するために設計されています。
 
-10. Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
-11. Click the **Edit Icon** to edit the app.
+10. **Apps** に移動し、**Lamna Healthcare Shared Components App** を選択します。
 
 ![A Screenshot with an arrow pointing to the edit button](03-2/media/image2-1.png)
 
-12. Select your **Region/Country** and click **Get started** if prompted.
+12. **Region/Country** を選択し、プロンプトが表示されたら **Get started** をクリックします。
     
     > [!Note]
     >
-    > When the app is open in Edit mode, move on to next step, as the Preloader component shows a Loading icon but it is not actually waiting for something to load.
-13. After the app opens, click **File** > **Save As**.
-14. Save the app as **Lamna Healthcare Share Components A**.
+    > アプリが編集モードで開いている場合、プリローダーコンポーネントには読み込みアイコンが表示されますが、実際には何かが読み込まれるのを待っていないため、次の手順に進みます。
+13. アプリが開いたら、**File** > **Save As** をクリックします。
+14. アプリを **Lamna Healthcare Share Components A** として保存します。
 
 ![A screenshot with a border around the app name saved as Lamna Healthcare Shared Components A](03-2/media/image2-2.png)
 
-14. Click **OK**.
-15. Close the **Lamna Healthcare Shared Components** tab in your browser.
+14. **OK** をクリックします。
+15. ブラウザの **Lamna Healthcare Shared Components** タブを閉じます。
 
 #### タスク2：ビューを作成する
 
-このタスクでは、現在のユーザーの問題レポートを表示するビューを作成します。 後で、このビューをキャンバスアプリのフィルター機能で使用します。
+このタスクでは、現在のユーザーのProblem Reportを表示するビューを作成します。 後で、このビューをキャンバスアプリのフィルター機能で使用します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Reports** Table.
+3.  **Problem Reports** テーブルを探し、開きます。
 
-4.  Select the **Views** tab and click to open the **Active Problem Reports** view.
+4.  **Views** タブを選択し、クリックして **Active Problem Reports** ビューを開きます。
 
 ![A Screenshot with an arrow pointing to the active problem reports view button](03-2/media/image3.png)
 
-5.  Click **Edit filters**.
+5.  **Edit filters** をクリックします。
 
 ![A Screenshot with an arrow pointing to the edit filters button](03-2/media/image4.png)
 
-6.  Change the filter to **Created By Equals current user** and click **OK**.
+6.  フィルタを **Created By Equals current user** に変更し、**OK** をクリックします。
 
 ![A screenshot of the edit filters window](03-2/media/image5.png)
 
-7.  Click on the chevron button next to the Save button and select **Save As**.
+7.  Save ボタンの横にある山形ボタンをクリックして、**Save As** を選択します。
 
 ![A Screenshot with an arrow pointing to the save as button](03-2/media/image6.png)
 
-8.  Enter **My Reports** for **Name** and click **Save**.
+8.  **Name** に **My Reports** と入力し、**Save** をクリックします。
 
-9.  Click **Publish** and wait for the publishing to complete.
+9.  **Publish** をクリックして、公開が完了するのを待ちます。
 
-10. Click on the **Back** button in your browser tab to go back to the Problem Report table details.
+10. ブラウザタブの **Back** ボタンをクリックして、Problem Report テーブルの詳細に戻ります。
 
 #### タスク3：ユーザーアプリケーションを作成する
 
 このタスクでは、電話のフォームファクターを使用してキャンバスアプリケーションを作成します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Click **+ New | App |Canvas app**.
+3.  **+ New | App | Canvas app** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new button with the drop down menu under app upon and a border around the canvas app button](03-2/media/image7.png)
 
-4.  Enter **Company 311 Phone App**, select **Phone** for format, and click **Create**.
+4.  **Company 311 Phone App** と入力し、フォーマットとして **Phone** を選択して、**Create** をクリックします。
 
-5.  Select **Skip**.
+5.  **Skip** を選択します。
 
-6.  Go to the Tree view and double click **Screen1**.
+6.  ツリービューに移動し、**Screen1**　をダブルクリックします。
 
 ![A Screenshot with an arrow pointing to the screen 1 button](03-2/media/image9.png)
 
-10. Rename the screen **Main Screen**. It’s always a good idea to give your screens a meaningful name.
+10. 画面の名前を **Main Screen** に変更します。 画面に意味のある名前を付けることは常に良い考えです。
 
 ![A screenshot with the Screen 1 name highlighted and renamed Main Screen](03-2/media/image10.png)
 
-11. Select the **Main Screen** and click **Insert**.
+11. **Main Screen** を選択し、**挿入** をクリックします。
 
 ![A Screenshot with an arrow pointing to the plus icon for insert](03-2/media/image11.png)
 
-12. Select **Get more Components**.
+12. **Get more Components** を選択します。
 
 ![A screenshot with a border around the get more components button](03-2/media/image12-1.png)
 
-13.  Expand the **Lamna Healthcare Shared Components A** Library, select **Header** and **Tab Control**, and then click **Import**.
+13.  **Lamna Healthcare Shared Components A** ライブラリを展開し、**Header** と **Tab Control** を選択して、**Import** をクリックします。
 
 ![A screenshot of the import components window with Ta control and header selected](03-2/media/image12-2.png)
 
-
-14.  Expand **Library components**, select **Header Control** and **Tab Control**. These are both components from the library you imported earlier in the lab.
+14.  **Library components** を展開し、**Header Control** と **Tab Control** を選択します。 これらは両方とも、ラボで以前にインポートしたライブラリのコンポーネントです。
 
 ![A screenshot with a border around the library components Header and Tab control](03-2/media/image12-3.png)
 
-15. Move the **Tab Control** to the bottom of the screen and the **Header Control** to the top of the screens.
+15. **Tab Control** を画面の下部に移動し、**Header Contro** を画面の上部に移動します。
 
-16. Select the **Header Control** and change the **Text** value to **"Company 311".**
+16. **Header Control** を選択し、**Text** の値を **Company 311** に変更します。
 
 ![A screenshot of a border around the expression tab with the text value set to company 311](03-2/media/image13.png)
 
-17. Set the **Height** of the **Header Control** to **75**.
+17. **Header Control** の**Height** を **75** に設定します。
 
     ![Set Height - Header](03-2/media/image37.png)
 
-18. Right click on the Main Screen and select **Duplicate screen**.
+18. メイン画面を右クリックして、**Duplicate screen** を選択します。
 
 ![A screenshot with a border around the duplicate screen button](03-2/media/image14.png)
 
-18. Rename the new screen **New Reports Screen**.
+18. 新しい画面の名前を **New Reports Screen** に変更します。
 
-19. Select the **Tree view**, select **App** and change the **OnStart** value to the formula below. This formula will create a new variable named My Tabs and set it to a table of tab items.
+19. **Tree view** を選択し、**App** を選択して、**OnStart** の値を次の式に変更します。 この数式は、My Tabs という名前の新しい変数を作成し、それをタブアイテムのテーブルに設定します。
 
 ```javascript
 Set('My Tabs', Table( {
@@ -202,28 +200,28 @@ Set('My Tabs', Table( {
 
 ![A screenshot of the copied expression into the expression tab](03-2/media/image15.png)
 
-20. Select the **Tab Control** in the **Main Screen** and change the **Items** value to **‘My Tabs’**.
+20. **Main Screen** で **Tab Control** を選択し、**Items** の値を **'My Tabs'** に変更します。
 
 ![A screenshot of the items value set to my tabs for Tab control](03-2/media/image16.png)
 
-21. Change the **SelectedColor** value to **WhiteSmoke**.
+21. **SelectedColor ** の値を **WhiteSmoke** に変更します。
 
-22. Select the **Tab Control** inside the **New Report Screen** and set the Item value to **‘My Tabs’**.
+22. **New Report Screen** 内の **Tab Control** を選択し、アイテムの値を **'My Tabs'** に設定します。
 
-23. Change the **SelectedColor** value to **WhiteSmoke**.
+23. **SelectedColor** の値を **WhiteSmoke** に変更します。
 
-24. Click on the **…** button of the **App** and select **Run OnStart**.
+24. **App** の **…** ボタンをクリックし、**Run OnStart** を選択します。
 
 ![A screenshot of the run on start button coming from the ellipsis icon for see more under the app button](03-2/media/image17.png)
 
-25. Your tabs should now show the two tabs you added.
+25. これで、追加した2つのタブがタブに表示されます。
 
 ![A screenshot of the two tabs you added](03-2/media/image18.png)
 
-26. Click **File** and then click **Save**.
-27. Click on the **<- back** button.
+26. **File** をクリックしてから、**Save** をクリックします。
+27. **<- back** ボタンをクリックします。
 
-28. Do not navigate away from this page.
+28. このページから離れないでください。
 
 ### 演習2：私のレポート
 
@@ -231,35 +229,35 @@ Set('My Tabs', Table( {
 
 #### タスク1：ギャラリーを追加する
 
-1.  Select the **Main Screen**, go to the **Insert** tab, click **Gallery**, and select **Vertical**.
+1.  **Main Screen** を選択し、**Insert** タブに移動し、**Gallery** をクリックして、**Vertical** を選択します。
 
 ![A Screenshot with an arrow pointing to the vertical gallery option](03-2/media/image19.png)
 
-2.  Rename the new gallery **My Reports Gallery**.
+2.  新しいギャラリーの名前を**My Reports Gallery** に変更します。
 
-3.  Resize and reposition **My Reports Gallery** and make sure the screen looks like the image below.
+3.  **My Reports Gallery** のサイズと位置を変更し、画面が下の画像のようになっていることを確認します。
 
 ![A screenshot of the my reports gallery selected](03-2/media/image20.png)
 
-4.  Select **My Reports Gallery**, go to the **Properties** pane, and select **Problem Reports** for **Data Source**. If you do not see Problem Reports, click **See all tables** or **Search** for the table.
+4.  **My Reports Gallery** を選択し、**Properties** ペインに移動して、**Data Source** に **Problem Reports** を選択します。 Problem Reportが表示されない場合は、**See all tables** または **Search** をクリックしてテーブルを検索してください。
 
 ![A screenshot of the my reports gallery window and the properties pane with problem reports selected for data source](03-2/media/image21.png)
 
-5.  Select the **My Reports** view you created for **View**.
+5.  **View** 用に作成した**My Reports** ビューを選択します。
 
-6.  Click **Edit fields**.
+6.  **Edit fields** をクリックします。 
 
 ![A Screenshot with an arrow pointing to the edit button](03-2/media/image22.png)
 
-7.  Change Subtitle1 to **statuscode**. This is the Status Reason Column.
+7.  Subtitle1を **statuscode** に変更します。 これはステータス理由の列です。
 
 ![A screenshot of a border around subtitle 1 changed to the correct name](03-2/media/image23.png)
 
-8.  Click **File** and then click **Save**.
+8.  **File** をクリックしてから、**Save** をクリックします。
 
-9.  Click on the **<- Back** button.
+9.  **<- Back** ボタンをクリックします。
 
-10. Do not navigate away from this page.
+10. このページから離れないでください。
 
 ### 演習3：レポートの削除を許可する
 
@@ -267,31 +265,31 @@ Set('My Tabs', Table( {
 
 #### タスク1：削除を許可する
 
-1.  Expand the **My Reports Gallery**.
+1.  **My Reports Gallery** を展開します。
 
-2.  Select the **Icon** inside the **My Reports Gallery**.
+2.  **My Reports Gallery** 内の **Icon** を選択します。
 
 ![A screenshot of the arrow icon inside the my reports gallery](03-2/media/image24.png)
 
-3.  Change the **Icon** value to **Icon.Trash**.
+3.  **Icon** の値を **Icon.Trash** に変更します。
 
 ![A screenshot of icon.trash typed into the expression tab](03-2/media/image25.png)
 
-4.  Change the **Visible** value to the formula below. This formula will hide the icon if the status reason is not New.
+4.  **Visible** の値を次の式に変更します。 ステータスの理由が「新規」でない場合、この式はアイコンを非表示にします。
 
 `If(Text(ThisItem.'Status Reason') = "New", true, false)`
 
 ![A screenshot of the expression tab with the relevant command pasted in](03-2/media/image26.png)
 
-5.  Make sure you still have the icon selected. Change the **OnSelect** value to the formula below. This formula will remove item from the data source.
+5.  アイコンがまだ選択されていることを確認してください。 **OnSelect** の値を次の式に変更します。 この式は、データソースからアイテムを削除します。
 
 `Remove('Problem Reports', ThisItem)`
 
-6.  Click **File** and then click **Save**.
+6.  **File** をクリックしてから、**Save** をクリックします。
 
-7.  Click on the **<-** **Back** button.
+7.  **<-** **Back** ボタンをクリックします。
 
-8.  Do not navigate away from this page.
+8.  このページから離れないでください。
 
 ### 演習4：新しいレポートを追加する
 
@@ -299,67 +297,67 @@ Set('My Tabs', Table( {
 
 #### タスク1：新しいレポートフォームを追加する
 
-1.  Select the **New Report Screen**, go to the **Insert** tab, click **Form**, and select **Edit**.
+1.  **New Report Screen** を選択し、**Insert** タブに移動し、**Form** をクリックして、**Edit** を選択します。
 
 ![A screenshot of the inset tab and forms button selected](03-2/media/image27.png)
 
-2.  Rename the form to **New Report Form**.
+2.  フォームの名前を **New Report Form** に変更します。
 
-3.  Select **New Report Form**, go to the **Properties** pane, and select **Problem Report** for **Data source**.
+3.  **New Report Form** を選択し、**Properties** ペインに移動して、**Data Source** の **Problem Report** を選択します。
 
-4.  Click **Edit fields**.
+4.  **Edit fields** をクリックします。
 
 ![A Screenshot with an arrow pointing to the edit fields button](03-2/media/image28.png)
 
-5.  Remove the **Status Reason** Column.
+5.  **Status Reason** 列を削除します。
 
 ![A Screenshot with an arrow pointing to the ellipses icon for more options and a border around the remove button](03-2/media/image29.png)
 
-6.  Remove the **Created On** Column.
+6.  **Created On** 列を削除します。
 
-7.  Remove the **Location** Column.
+7.  **Location** 列を削除します。
 
-8.  Click **+ Add field**.
+8.  **+ Add field** をクリックします。
 
-9.  Select **Details**, **Building**, **Department**, and **Photo**, and then click **Add**.
+9.  **Details**、**Building**、**Department**、**Photo** を選択し、**Add** をクリックします。
 
 ![A screenshot of photo, details, building, and location selected in the fields window](03-2/media/image30.png)
 
-10. Resize and reposition the form so it takes most of the page and leave enough room for a button in the bottom.
+10. フォームのサイズと位置を変更して、ページの大部分を占め、下部にボタンを配置するのに十分なスペースを残します。
 
 ![A screenshot of the form resized and reposition for room at the bottom for a button](03-2/media/image31.png)
 
-11. Select the **New Report Screen**.
+11. **New Report Screen** を選択します。
 
-12. Go to the **Insert** tab and select **Button**.
+12. **Insert** タブに移動し、**Button** を選択します。
 
-13. Rename the button **Submit Report**.
+13. ボタンの名前を **Submit Report** に変更します。
 
-14. Place the button below the form and make it stretch across the screen
+14. フォームの下にボタンを配置し、画面全体に広げます
 
-15. Change the **Submit Report** button's **text** property to **Submit**.
+15. **Submit Report** ボタンの **Text** プロパティを **Submit** に変更します。
 
-16. Select the Submit Report button and change the **OnSelect** value to the formula below. This formula will create a new Row in the Problem Reports table.
+16. Submit Report ボタンを選択し、**OnSelect** の値を次の式に変更します。 この式は、問題レポートテーブルに新しい行を作成します。
 
 `SubmitForm('New Report Form') `
 
-17. Select the **New Report Form**.
+17. **New Report Form** を選択します。
 
-18. Change the **OnSuccess** value to the formula below. This formula will show a notification after the new Row gets created and clear the form when the record creation is successful.
+18. **OnSuccess** の値を次の式に変更します。 この式は、新しい行が作成された後に通知を表示し、レコードの作成が成功するとフォームをクリアします。
 
 `Notify("Created new problem report row");NewForm('New Report Form')`
 
-19. Select the **New Report Screen**.
+19. **New Report Screen** を選択します。
 
-20. Set the **OnVisible** value to the formula below. This formula will create a new form when the screen becomes visible.
+20. **OnVisible** の値を次の式に設定します。 この数式は、画面が表示されたときに新しいフォームを作成します。
 
 `NewForm('New Report Form')`
 
-21. Click **File** and then click **Save**.
-22. Click **Publish**.
-23. Click **Publish this version** and wait for the publishing to complete.
-24. Click on the **<-** **Back** button.
-25. Do not navigate away from this page.
+21. **File** をクリックしてから、**Save** をクリックします。
+22. **Publish** をクリックします。
+23. **Publish this version** をクリックして、公開が完了するのを待ちます。
+24. **<-** **Back** ボタンをクリックします。
+25. このページから離れないでください。
 
 
 ### 演習5：アプリケーションをテストする
@@ -368,38 +366,38 @@ Set('My Tabs', Table( {
 
 #### タスク1：アプリケーションをテストする
 
-1.  Select the **Main Screen** and click **Preview the app**.
+1.  **Main Screen** を選択し、**Preview the app** をクリックします。
 
 ![A Screenshot with an arrow pointing to the play icon to preview the app](03-2/media/image32.png)
 
-2.  The application should load, and the list should show all the reports you created.
+2.  アプリケーションが読み込まれ、作成したすべてのレポートがリストに表示されます。
 
 ![A screen of your loaded application](03-2/media/image33.png)
 
-3.  Select the **New Report** tab.
+3.  **New Report** タブを選択します。 
 
-4.  The **New Report Form** should load. Fill out the form and click on the **Photo** Column.
+4.  **New Report Form** が読み込まれます。 フォームに記入し、**Photo** 列をクリックします。
 
-5.  Select an image.
+5.  画像を選択します。
 
-6.  Click **Submit**
+6.  **Submit** をクリックします。
 
-7.  The Row should get created successfully and you should see the success message.
+7.  行が正常に作成され、成功メッセージが表示されます。
 
 ![A screen of the success message reading "created new problem report record"](03-2/media/image38.png)
 
-8.  Select the **My Reports** tab.
+8.  **My Reports** タブを選択します。
 
-9.  You should see the new report you created. Click **Delete** to test the delete.
+9.  作成した新しいレポートが表示されます。 **Delete** をクリックして削除をテストします。
 
 ![A Screenshot with an arrow pointing to the trash can icon to delete](03-2/media/image35.png)
 
-10. The Row should be deleted and removed from the list.
+10. 行を削除して、リストから削除する必要があります。
 
 ![A screenshot of the row deleted and removed from the list](03-2/media/image36.png)
 
-11. **Close** the preview.
-12. **Close** the app studio by closing the browser tab.
+11. プレビューを**閉じる**。
+12. ブラウザタブを閉じて、アプリスタジオを**閉じます**。
 
 ### 演習6：Microsoft Teamsにキャンバスアプリを埋め込む
 
@@ -407,55 +405,55 @@ Set('My Tabs', Table( {
 
 #### タスク1：会社311チームをセットアップする
 
-In this task, you will setup a **Microsoft Teams** team for the Lamna Healthcare Company, if you have not done so previously.
+このタスクでは、Lamna HealthcareCompanyの **Microsoft Teams** チームをセットアップします（これまでにセットアップしたことがない場合）。
 
-1.  Navigate to [Microsoft Teams](https://teams.microsoft.com) and sign in with the same credentials you have been using previously.
+1.  [Microsoft Teams](https://teams.microsoft.com) に移動し、以前に使用していたのと同じ資格情報でサインインします。 
 
-2.  Select **Use the web app instead** on the welcome screen.
+2.  ようこそ画面で **Use the web app instead** を選択します。
 
 ![A screenshot of the Microsoft Teams web browser landing page with a border around the use the web app instead button](03-2/media/image-3-teams.png)
 
-3.  When the Microsoft Teams window opens, dismiss the welcome messages.
+3.  Microsoft Teamsウィンドウが開いたら、ウェルカムメッセージを閉じます。
 
-4.  Select **Teams**.
-5.  On the bottom left corner, choose **Join or create a team**.
+4.  **Teams** を選択します。
+5.  左下隅で、**Join or create a teams** を選択します。
 
-6.  Select **Create a team**.
+6.  **Create a teams** を選択します。
 
 ![A screenshot of a border around the join or create a team button and another border around the create a team button](03-2/media/image-3-createteam.png)
 
-6.  Press **From scratch**.
+6.  **From scratch** を押します。 
 
-7.  Select **Public**.
+7.  **Public** を選択します。
 
-8.  For the Team name enter **Company 311** and select **Create**.
+8.  チーム名に **Company 311** と入力し、**Create** を選択します。
 
-9.  Select **Skip** adding members to Company 311.
-10. Do not navigate away from this page.
+9.  Company 311 にメンバーを追加するで **Skip** を選択します。
+10. このページから離れないでください。
 
 
 #### タスク2：チームにキャンバスアプリを追加する
 
-1.  Select the **General** channel of the **Company 311** team.
+1.  **Company 311** チームの **General** チャネルを選択します。
 
-2.  On the top of the page, press the **+** symbol to add a new tab.
+2.  ページの上部にある **+** 記号を押して、新しいタブを追加します。
 
 ![A screenshot of a border around the plus icon to add a new tab](03-2/media/image-3-addpowerbitab.png)
 
-4.  Search for **power** and select **PowerApps** from the results.
+4.  **power** を検索し、結果から **Power Apps** を選択します。
 
-5.  Select **Add** to add Power Apps to Teams
+5.  Power Appsをチームに追加するには、**Add** を選択します。
 
 ![A screenshot of the prompt to add Power Apps to Teams](03-2/media/image-3-powerappsteams.png)
 
-6. Select the **Company 311 Phone App** that you created earlier in this lab. 
+6. このラボで以前に作成した **Company 311 Phone App** を選択します。
 
 > [!IMPORTANT]
 > アプリが表示されない場合は、アプリエディターに戻ってアプリを公開する必要があります
 
-7. Select **Save**.
+7. **Save** を選択します。
 
-8. The **Company 311** app should now appear on a tab in Microsoft Teams.
+8. **Company 311** アプリが Microsoft Teams のタブに表示されます。
 
 ![A screenshot of the company 311 app appearing on a tab in Microsoft Teams](03-2/media/image-3-powerappinteams.png)
 
