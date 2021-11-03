@@ -11,21 +11,21 @@ lab:
 >
 
 
-# Lab 02.2: Business Process Flows and Business Rules
+# ラボ02.2：ビジネスプロセスフローとビジネスルール
 
-In this lab you will enhance the data model and improve the app behavior by adding a business process flow and a business rule.
+このラボでは、ビジネスプロセスフローとビジネスルールを追加することで、データモデルを強化し、アプリの動作を改善します。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - How to identify stages in a Business Process Flow (BPF)
+  - ビジネスプロセスフロー（BPF）の段階を特定する方法
 
-  - How to create and use a BPF
+  - BPFを作成して使用する方法
 
-  - How to use a business rule to implement logic
+  - ビジネスルールを使用してロジックを実装する方法
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-  - Exercise 1 – Create BPF lifecycle of problem report
+  - 演習1 - 問題レポートのBPFライフサイクルを作成する
     
       - Route 
       
@@ -33,79 +33,79 @@ In this lab you will enhance the data model and improve the app behavior by addi
       
       - Resolved 
 
-  - Exercise 2 – Business rule to not allow close without resolution
+  - 演習2 – 解決せずにクローズを許可しないビジネスルール
 
-## Prerequisites
+## 前提条件
 
-* Must have completed **Lab 02.1: Data model and model-driven app**
+* **ラボ02.1：データモデルとモデル駆動型アプリ** を完了している必要があります
 
-## Detailed steps
+## 詳細な手順
 
-### Exercise 1: Create business process flow
+### 演習1：ビジネスプロセスフローを作成する
 
-In this exercise, you will create a business process flow for the problem report table.
+この演習では、問題レポートテーブルのビジネスプロセスフローを作成します。
 
-#### Task 1: Customize Table
+#### タスク1：テーブルをカスタマイズする
 
-In this task, you will add a lookup Column to the problem report table.
+このタスクでは、ルックアップ列を問題レポートテーブルに追加します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Locate and click to open the **Problem Report** Table.
+3.  **Problem Report** テーブルを探し、開きます。
 
-4.  Make sure you have the **Columns** tab and click **+ Add Column**.
+4.  **Columns** タブがあることを確認し、**+ Add Column** をクリックします。
 
-5.  Enter **Assign to** for **Display name**, select **Lookup** for **Data type**, select **User** for **Related table**, and click **Done**.
+5.  **Display name** に **Assign to** を入力し、**Data type** に **Lookup** を選択し、**Related table** に**User** を選択して、**Done** をクリックします。
 
 ![A screenshot of the assign to panel with all relevant values in each field](02-2/media/image1.png)
 
-6.  Click **Save Table**.
+6.  **Save Table** をクリックします。
 
-7.  Go back to the solution by clicking on the solution name.
+7.  ソリューション名をクリックして、ソリューションに戻ります。
 
 ![A Screenshot with an arrow pointing to the solution name](02-2/media/image2.png)
 
-8.  Click **Publish all customizations** and wait for the publishing to complete.
+8.  **Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
-#### Task 2: Create business process flow
+#### タスク2：ビジネスプロセスフローを作成する
 
-In this task, you will create a business process flow for the problem report Table.
+このタスクでは、問題レポートテーブルのビジネスプロセスフローを作成します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) ページに移動し、正しい環境にいることを確認します。 
 
-2.  Select **Flows**.
+2.  **Flows** を選択します。
 
-3.  Select the **Business process flows** tab and click **+ New**.
+3.  **Business process flows** タブを選択し、**+ New** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new button](02-2/media/image3.png)
 
-4.  Enter **Problem resolution process** for **Flow Name**, select **Problem Report** for **Table**, and click **Create**.
+4.  **Flow Name** に**Problem resolution process** を入力し、**Table** に **Problem Report** を選択して、**Create** をクリックします。
 
-5.  Select the **New stage**, go to the **Properties** pane, change the **Display Name** to **Route**, and click **Apply**.
+5.  **New stage** を選択し、**Properties** ペインに移動し、**Display Name** を **Route** に変更して、**Apply** をクリックします。
 
 ![A screenshot of the new stage and properties pane](02-2/media/image4.png)
 
-6.  Expand **Details** of the **Route** stage.
+6.  **Route** ステージの **Details** を展開します。
 
 ![A Screenshot with an arrow pointing to the details button](02-2/media/image5.png)
 
-7.  Select **Data Step \#1**, go to the **Properties** pane, select **Building** for **Data Field**, and click **Apply**.
+7.  **Data Step \#1** を選択し、**Properties** ペインに移動し、**Data Field** の **Building** を選択して、**Apply** をクリックします。
 
 ![A screenshot of the new stage with data step one selected and the properties pane open](02-2/media/image6.png)
 
-8.  Click **+ Add** and select **Add Data Step**.
+8.  **+ Add** をクリックし、**Add Data Step** を選択します。
 
 ![A Screenshot with an arrow pointing to the add button and a border around add data step button](02-2/media/image7.png)
 
-9. Select the **+** option to add the data step below the **Building** data step.
+9. **+** オプションを選択して、**Building** データステップの下にデータステップを追加します。
 
    ![A screenshot of a data step being about to be added to the process stage](02-2/media/image27.png)
 
-10. Select the new data step, go to the **Properties** pane, select **Location** for **Data Field**, and click **Apply**.
+10. 新しいデータステップを選択し、**Properties** ペインに移動し、**Data Field** で **Location** を選択して、**Apply** をクリックします。
 
-11. Click **+ Add** again and select **Add Data Step**.
+11. **+ Add** をもう一度クリックし、**Add Data Step** を選択します。
 
 12. Select the new data step, go to the **Properties** pane, select **Department** for **Data Field**, and click **Apply**.
 
