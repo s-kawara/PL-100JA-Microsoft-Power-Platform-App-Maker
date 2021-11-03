@@ -391,201 +391,201 @@ lab:
 
 #### タスク1：キャンバスを追加する
 
-1. Navigate to [Power BI](https://app.powerbi.com).
-2. Select **Workspaces** and then select to open **311 Workspace**.
-3. Click to open the **Problem management** report.
-4. Click **Edit**.
-5. Resize and reposition the visuals as shown below.
+1. [Power BI](https://app.powerbi.com) に移動します。 
+2. **Workspaces** を選択してから、**311 Workspace** を開くことを選択します。
+3. クリックして、**Problem management** レポートを開きます。
+4. **Edit** をクリックします。
+5. 以下に示すように、ビジュアルのサイズと位置を変更します。
 
 ![Power BI visuals - screenshot](05/media/image-6-powerbivisuaLs.png)
 
-6. Click on an empty area of the canvas, go to the **Visualizations** and click **Power Apps for Power BI**.
+6. キャンバスの何もない領域をクリックし、**Visualizations**　に移動して、**Power Apps for Power BI**　をクリックします。
 
 ![Power Apps for Power BI - screenshot](05/media/image-6-powerappsforpowerbi.png)
 
-7. Select the Power BI visual you just created, expand the **lh_problemreport** table select **Problem Report** column.
+7. 作成したPowerBIビジュアルを選択し、**lh_problemreport** テーブルを展開して **Problem Report** 列を選択します。
 
 ![Table column - screenshot](05/media/image-6-tablecolumn.png)
 
-8. Select your practice environment and click **Create new**.
+8. 練習環境を選択し、**Create new** をクリックします。
 
 ![create app - screenshot](05/media/image-6-createembeddedapp.png)
 
-9. A new browser window or tab should open and load the app studio.
-10. Do not navigate away from this page.
+9. 新しいブラウザウィンドウまたはタブが開き、アプリスタジオが読み込まれます。
+10. このページから離れないでください。
 
-#### Task 2: Customize the app
+#### タスク2：アプリをカスタマイズする
 
-1.  Right click on **Gallery** and select **Delete**.
+1.  **Gallery** を右クリックして、**Delete** を選択します。
 
 ![Delete gallery button - screenshot](05/media/ex_5_deletegallery.png)
 
-2.  Click **File**.
-4.  Select **Settings**.
-5.  Select **Display**.
-6.  Change the **Orientation** for **Landscape**.
-7.  Click **Apply** on the popup.
-8.  Close the **Settings** window.
-9.  Select **Data** and click **Add data**.
+2.  **File** をクリックします。
+4.  **Settings** を選択します。
+5.  **Display** を選択します。
+6.  **Landscape** の **Orientation** を変更します。
+7.  ポップアップで **Apply** をクリックします。
+8.  **Settings** ウィンドウを閉じます。
+9.  **Data** を選択し、**Add data** をクリックします。
 
 ![Add data - screenshot](05/media/ex_5_adddata.png)
 
-10.  Select the **Problem reports** table.
+10.  **Problem reports** テーブルを選択します。
 
 ![Select data table - screenshot](05/media/ex_5_datatable.png)
 
-11.  Select the **App** object from the Tree view.
-12.  Select the **OnStart** of the **App** object and set it to the formula below. This formula will create two variables one to keep track of the current index of the reports table and another to keep track of the current item row.
+11.  ツリービューから **App** オブジェクトを選択します。
+12.  **App** オブジェクトの **OnStart** を選択し、以下の式に設定します。 この数式は、レポートテーブルの現在のインデックスを追跡するための変数と、現在のアイテム行を追跡するための変数の2つを作成します。
 
 ```Set(currentIndex,1);Set(CurrentItem, LookUp('Problem Reports', 'Problem Report' = GUID(Last(FirstN([@PowerBIIntegration].Data,currentIndex)).'Problem Report')))```
 
 ![A screentshot showing OnStart property set to the expression described on the previous step](05/media/ex_5_apponstart.png)
 
-13.   Select the **Insert** tab, click **Media**, and select **Image**.
+13.   **Insert** タブを選択し、**Media** をクリックして、**Image** を選択します。
 
 ![Insert image- screenshot](05/media/ex_5_insertimaGe.png)
 
-14  Set the **Image** value to the formula below.
+14  **Image** の値を次の式に設定します。
 
 ```CurrentItem.Photo```
 
-15.  Click on the **...** button of the **App** object and select **Run OnStart**.
+15.  **App** オブジェクトの **...** ボタンをクリックし、**Run OnStart** を選択します。
 
 ![Run app OnStart - screenshot](05/media/ex_5_runonstart.png)
 
-16.   You should see the photo. If you are not seeing the photo, then go to your Model Driven App and add photo to Problem Reports records where the Photo field is empty.
+16.   写真が見えるはずです。 写真が表示されない場合は、モデル駆動型アプリに移動し、写真フィールドが空の問題レポートレコードに写真を追加します。
 
 ![Current image with photo - screenshot](05/media/ex_7_imagephoto.png)
 
-17.  Set the **X** value of the image to **0**.
-18.  Set the **Y** value of the image to **0**.
-19.  Set the **Width** value of the image to the formula below.
+17.  画像の **X** 値を **0** に設定します。
+18.  画像の **Y** 値を **0** に設定します。
+19.  画像の **Width** 値を以下の式に設定します。
 
 ```Parent.Width```
 
-20. Set the **Height** value of the image to the formula below.
+20. 画像の **Height** 値を以下の式に設定します。
 
 ```Parent.Height```
 
-21.  The image should fill the screen.
+21.  画像が画面いっぱいに表示されます。
 
 ![Image position - screenshot](05/media/ex_7_imageposition.png)
 
-22.  Do not navigate away from this page.
+22.  このページから離れないでください。
 
 
-#### Task 3: Add controls
+#### タスク3：コントロールを追加する
 
-1.  Select the **Insert** tab and click **Label**.
-2.  Select the label you just added and set the **Text** value to the formula below.
+1.  **Insert** タブを選択し、**Label** をクリックします。
+2.  追加したラベルを選択し、**Text** の値を次の式に設定します。
 
 ```CurrentItem.Title```
 
-3.  Set the **Height** value of the labe to **60**.
-4.  Set the **X** value of the label to **0**.
-5.  Set the **Y** value of the label to formula below.
+3.  ラベルの **Heigh** 値を **60** に設定します。
+4.  ラベルの **X** 値を **0** に設定します。
+5.  ラベルの **Y** 値を次の式に設定します。
 
 ```Parent.Height -Self.Height```
 
-6.  Set the the **Width** value of the label to formula below.
+6.  ラベルの **Width** 値を次の式に設定します。
 
 ```Parent.Width```
 
-7.  Set the **Fill** value of the label to **RGBA(0, 108, 191, .5)**.
-8.  Set the **Color** value of the label to **RGBA(255, 255, 255, 1)**.
-9.  Set the **Align** value to the formula below.
+7.  ラベルの **Fill** 値を **RGBA(0, 108, 191, .5)** に設定します。
+8.  ラベルの **Color** 値を **RGBA(255, 255, 255, 1)** に設定します。
+9.  ラベルの **Align** 値を次の式に設定します。
 
 ```Align.Center```
 
-10. The label should now look like the image below. If you don't see the title, click on the **...** button of the **App** object and **Run OnStart** again.
+10. これで、ラベルは次の画像のようになります。 タイトルが表示されない場合は、**App** オブジェクトの **...** ボタンをクリックして、**Run OnStart** をもう一度クリックします。
 
 ![Resized label - screenshot](05/media/ex_7_resizedlabel.png)
 
-11.  Go to the **Insert** tab, click **Icons** and select **Next**.
-12.  Double click on the icon you just added and rename it **Next icon**.
-13.  Go to the **Insert** tab, click **Icons** and select **Back**.
-14.  Double click on the second icon you just added and rename it **Back icon**.
-15.  Drag and place the the **Next icon** above the right side of the label.
-16.  Drag and place the the **Back icon** above the left side of the label.
-17.  The icons should now look like the image below.
+11.  **Insert** タブに移動し、**Icons** をクリックして、**Next** を選択します。
+12.  追加したアイコンをダブルクリックして、名前を **Next icon** に変更します。
+13.  **Insert** タブに移動し、**Icons** をクリックして、**Back** を選択します。
+14.  追加した2番目のアイコンをダブルクリックし、名前を **Back icon** に変更します。
+15.  ラベルの右側の上に **Next icon** をドラッグして配置します。
+16.  ラベルの左側の上に **Back icon** をドラッグして配置します。
+17.  アイコンは下の画像のようになります。
 
 ![Icon location - screenshot](05/media/ex_7_iconlocation.png)
 
-18.  Select the **Next icon** and set the **OnSelect** value to the formula below.
+18.  **Next icon** を選択し、**OnSelect** の値を次の式に設定します。
 
 ```UpdateContext({CurrentItem: LookUp('Problem Reports', 'Problem Report' = GUID(Last(FirstN([@PowerBIIntegration].Data,currentIndex)).'Problem Report'))});UpdateContext({currentIndex: currentIndex +1})```
 
-19.  Set the **DisplayMode** value of the **Next icon** to the formula below.
+19.  **Next icon** の **DisplayMode** 値を次の式に設定します。
 
 ```If(currentIndex = CountRows([@PowerBIIntegration].Data), DisplayMode.Disabled, DisplayMode.Edit)```
 
-20.  Select the **Back icon** and set the **OnSelect** value to the formula below.
+20.  **Back icon** を選択し、**OnSelect** の値を次の式に設定します。
 
 ```UpdateContext({CurrentItem: LookUp('Problem Reports', 'Problem Report' = GUID(Last(FirstN([@PowerBIIntegration].Data,currentIndex)).'Problem Report'))});UpdateContext({currentIndex: currentIndex -1})```
 
-21.   Set the **DisplayMode** value of the **Back icon** to the formula below.
+21.   **Back icon** の **DisplayMode** 値を次の式に設定します。
 
 ```If(currentIndex > 1, DisplayMode.Edit, DisplayMode.Disabled)```
 
-22.   Go to the **Insert** tab, click **Icons** and select **Check**.
-23.   Rename the Check icon **Complete icon**.
-24.   Move the **Complete icon** to the top right of the screen.
-25.   Set the OnSelect of the **Check icon** to the formula below. This formula will update the status of the row to completed and then refresh Power BI.
+22.   **Insert** タブに移動し、**Icons** をクリックして、**Check** を選択します。
+23.   チェックアイコン **Complete icon** の名前を変更します。
+24.   **Complete icon** を画面の右上に移動します。
+25.   **Check Icon** のOnSelectを次の式に設定します。 この数式は、行のステータスを完了に更新してから、Power BIを更新します。
 
 ```Patch('Problem Reports', CurrentItem, {'Status Reason': 'Status Reason (Problem Reports)'.Completed}); PowerBIIntegration.Refresh()```
 
-26.   Click **Play**.
-27.   Click on the next and back icons and make sure the image changes.
-28.   Close the preview.
+26.   **Play** をクリックします。 
+27.   次と戻るアイコンをクリックして、画像が変わることを確認します。
+28.   プレビューを閉じます。
 
-29.   Click **File**.
-30.   Click **Save**.
-31.   Select **Cloud** enter **Power BI embed app**.
-32.   Click **Save**.
-33.   Close the app studio browser window or tab.
-34.   You should now be back on the Power BI report. Click **Refresh** on the top header.
-35. Click on the **Next** and **Back** icons to make sure the application loads the images.
+29.   **File** をクリックします。 
+30.   **Save** をクリックします。 
+31.   **Cloud** を選択し、**Power BI embed app** を入力します。
+32.   **Save** をクリックします。
+33.   アプリスタジオのブラウザウィンドウまたはタブを閉じます。
+34.   これで、Power BIレポートに戻るはずです。 上部のヘッダーにある **Refresh** をクリックします。
+35. **Next** および **Back** アイコンをクリックして、アプリケーションが画像をロードすることを確認します。
 
     ![Canvas inside Power BI report - screenshot](05/media/ex_7_canvasembedded.png)
 
-36. Select the **Completed** column of the stacked column chart and make a note how many rows are completed.
-37. Select any column of the stacked column chart apart from **Completed**. Click on the next icon to see the next image.
-38. Click on the **Complete** icon. 
+36. 積み上げ縦棒グラフの **Completed** 列を選択し、完了した行数をメモします。
+37. **Completed** 以外の積み上げ縦棒グラフの任意の列を選択します。 次のアイコンをクリックすると、次の画像が表示されます。
+38. **Complete** アイコンをクリックします。 
 
     ![Complete status of problem - screenshot](05/media/ex_7_complete.png)
 
-39. The completed count should increase. If the completed count doesn't increase, click refresh and wait for the visuals to be refreshed.
+39. 完了した数が増えるはずです。 完了した数が増えない場合は、更新をクリックして、ビジュアルが更新されるのを待ちます。
 
     ![Increased completed count - screenshot](05/media/ex_7_increasedcount.png)
 
-40. Click **Save** to save the report..
+40. **Save**をクリックしてレポートを保存します。
 
 
 
-## Challenges
+## 課題
 
-* Dashboards and reports to include drilldown to individual reports with photos
-* Report and analyze problem patterns and trends
-* Problem resolution status visualization as a funnel
+* 写真付きの個々のレポートへのドリルダウンを含むダッシュボードとレポート
+* 問題のパターンと傾向を報告および分析する
+* 目標到達プロセスとしての問題解決ステータスの視覚化
 
-## Addendum
+## 補遺
 
-### Import sample data
+### サンプルデータをインポートする
 
-In this exercise you will import sample data into Power BI service. That allows you to complete the lab exercises even if do not have required permissions to install desktop applications, or experience difficulties in configuring Power BI Desktop and connecting it to the data. After completion of this exercise you can skip **Exercise1** and start the lab on **Exercise 2** using Power BI service ([https://app.powerbi.com](https://app.powerbi.com)) instead of Power BI Desktop. 
+この演習では、サンプルデータをPower BIサービスにインポートします。 これにより、デスクトップアプリケーションをインストールするために必要なアクセス許可がない場合や、Power BI Desktopを構成してデータに接続する際に問題が発生した場合でも、ラボの演習を完了することができます。 この演習の完了後、**Exercise1** をスキップし、Power BIサービス（[https://app.powerbi.com]（https://app.powerbi.com）を使用して **Exrcise2** でラボを開始できます。）) 
 
-1. Download [problem-reports-data.pbix](06\Resources\problem-reports-data.pbix) and save on your computer.
-2. Navigate to [Power BI](https://app.powerbi.com/).
-3. Click **311 Workspace**.
-4. Expand **+New** and select **Upload a file**.
+1. [problem-reports-data.pbix](06\Resources\problem-reports-data.pbix) をダウンロードして、コンピューターに保存します。 
+2. [Power BI](https://app.powerbi.com/) に移動します。 
+3. **311 Workspace** をクリックします。
+4. **+New** を展開し、**Upload a file** を選択します。
 
 ![A Screenshot with an arrow pointing to the new button and another arrow pointing to the upload a file button](05/media/image-6-29.png)
 
-5. Select **Local File**.
-6. Locate and select **problem-report-data.pbix** file that you've downloaded earlier.
-7. Once data load is complete, select **problem-reports-data** report.
-8. Click **...** then select **Edit**.
+5. **Local File** を選択します。
+6. 以前にダウンロードした **problem-report-data.pbix** ファイルを見つけて選択します。
+7. データの読み込みが完了したら、**problem-reports-data** レポートを選択します。
+8. **...** をクリックしてから、**Edit** を選択します。
 
 ![A Screenshot with an arrow pointing to the ellipses icon for more options and the edit button selected](05/media/image-6-30.png)
 
-9. You can now start **Exercise 2: Create Power BI Report** of this lab.
+9. これで、このラボの **演習2：Power BIレポートの作成** を開始できます。
