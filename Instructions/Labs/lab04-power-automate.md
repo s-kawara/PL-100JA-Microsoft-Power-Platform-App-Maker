@@ -11,113 +11,113 @@ lab:
 >
 
 
-# Lab 04: Power Automate
+# ラボ04： Power Automate
 
-In this lab, you will create Power Automate cloud flows to automate various parts of the Company 311 solution.
+このラボでは、Power Automateクラウドフローを作成して、Company 311 ソリューションのさまざまな部分を自動化します。
 
-The following have been identified as requirements you must implement to complete the project: 
+プロジェクトを完了するために実装する必要のある要件として、以下が特定されています。 
 
-  - Escalation, approval, and execution process for urgent maintenance issues 
+  - 緊急のメンテナンス問題のエスカレーション、承認、および実行プロセス
 
-  - Notify reporting user about the issue status changes 
+  - 問題のステータスの変更についてレポートユーザーに通知する 
 
-  - How to use a business rule to implement logic.
+  - ビジネスルールを使用してロジックを実装する方法。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - How to design data columns (in the data model) to support automation 
+  - 自動化をサポートするために（データモデル内の）データ列を設計する方法
 
-  - How to build a flow using Microsoft Dataverse Connector
+  - Microsoft Dataverse Connectorを使用してフローを構築する方法
 
-  - How to use approvals 
+  - 承認の使用方法
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-  - Add columns to support escalation 
-  - Build flow to approve escalation  
-  - Build flow to notify user of status change
-  - Build approval as an adaptive card in Microsoft Teams 
+  - エスカレーションをサポートする列を追加する 
+  - エスカレーションを承認するためのフローを構築する
+  - ステータスの変更をユーザーに通知するフローを作成する
+  - Microsoft Teamsでアダプティブカードとして承認を作成する
 
 ## Prerequisites
 
-* Must have completed **Lab 02.1: Data model and model-driven app**
-* Must have completed **Lab 02.2: Business Process Flows and Business Rules**
+* **ラボ02.1：データモデルとモデル駆動型アプリ** を完了している必要があります
+* **ラボ02.2：ビジネスプロセスフローとビジネスルール** を完了している必要があります
 
-## Things to consider before you begin
+## 始める前に考慮すべきこと
 
-  - What is the most efficient way to identify urgent maintenance issues and escalate them
+  - 緊急のメンテナンスの問題を特定し、それらをエスカレーションするための最も効率的な方法は何ですか
 
-## Detailed steps  
+## 詳細な手順  
 
-### Exercise 1: Build notify flow
+### 演習1：通知フローを作成する
 
-In this exercise, you create a flow that will notify the creator of a problem when the status changes.
+この演習では、ステータスが変更されたときに問題を作成者に通知するフローを作成します。
 
-#### Task 1: Create flow
+#### タスク1：フローを作成する
 
-In this task, you will create a flow that send notification when the status of problem report row changes.
+このタスクでは、問題レポート行のステータスが変更されたときに通知を送信するフローを作成します。
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。 
 
-2.  Select **Solutions** and click to open the **Company 311** solution.
+2.  **Solutions** を選択し、クリックして **Company 311** ソリューションを開きます。
 
-3.  Click **+ New** and select **Cloud Flow**.
+3.  **+ New** をクリックし、**Cloud Flow** を選択します。
 
 ![A screenshot with an arrow pointing to the + New button with a red border around the Cloud Flow link](04/media/image1.png)
 
-4.  Select **Microsoft Dataverse** connector. If **Microsoft Dataverse** connector is not visible, select **Connectors** tab then select **Microsoft Dataverse**.
+4.  **Microsoft Dataverse** コネクタを選択します。 **Microsoft Dataverse** コネクタが表示されていない場合は、**コネクタ** タブを選択してから、**Microsoft Dataverse** を選択します。
 
-5.  Select **When a row is added, modified or deleted**.
+5.  **When a row is added, modified or deleted** を選択します。
 
 ![A screenshot of a border around the when a row is added, modified, or deleted option](04/media/image2.png)
 
-6.  Select **Modified** for **Change type**, select **Problem Reports** for **Table name**, **Organization** for **Scope** and click **Show advanced options**.
+6.  **Change type** で **Modified** を選択し、**Table name** で **Problem Reports** を選択し、**Scope** で **Organization** を選択して、**Show advanced options** を表示します。
 
-7.  Enter **statuscode** for **Select columns** and **… Menu** button of the trigger step.
+7.  トリガーステップの **Select columns** および **… Menu** ボタンに **statuscode** を入力します。
 
 ![A Screenshot with an arrow pointing to the ellipses icon for more options and a border around the select columns statuscode](04/media/image3.png)
 
-8.  Select **Rename**.
+8.  **Rename** を選択します。
 
-9.  Rename the trigger step **When problem report status changes**.
+9.  トリガーステップの名前を **When problem report status changes** に変更します。
 
-10.  Click **+ New step**.
+10.  **+ New step** をクリックします。
 
 ![A Screenshot with an arrow pointing to the add new step button](04/media/image4.png)
 
-11. Select **Connectors** tab and then select **Microsoft Dataverse**. Select **Get a Row by ID**.
+11. **Connectors** タブを選択してから、**Microsoft Dataverse** を選択します。 **Get a Row by ID** を選択します。
 
-12. Select **Users** for **Table name**.
+12. **Table name** に **Users** を選択します。
 
-13. Click on the **Row ID** field, go to the Dynamic pane, search for **created** and click once on **Created By (Value)** to add it.
+13. **Row ID** フィールドをクリックし、動的ペインに移動して、**created** を検索し、**Created By (Value)** を1回クリックして追加します。
 
-14. Click **Show advanced options** of the new step.
+14. 新しいステップの **Show advanced options** をクリックします。
 
-15. Enter **internalemailaddress** for **Select columns**.
+15. **Select columns** に **internalemailaddress** を入力します。
 
-16. Click on the **… Menu** button of the new step and select **Rename**.
+16. 新しいステップの **… Menu** ボタンをクリックし、**Rename** を選択します。
 
-17. Rename the step **Get problem creator**.
+17. ステップの名前を **Get problem creator** に変更します。
 
-18. Click **+ New step**.
+18. **+ New step** をクリックします。
 
-19. Search for **send email** and select **Send an email (V2).**
+19. **send email** を検索し、**Send an email (V2)** を選択します。
 
-20. Click to select the **To** Column and click **Switch to advanced mode**. Click on this button toggles show/hide of the dynamic pane.
+20. **To** 列をクリックして選択し、**Switch to advanced mode** をクリックします。 このボタンをクリックすると、動的ペインの表示と非表示が切り替わります。
 
 ![A Screenshot with an arrow pointing to the switch to advanced mode icon](04/media/image5.png)
 
-21. Select the **Primary Email** Column from the **Get problem creator** step.
+21. **Get problem creator** ステップから **Primary Email** 列を選択します。
 
-22. Enter **Problem report status change notification** for **Subject**.
+22. **Subject** に **Problem report status change notification** を入力します。
 
-23. Click to select the **Body** Column.
+23. **Body** 列をクリックして選択します。
 
-24. Type **The status of the problem you reported has changed.** and press the **[ENTER]** key.
+24. **The status of the problem you reported has changed.** と入力し、**[ENTER]** キーを押します。
 
-25. Type **Problem Title:** go to the Dynamic pane, search for **title** and select **Title**.
+25. **Problem Title:** と入力し、[動的]ペインに移動して、**title** を検索し、**Title** を選択します。
 
-26. Press the **[ENTER]** key.
+26. **[ENTER]** キーを押します。
 
 27. Type **Current Status:** go to the Dynamic pane, select the **Expression** tab, paste the expression below, and click **OK**. This expression will show the label of the choice instead of the value.
 
