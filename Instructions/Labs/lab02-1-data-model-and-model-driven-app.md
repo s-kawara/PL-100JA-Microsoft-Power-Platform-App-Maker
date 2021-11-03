@@ -522,192 +522,192 @@ lab:
 
 ![A screenshot of the properties pane with the title and ID changed](02-1/media/image72.png)
 
-27.  Select the **Taxonomy** group you just added, click **+ Add** and select **Subarea**
+27.  追加した **Taxonomy** グループを選択し、**+ Add** をクリックして、**Subarea** を選択します。
 
 ![A Screenshot with an arrow pointing to the subarea button](02-1/media/image73.png)
 
-28.   Select **Table** for **Content type**, **Building** for **Table** and click **Add**.
+28.   **Content type** に **Table**、**Table** に **Building** を選択し、**Add** をクリックします。
 
 ![A screenshot of the New Subarea window and the content type changed](02-1/media/image74.png)
 
-29.  Select the **Taxonomy** group, click **+ Add** and select **Subarea** again.
+29.  **Taxonomy** グループを選択し、**+ Add** をクリックして、**Subarea** をもう一度選択します。
 
-30.  Select **Table** for **Content type**, select **Department** for **Table**, and click **Add**.
+30.  **Content type** で **Table** を選択し、**Table** で **Department** を選択して、**Add** をクリックします。
 
-31. The sitemap should now look like the image below. Click **Save** to save the sitemap.
+31. サイトマップは次の画像のようになります。 **Save** をクリックしてサイトマップを保存します。
 
 ![A Screenshot with an arrow pointing to the save button on your site map which should have active departments with a name column below](02-1/media/image76.png)
 
-32. Click **Publish** to publish the sitemap and wait for the publishing to complete.
-33. **Close** the browser tab. 
-34. Open a new tab and navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
-35. Select Solutions and click to open the **Company 311** solution.
-36. Click **Publish all customizations** and wait for the publishing to complete.
+32. **Publishe** をクリックしてサイトマップを公開し、公開が完了するのを待ちます。
+33. ブラウザタブを**閉じます** 
+34. 新しいタブを開き、 [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
+35. ソリューションを選択し、クリックして **Company 311** ソリューションを開きます。
+36. **Publish all customizations** をクリックして、公開が完了するのを待ちます。
 
 ![A Screenshot with an arrow pointing to the publish all customizations button](02-1/media/image77.png)
 
-### Exercise 5: Input data
+### 演習5：入力データ
 
-In this exercise, you will input data to the Dataverse tables.
+この演習では、Dataverseテーブルにデータを入力します。
 
-#### Task 1: Input data
+#### タスク1：データを入力する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application you created.
+2.  **Apps** を選択し、作成した **Company 311 Admin** アプリケーションを開きます。
 
 ![A Screenshot with an arrow pointing to the company 311 admin app](02-1/media/image80.png)
 
-3.  Click **Change area**.
+3.  **Change area** をクリックします。
 
 ![A Screenshot with an arrow pointing to chevron icon next to manage problems](02-1/media/image81.png)
 
-4.  Select **Settings** area.
+4.  **Settings** エリアを選択します。
 
-5.  Select **Departments** and click **+ New**.
+5.  **Departments** を選択し、 **+ New** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new button at the top of the window](02-1/media/image82.png)
 
-6.  Enter **Facility Maintenance** for **Name** and click **Save**.
+6.  **Name** で **Facility Maintenance** を入力し、 **Save** をクリックします。
 
 ![A screenshot showing the change in name to facility maintenance](02-1/media/image83.png)
 
-7.  Click **+ New** again.
+7.  再度、 **+ New** をクリックします。
 
-8.  Enter **Human Resources** for **Name** and click **Save**.
+8.  **Name** で **Human Resources** を入力し、 **Save** をクリックします。
 
-9.  Click **+ New** one more time.
+9.  **+ New** を再度クリックします。
 
-10. Enter **Marketing** for **Name** and click **Save**.
+10. **Name** で、 **Marketing** を入力し、 **Save** をクリックします。
 
-11. Select **Departments**.
+11. **Departments** を選択します。
 
-12. You should now have three department Rows. Select **Buildings**.
+12. これで、3つの部門行ができました。 **Buildings** を選択します。
 
 ![A Screenshot with an arrow pointing to the buildings button under taxonomy](02-1/media/image84.png)
 
-13. Click **+ New**.
+13. **+ New** をクリックします。
 
-14. Enter **San Francisco Main Campus** for **Name** and click **Save & Close**.
+14. **Name** で **San Francisco Main Campus** を入力し、 **Save & Close** をクリックします。
 
-15. Click **+ New** again.
+15. 再度、 **+ New** をクリックします。
 
-16. Enter **London Paddington** for **Name** and click **Save & Close**.
+16. **Name** で **London Paddington** を入力し、 **Save & Close** をクリックします。
 
-17. You should now have two building Rows. Click **Change area**.
+17. これで、2つの構築行ができました。 **Change area**をクリックします。
 
 ![A Screenshot with an arrow pointing to the chevron icon next to settings in the bottom left corner of the window](02-1/media/image85.png)
 
-18. Select **Manage Problems**.
+18. **Manage Problems** を選択します。
 
-19. Click **+ New**.
+19. **+ New** をクリックします。
 
 ![A screenshot of the active problem reports page](02-1/media/image86.png)
 
-20. Enter **Broken door** for **Title**, select **San Francisco Main Campus** for **Building**, enter **The main entrance door will not open all the way** for **Details**, and click **Save**
+20. **Title** に **Broken door** を入力し、**Building** に**San Francisco Main Campus** を選択し、**Details* に **The main entrance door will not open all the way** と入力します。
 
 ![A screenshot of the new problem report window with all relevant text in each field](02-1/media/image87.png)
 
-21. Click on the **Photo** Column.
+21. **Phone** 列をクリックします。
 
 ![A Screenshot with an arrow pointing to the upload an image button](02-1/media/image88.png)
 
-22. Select an image from your device. The sample image displayed below can be found [here](02-1/media/image89.png).
+22. デバイスから画像を選択します。 以下に表示されているサンプル画像は、[ここ]（02-1/media/image89.png）にあります。
 
-23. The image should now show on the form.
+23. 画像がフォームに表示されます。
 
 ![A screenshot of a vector image of a door which should appear](02-1/media/image89.png)
 
-24. Click **Save & Close**.
+24. **Save & Close** をクリックします。
 
-25. Close the browser tab.
+25. ブラウザタブを閉じます。
 
-### Exercise 6: Import data
+### 演習6：データのインポート
 
-In this exercise, you will import sample data into the environment. Rows are imported by a Power Automate cloud flow that you will first import using a solution.
+この演習では、サンプルデータを環境にインポートします。 行は、ソリューションを使用して最初にインポートするPowerAutomateクラウドフローによってインポートされます。
 
-#### Task 1: Import solution
+#### タスク1：ソリューションをインポートする
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
-2.  Select **Solutions** and click **Import**.
-3.  Click **Browse**.
-4.  Select the **DataImport.zip** solution file located in the lab resources folder and click **Open**.
-5.  Click **Next**.
-6.  Click **Next** again.
-7.  Expand **Select a connection** dropdown and click **+ New connection**.
-8.  New tab will open with a prompt to create **Microsoft Dataverse** connection. 
-9.  Click **Create**, authenticate if required, wait until new connection is created. Close the browser tab.
-10.  Click **Refresh**. Make sure new connection is selected in the dropdown. 
-11.  Click **Import** and wait for the message **Solution "Data Import" imported successfully** to appear.
-12.  Click **Publish all customizations** and wait for the publishing to complete. 
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
+2.  **Solutions** を選択し、**Import** をクリックします。
+3.  **Browse** を選択します。
+4.  ラボのリソースフォルダーにある **DataImport.zip** ソリューションファイルを選択し、**Open** をクリックします。
+5.  **Next** をクリックします。
+6.  再度 **Next** をクリックします。
+7.  **Select a connection** ドロップダウンを展開し、**+ New connection** をクリックします。
+8.  新しいタブが開き、**Microsoft Dataverse** 接続を作成するように求められます。
+9.  **Create** をクリックし、必要に応じて認証し、新しい接続が作成されるまで待ちます。 ブラウザタブを閉じます。
+10.  **Refresh** をクリックします。ドロップダウンで新しい接続が選択されていることを確認します。 
+11.  **Import** をクリックし、メッセージ **Solution "Data Import" imported successfully** が表示されるのを待ちます。
+12.  **Publish all customizations** をクリックして、公開が完了するのを待ちます。 
 
-#### Task 2: Review and run flow
+#### タスク2：フローを確認して実行する
 
-1. Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1. [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
 
-2. Select **Solutions** and click to open the **Data Import** solution you imported.
+2. **Solutions** を選択し、クリックして、インポートした**Data Import** ソリューションを開きます。
 
-3.  Click to open the **Import Data** flow. Click the **Get Started** button on the **Welcome to Power Automate** window.
+3.  クリックして **Import Data** フローを開きます。 **Welcome to Power Automate** ウィンドウの **Get Started** ボタンをクリックします。
 
 > [!NOTE]
-> If the flow is not opened after clicking on Get Started, then close the current tab, go back to your previous window, click Done and reopen the flow.
+> [開始]をクリックしてもフローが開かない場合は、現在のタブを閉じ、前のウィンドウに戻り、[完了]をクリックしてフローを再度開きます。
 
 ![A Screenshot with an arrow pointing to the import data button](02-1/media/image90.png)
 
-4.  Click **Edit**.
+4.  **Edit** をクリックします。
 
-5.  Click **Continue**.
+5.  **Continue** をクリックします。
 
-6.  Click to expand the **Input** **Data** step.
+6.  クリックして、**Input** **Data** ステップを展開します。
 
-7.  Review the JSON text in the value Column. This is the data that will be imported into your environment. Note the image data encoded as a text.
+7.  値列のJSONテキストを確認します。 これは、環境にインポートされるデータです。 テキストとしてエンコードされた画像データに注意してください。
 
-8.  Expand the **Each Department** for each control
+8.  各コントロールの **Each Department** を展開します。
 
-9.  Expand and review the **Upsert Department** step.
+9.  **Upsert Department** ステップを展開して確認します。
 
-10. Expand and review the rest of the steps.
+10. 残りの手順を展開して確認します。
 
-11. Click **Save** to save the flow.
+11. **Save** をクリックしてフローを保存します。
 
-12. Click on the button and go back to the flow details page.
+12. ボタンをクリックして、フローの詳細ページに戻ります。
 
 ![A Screenshot with an arrow pointing to the arrow icon to go back](02-1/media/image92.png)
 
-13. Click **Run**.
+13. **Run** をクリックします。
 
-14. Click **Run flow**.
+14. **Run flow** をクリックします。
 
-15. Click **Done**.
+15. **Done** をクリックします。
 
-16. Wait for the flow run to complete. Click on the **Refresh** button to check if the flow run completed successfully.
+16. フローの実行が完了するのを待ちます。 **Refresh** ボタンをクリックして、フローの実行が正常に完了したかどうかを確認します。
 
 ![A Screenshot with an arrow pointing to the refresh button in the top right corner and a border around the status showing it has succeeded](02-1/media/image93.png)
 
-17. Close the flow editor browser window or tab.
+17. フローエディタのブラウザウィンドウまたはタブを閉じます。
 
-18. Click **Done** on the popup
+18. ポップアップで **Done** をクリックします。
 
-#### Task 3: Review imported data
+#### タスク3：インポートされたデータを確認する
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application.
+2.  **Apps** を選択し、クリックして **Company 311 Admin** アプリケーションを開きます。
 
-3.  Select Problem Reports. You should see at least three new Rows.
+3.  Problem Reportsを選択します。 少なくとも3つの新しい行が表示されます。
 
 ![A screenshot with a border around your reports, there are three new rows at the bottom](02-1/media/image104.png)
 
-4.  Click to open one of the **Problem Report** Rows.
+4.  クリックして、**Problem Report** 行の1つを開きます。
 
-5.  Click on the **Search** icon of the **Building** lookup and make sure building Rows were imported.
+5.  **Building** ルックアップの **Search** アイコンをクリックして、Building 行がインポートされたことを確認します。
 
 ![A screenshot of a border around the building lookup with the building rows imported](02-1/media/image95.png)
 
-6.  Scroll down and click on the **Department** lookup.
+6.  下にスクロールして、**Department** ルックアップをクリックします。
 
-7.  Make sure the department Rows got imported.
+7.  部門の行がインポートされたことを確認します。
 
 ### **Bonus exercise**
 
-  - Deal with problem report assignment within a department.
+  - 部門内の問題レポートの割り当てに対処します。
