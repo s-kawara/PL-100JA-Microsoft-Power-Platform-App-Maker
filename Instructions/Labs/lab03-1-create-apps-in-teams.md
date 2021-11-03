@@ -11,161 +11,161 @@ lab:
 > - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 >
 
-Lab 03.1: Create apps in Teams
+ラボ03.1：チームでアプリを作成する
 =================================
 
 ## Scenario
 
-It is not uncommon for organizations to accumulate unused computer Peripherals, power cords and other electronics. Your organization is taking steps to reuse existing devices and computer peripherals before ordering new equipment.
+組織が未使用のコンピュータ周辺機器、電源コード、その他の電子機器を蓄積することは珍しくありません。 あなたの組織は、新しい機器を注文する前に、既存のデバイスとコンピュータ周辺機器を再利用するための措置を講じています。
 
 You are asked to create an application where users can post devices they no longer need and browse through what their colleagues posted.
 
-## Requirements
+## 要件
 
-1)	Application must use Dataverse for Teams.
-2)	Users should be able to create new items, edit items they created and see items created by other users.
-3)	Items should be removed from the list if they are no longer available.
-4)  Allow users to reserve an item.
-5)  Allow user to mark item for pick up.
-6)  If item is reserved, only reserved user should be able to mark item picked up.
-7)  Users should be able to search items.
+1)	アプリケーションは Dataverse for Teamsを使用する必要があります。
+2)	ユーザーは、新しいアイテムを作成したり、作成したアイテムを編集したり、他のユーザーが作成したアイテムを表示したりできる必要があります。
+3)	アイテムが利用できなくなった場合は、リストから削除する必要があります。
+4)  ユーザーがアイテムを予約できるようにします。
+5)  ユーザーがアイテムをピックアップ用にマークできるようにします。
+6)  アイテムが予約されている場合、予約されたユーザーのみがピックアップされたアイテムにマークを付けることができます。
+7)  ユーザーはアイテムを検索できる必要があります。
 
-## What you will learn
+## あなたが学ぶこと
 
-1)	How to create an application using Dataverse for Teams.
-2)	How to publish application.
-3)	How to give other users permission to your application.
+1)	Dataverse for Teamsを使用してアプリケーションを作成する方法。
+2)	アプリケーションを公開する方法。
+3)	他のユーザーにアプリケーションへのアクセス許可を与える方法。
 
-## Detailed steps
+## 詳細な手順
 
 ### Exercise 1: Get started with Microsoft Dataverse for Teams
 
-In this exercise, you will create a new team and install Power Apps for Teams.
+この演習では、新しいチームを作成し、Power Apps forTeamsをインストールします。
 
-#### Task 1: Create team
-In this task you will create a new team
+#### タスク1：チームを作成する
+このタスクでは、新しいチームを作成します
 
-1. Navigate to [Microsoft Teams](https://teams.microsoft.com).
-2. Select **Teams**, click **Join or create a team** and click **Create Team**.
+1. [Microsoft Teams](https://teams.microsoft.com) に移動します。 
+2. **Teams** を選択し、**Join or create a team** をクリックして、**Create Team** をクリックします。
 
 ![A screenshot with a box around the teams button on the left side of the window and an arrow pointing to the create team button](03-1/media/ex1-t1-image1.png)
 
-3. Select **From scratch**.
-4. Select **Public**.
-5. Enter **Green** for Team name and click **Create**.
+3. **From scratch** を選択します。
+4. **Public** を選択します。
+5. チーム名に **Green** を入力し、**Create** をクリックします。
 
 ![A screenshot with the word green in the team name field](03-1/media/ex1-t1-image2.png)
 
-6. Click **Skip**.
-7. You should now have a new team named **Green**.
+6. **Skip** をクリックします。
+7. これで、**Green** という名前の新しいチームができました。
 
 ![A screenshot of the microsoft teams page with your new team named green now under your teams](03-1/media/ex1-t1-image3.png)
 
-8. Do not navigate away from this page.
+8. このページから離れないでください。
 
-#### Task 2: Install Power Apps
-In this task you will install Power Apps for Teams.
+#### タスク2：PowerAppsをインストールする
+このタスクでは、Power Apps forTeamsをインストールします。
 
-1.  Click on the **... More added apps**, search for power apps and select **Power Apps**.
+1.  **... More added apps** をクリックし、Power Appsを検索して、**Power Apps** を選択します。
 
 ![A Screenshot with an arrow pointing to the ellipsis icon for more added apps on the left side of the page and a box around power apps button](03-1/media/ex1-t2-image1.png)
 
-2.  Click **Add**.
+2.  **Add** をクリックします。
 
-3.  Right click on the Power Apps tab and select  **Pin**.
+3.  ower Apps タブを右クリックして、**Pin** を選択します。
 
 ![A Screenshot with an arrow pointing to the power apps icon and a box around the pin button](03-1/media/ex1-t2-image2.png)
 
 
-### Exercise 2: Create application
-In this exercise, you will provision Dataverse for Teams by creating an application and you will also create a Dataverse table with columns.
+### 演習2：アプリケーションを作成する
+この演習では、アプリケーションを作成してチーム用のDataverseをプロビジョニングし、列を含むDataverseテーブルも作成します。
 
-#### Task 1: Create application
-In this task, you will provision Dataverse for Teams by creating an application.
-1. Navigate to [Microsoft Teams](https://teams.microsoft.com).
+#### タスク1：アプリケーションを作成する
+このタスクでは、アプリケーションを作成して、Dataverse forTeamsをプロビジョニングします。
+1. [Microsoft Teams](https://teams.microsoft.com) に移動します。
 
-2. Select Power Apps and click **Start now**.
+2. Power Appsを選択し、**Start now** をクリックします。
 
 ![A screenshot of the power apps home page](03-1/media/ex2-t1-image1.png)
 
-3. Select the **Green** team you created and click **Create**.
-4. Enter **Upcycle** for App name and click **Save**.
-5. Do not navigate away from this page.
+3. 作成した**Green** チームを選択し、**Create** をクリックします。
+4. アプリ名に **Upcycle** と入力し、**Save** をクリックします。
+5. このページから離れないでください。
 
-#### Task 2: Create table
-In this task, you will create a table and columns.
+#### タスク2：テーブルを作成する
+このタスクでは、テーブルと列を作成します。
 
-1. Click **With data** and select **+ Create new table**.
+1. **With data** をクリックし、**+ Create new table** を選択します。
 
 ![A Screenshot with an arrow pointing to the with data option and a box around the create new table button from the select a data source prompt](03-1/media/ex2-t2-image2.png)
 
-2. Enter **Gadget** for Table name and click **Create**.
-3. Click **+ Add column**.
-4. Enter **Description** for Name select **Text** for Type, and click to expand the **Advanced options** section.
+2. テーブル名に **Gadget** と入力し、**Create** をクリックします。
+3. **+ Add column** をクリックします。
+4. 名前に **Description** を入力し、タイプに **Text** を選択し、クリックして **Advanced options** セクションを展開します。
 
 ![A Screenshot with an arrow pointing to the advanced options button](03-1/media/ex2-t2-image3.png)
 
-5. Change the **Max length** to **500** and click **Create**.
-6. Click **+ Add column** again.
-7. Enter **Availability** for Name, select **Choice** for Type, enter **Available** for the first choice and click **+ New choice**.
+5. **Max ength** を**500** に変更し、**Create** をクリックします。
+6. **+ Add column** をもう一度クリックします。
+7. 名前に **Availability** と入力し、タイプに **Choice** を選択し、最初の選択肢に **Available** と入力して、**+ New choice** をクリックします。
 
 ![A Screenshot with an arrow pointing to the new choice button](03-1/media/ex2-t2-image4.png)
 
-8.  Enter **Reserved** for the second choice and click **+ New choice**.
-9.  Enter **Picked up** for the third choice and click **Create**.
-10.  Your table screen should now look like the image below.
+8.  2番目の選択肢に **Reserved** と入力し、**+ New choice** をクリックします。
+9.  3番目の選択肢として **Picked up** と入力し、**Create** をクリックします。
+10. これで、テーブル画面は次の画像のようになります。
      ![A Screenshot with an arrow pointing to the word saved in the right hand corner of the window](03-1/media/ex2-t2-image5.png)
-11.  Close the table editor by clicking on the **Close** button.
-12.  Do not navigate away from this page.
+11.  **Close** ボタンをクリックしてテーブルエディタを閉じます。
+12.  このページから離れないでください。
 
 
-#### Task 3: Add columns
-In this task, you will add new columns to the table.
+#### タスク3：列を追加する
+このタスクでは、テーブルに新しい列を追加します。
 
-1. Select the **Home** tab and click **See more**.
+1. **Home** タブを選択し、**See more** をクリックします。
 
 ![A screenshot of a box around the home button and an arrow pointing to the see more button in the recent apps window of the home page of power apps](03-1/media/ex2-t3-image1.png)
 
-2. Click to open the **Gadget** table.
-3. Click  **+ Add column** column.
-4. Enter **Location** for Display name, select **Text** for Data type, make the column **Required** and click **Done**.
+2. クリックして **Gadget** テーブルを開きます。
+3. **+ Add column** 列をクリックします。
+4. 表示名に **Location** を入力し、データタイプに **Text** を選択し、列を **Required** にして、**Done** をクリックします。
 
 ![A screenshot of the add column window with the relevant text in each field](03-1/media/ex2-t3-image.png)
 
-5. Click **+ Add column**.
-6. Enter **Photo** for Display name, select **Image** for Data type, check the **Primary image** checkbox and click **Done**.
+5. **+ Add column** をクリックします。
+6. 表示名に **Photo** と入力し、データタイプに **Image** を選択し、**Primary image** チェックボックスをオンにして、**Done** をクリックします。
 
 ![A screenshot of the add column window with the relevant text in each field](03-1/media/ex2-t3-image3.png)
 
-7.  Click **+ Add column**.
-8.  Enter **Reserved by** for Display name, select **Lookup** for Data type, select **User** for Related table and click **Done**.
+7.  **+ Add column** をクリックします。
+8.  表示名に **Reserved by** と入力し、データ型に **Lookup** を選択し、関連テーブルに **User** を選択して、**Done** をクリックします。
 
 ![A screenshot of the add column window with the relevant text in each field](03-1/media/ex2-t3-image4.png)
 
-9.  Select the **Availability** column.
-10. Select **Available** for Default value and click **Done**
+9.  **Availability** 列を選択します。
+10. デフォルト値として **Available** を選択し、**Done** をクリックします。
 
 ![A screenshot with a box around available selected as the default value option](03-1/media/ex2-t3-image5.png)
 
-11. Click the **Save table** button located on the bottom right of the screen.
-12. Do not navigate away from this page.
+11. 画面の右下にある **Save table** ボタンをクリックします。
+12. このページから離れないでください。
 
 
-#### Task 4: Edit the application
-In this task, you will edit the application by filters for gadgets that are available and edit the form.
+#### タスク4：アプリケーションを編集する
+このタスクでは、使用可能なガジェットのフィルターによってアプリケーションを編集し、フォームを編集します。
 
-1. Select the **Home** tab and click to open the **Upcycle** application you created.
-2. Select **Screen1**. If the screen already contains the form, move to the next step, otherwise click **With data** and select **Gadgets** table under **Current environment**. That will create the screen elements including the form.
-3. Make sure **RightContainer1** is expanded and select the **EditForm1** control from tree view.
+1. **Home** タブを選択し、クリックして、作成した **Upcycle** アプリケーションを開きます。
+2. **Screen1** を選択します。 画面にすでにフォームが含まれている場合は、次の手順に進みます。それ以外の場合は、**With data** をクリックして、**Current environment** の下の **Gadgets** テーブルを選択します。 これにより、フォームを含む画面要素が作成されます。
+3. **RightContainer1** が展開されていることを確認し、ツリービューから **EditForm1** コントロールを選択します。
 
 ![A screenshot with a border around the edit form button under screen 1](03-1/media/ex2-t4-image1.png)
 
-3. Go to the **Properties** pane and click **Edit fields**
+3. **Properties** ペインに移動し、**Edit fields** をクリックします。
 
 ![A Screenshot with an arrow pointing to the edit fields button](03-1/media/ex2-t4-image2.png)
 
-4. Click on the **+ Add field** button.
-5. Select the fields that does not exist on the EditForm control from the below list and click **Add**.
+4. **+ Add field** ボタンをクリックします。
+5. 以下のリストから EditForm コントロールに存在しないフィールドを選択し、**Add** をクリックします。
    1. **Name**
    2. **Description**
    3. **Availability**
@@ -175,20 +175,20 @@ In this task, you will edit the application by filters for gadgets that are avai
 
 ![A screenshot of the add field window](03-1/media/ex2-t4-image3.png)
 
-6. Remove any extra fields and close the **Fields** pane. Your form should only have **Name, Description, Availability, Location, Reserved By and Photo** columns.
-7. Change **Columns** for Snap to columns to **1**.
+6. 余分なフィールドをすべて削除し、**Fields** ペインを閉じます。 フォームには、**Name, Description, Availability, Location, Reserved By and Photo** の列のみを含める必要があります。
+7. 列にスナップの **Columns** を **1** に変更します。
 
 ![A screenshot with a border around the columns field and the value of 1 in the field itself](03-1/media/ex2-t4-image4.png)
 
-8. Select the **Photo** inside the canvas and change **Width** to **400**.
+8. キャンバス内の **Photo** を選択し、**Width** を **400** に変更します。
 
 ![A screenshot of the photo selected inside the canvas and a border around the size field changed to 400 in the properties pane](03-1/media/ex2-t4-image5.png)
 
-9.  Expand the form and select the **Reserved by** data card.
+9.  フォームを展開し、**Reserved by** データカードを選択します。
 
 ![A screenshot of a border around reserved by data card selected under edit form 1](03-1/media/ex2-t4-image5_1.png)
 
-10.  Go to the **Properties** pane, select the **Advanced** tab and click **Unlock**.
+10. **Properties** ペインに移動し、**Advanced** タブを選択して、**Unlock** をクリックします。
 
 ![A Screenshot with an arrow pointing to the lock icon under the advanced tab](03-1/media/ex2-t4-image5_2.png)
 
