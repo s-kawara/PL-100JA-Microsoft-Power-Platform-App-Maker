@@ -11,41 +11,41 @@ lab:
 >
 
 
-# Lab 03.2: Canvas app
+# ラボ03.2：Canvasアプリ
 
-In this module you will design and build a canvas app for the company employees to submit problem reports.
+このモジュールでは、会社の従業員が問題レポートを送信するためのキャンバスアプリを設計および構築します。
 
-## What you will learn
+## あなたが学ぶこと
 
-  - Import and use a pre-built component library
-  - Create a Power Apps canvas app
-  - Connect to a data source
-  - Filter data
-  - Create data Rows
-  - Use images with data Rows
-  - Embed canvas Power App into Microsoft Teams
+  - ビルド済みのコンポーネントライブラリをインポートして使用する
+  - Power Apps のキャンバスアプリを作成する
+  - データソースに接続する
+  - データをフィルタリングする
+  - データ行を作成する
+  - データ行のある画像を使用する
+  - Canvas PowerアプリをMicrosoft Teamsに埋め込む
 
-## High-level lab steps
+## 高レベルのラボ手順
 
-  - Import company components
-  - Create app and layout main screen (including list of my items)
-  - Submit New Report
-  - Test
-  - Embed canvas app in Microsoft Teams
+  - 会社のコンポーネントをインポートする
+  - アプリとレイアウトのメイン画面（アイテムのリストを含む）を作成します
+  - 新しいレポートを送信する
+  - テスト
+  - Microsoft Teamsにキャンバスアプリを埋め込む
 
-## Prerequisites
+## 前提条件
 
 * Must have completed **Lab 02.1: Data model and model-driven app**
 
-## Detailed steps
+## 詳細な手順
 
-  ### Exercise 1: Create canvas application
+  ### 演習1：キャンバスアプリケーションを作成する
 
-In this exercise, you will import a solution with shared components, create a view for the problem report Table and create a canvas application.
+この演習では、共有コンポーネントを使用してソリューションをインポートし、問題レポートテーブルのビューを作成して、キャンバスアプリケーションを作成します。
 
-#### Task 1: Import component library solution
+#### タスク1：コンポーネントライブラリソリューションをインポートする
 
-In this task, you will import the shared components solution into your environment. This shared component library was built by another team at your company.
+このタスクでは、共有コンポーネントソリューションを環境にインポートします。 この共有コンポーネントライブラリは、会社の別のチームによって作成されました。
 
 1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
 
@@ -70,7 +70,7 @@ In this task, you will import the shared components solution into your environme
 ![A screenshot of the shared components window with the Lamna Healthcare shared components item](03-2/media/image2.png)
 
 > [!IMPORTANT]
-> There is an issue where importing the app as part of a solution may not add it to your components library. The following steps are designed to resolve the issue.
+> ソリューションの一部としてアプリをインポートしても、コンポーネントライブラリにアプリが追加されない場合があるという問題があります。 次の手順は、問題を解決するために設計されています。
 
 10. Navigate to **Apps**, Select the **Lamna Healthcare Shared Components App**.
 11. Click the **Edit Icon** to edit the app.
@@ -90,9 +90,9 @@ In this task, you will import the shared components solution into your environme
 14. Click **OK**.
 15. Close the **Lamna Healthcare Shared Components** tab in your browser.
 
-#### Task 2: Create view
+#### タスク2：ビューを作成する
 
-In this task, you will create a view that will show the current user’s problem reports. Later you will use this view with the filter function in the canvas app.
+このタスクでは、現在のユーザーの問題レポートを表示するビューを作成します。 後で、このビューをキャンバスアプリのフィルター機能で使用します。
 
 1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
 
@@ -122,9 +122,9 @@ In this task, you will create a view that will show the current user’s problem
 
 10. Click on the **Back** button in your browser tab to go back to the Problem Report table details.
 
-#### Task 3: Create the user application
+#### タスク3：ユーザーアプリケーションを作成する
 
-In this task, you will create a canvas application using the phone form factor.
+このタスクでは、電話のフォームファクターを使用してキャンバスアプリケーションを作成します。
 
 1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) page and make sure you are in the correct environment.
 
@@ -198,7 +198,7 @@ Set('My Tabs', Table( {
 ```
 
 > [!IMPORTANT]
-> When expressions are copied, the quotes and double quotes are sometimes replaced with their "smart" counterparts which are not valid in formulas. If you copy and paste the expression above, make sure the resulting formula does not contain any errors.     
+> 式がコピーされると、引用符と二重引用符は、数式では無効な「スマート」な対応物に置き換えられることがあります。 上記の式をコピーして貼り付ける場合は、結果の数式にエラーが含まれていないことを確認してください。
 
 ![A screenshot of the copied expression into the expression tab](03-2/media/image15.png)
 
@@ -225,11 +225,11 @@ Set('My Tabs', Table( {
 
 28. Do not navigate away from this page.
 
-### Exercise 2: My reports
+### 演習2：私のレポート
 
-In this exercise, you will add a gallery that will show reports created by the current logged in user.
+この演習では、現在ログインしているユーザーによって作成されたレポートを表示するギャラリーを追加します。
 
-#### Task 1: Add gallery
+#### タスク1：ギャラリーを追加する
 
 1.  Select the **Main Screen**, go to the **Insert** tab, click **Gallery**, and select **Vertical**.
 
@@ -261,11 +261,11 @@ In this exercise, you will add a gallery that will show reports created by the c
 
 10. Do not navigate away from this page.
 
-### Exercise 3: Allow removing reports
+### 演習3：レポートの削除を許可する
 
-In this exercise, you will allow unassigned reports to be removed. This will allow users to easily remove any reports that were accidentally created.
+この演習では、割り当てられていないレポートを削除できるようにします。 これにより、ユーザーは誤って作成されたレポートを簡単に削除できます。
 
-#### Task 1: Allow remove
+#### タスク1：削除を許可する
 
 1.  Expand the **My Reports Gallery**.
 
@@ -293,11 +293,11 @@ In this exercise, you will allow unassigned reports to be removed. This will all
 
 8.  Do not navigate away from this page.
 
-### Exercise 4: Add new report
+### 演習4：新しいレポートを追加する
 
-In this exercise, you will add a form to submit new problem reports.
+この演習では、新しい問題レポートを送信するためのフォームを追加します。
 
-#### Task 1: Add new report form
+#### タスク1：新しいレポートフォームを追加する
 
 1.  Select the **New Report Screen**, go to the **Insert** tab, click **Form**, and select **Edit**.
 
@@ -362,11 +362,11 @@ In this exercise, you will add a form to submit new problem reports.
 25. Do not navigate away from this page.
 
 
-### Exercise 5: Test the application
+### 演習5：アプリケーションをテストする
 
-In this exercise, you will test the canvas application you created by submitting a problem report.
+この演習では、問題レポートを送信して作成したキャンバスアプリケーションをテストします。
 
-#### Task 1: Test application
+#### タスク1：アプリケーションをテストする
 
 1.  Select the **Main Screen** and click **Preview the app**.
 
@@ -401,11 +401,11 @@ In this exercise, you will test the canvas application you created by submitting
 11. **Close** the preview.
 12. **Close** the app studio by closing the browser tab.
 
-### Exercise 6: Embed canvas app in Microsoft Teams
+### 演習6：Microsoft Teamsにキャンバスアプリを埋め込む
 
-In this exercise, you will add the Company 311 Phone App that you created earlier, to Microsoft Teams as a way for staff to be able to log issues directly within Teams.
+この演習では、スタッフがチーム内で直接問題をログに記録できるようにする方法として、以前に作成したCompany 311 Phone アプリを Microsoft Teams に追加します。
 
-#### Task 1: Setup Company 311 Team
+#### タスク1：会社311チームをセットアップする
 
 In this task, you will setup a **Microsoft Teams** team for the Lamna Healthcare Company, if you have not done so previously.
 
@@ -434,7 +434,7 @@ In this task, you will setup a **Microsoft Teams** team for the Lamna Healthcare
 10. Do not navigate away from this page.
 
 
-#### Task 2: Add canvas app to Teams
+#### タスク2：チームにキャンバスアプリを追加する
 
 1.  Select the **General** channel of the **Company 311** team.
 
@@ -451,7 +451,7 @@ In this task, you will setup a **Microsoft Teams** team for the Lamna Healthcare
 6. Select the **Company 311 Phone App** that you created earlier in this lab. 
 
 > [!IMPORTANT]
-> If you do not see the app you need to go back to the app editor and publish the app
+> アプリが表示されない場合は、アプリエディターに戻ってアプリを公開する必要があります
 
 7. Select **Save**.
 
@@ -461,11 +461,11 @@ In this task, you will setup a **Microsoft Teams** team for the Lamna Healthcare
 
 
 
-### Exercise 7: Embed canvas in model-driven app
+### 演習7：モデル駆動型アプリにキャンバスを埋め込む
 
-In this exercise, you will create a canvas application and add it to the model-driven application.
+この演習では、キャンバスアプリケーションを作成し、それをモデル駆動型アプリケーションに追加します。
 
-#### Task 1: Add canvas app to the form
+#### タスク1：フォームにキャンバスアプリを追加する
 
 1. Navigate to [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in your practice environment.
 2. Select **Solutions** and click to open the **Company 311** solutions.
@@ -507,7 +507,7 @@ In this exercise, you will create a canvas application and add it to the model-d
 17.   A new browser window or tab should open and load the app studio.
 18.   Do not navigate away from this page.
 
-#### Task 2: Customize the app
+#### タスク2：アプリをカスタマイズする
 
 1.  Right click on **Form1** and select **Delete**.
 
@@ -570,7 +570,7 @@ In this exercise, you will create a canvas application and add it to the model-d
 25. Do not navigate away from this page.
 
 
-#### Task 3: Add controls
+#### タスク3：コントロールを追加する
 
 1.  Select the **Insert** tab and click **Label**.
 2.  Select the label you just added and set the **Text** value to the formula below.
@@ -693,7 +693,7 @@ In this exercise, you will create a canvas application and add it to the model-d
 53. Click **Publish all customizations** and wait for the publishing to complete.
 
 
-#### Task 4: Test app
+#### タスク4：アプリをテストする
 
 1. Select the **Apps** and click to launch the **Company 311 Admin** application.
 
@@ -704,7 +704,7 @@ In this exercise, you will create a canvas application and add it to the model-d
 
    ![A Screenshot with an arrow pointing to the building lookup](03-2/media/ex_7_lookup.png)
 
-4. The Canvas app should load inside the Model-Driven application. Click on the Next/Back icons and make sure the application behaves as expected.
+4. Canvasアプリは、モデル駆動型アプリケーション内に読み込まれる必要があります。 [次へ] / [戻る]アイコンをクリックして、アプリケーションが期待どおりに動作することを確認します。
 
    ![A screenshot of the broken door icon in the context of the canvas app inside the Model-Driven Application](03-2/media/ex_7_canvasinmodel.png)
 
