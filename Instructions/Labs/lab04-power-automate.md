@@ -328,73 +328,73 @@ lab:
 
 48. ポップアップで **Done** をクリックします。
 
-#### Task 3: Test flow
+#### タスク3：テストフロー
 
-In this task, you will test the escalation flow
+このタスクでは、エスカレーションフローをテストします
 
-1.  Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and make sure you are in the correct environment.
+1.  [Power Apps maker portal](https://make.powerapps.com/) に移動し、正しい環境にいることを確認します。 
 
-2.  Select **Apps** and click to open the **Company 311 Admin** application.
+2.  **Apps** を選択し、クリックして**Company 311 Admin** アプリケーションを開きます。
 
-3.  Click to open one of the **Problem Report** rows.
+3.  クリックして、**Problem Report** 行の1つを開きます。
 
-4.  Scroll down, enter **2500** for **Estimated Cost**, assign it to **yourself** (for test purposes) and click **Save**.
+4.  下にスクロールして、**Estimated Cost** に **2500** と入力し、**yourself** に割り当てて（テスト目的で）、**Save** をクリックします。
 
 5.  Navigate to [Power Automate](https://us.flow.microsoft.com/en-us/)
 
-6.  Expand **Action Items** and select **Approvals**.
+6.  **Action Items** を展開し、**Approvals** を選択します。
 
-7.  You should see at least one approval in the received tab. Click to open the approval. It can take around 10-15 minutes for approvals to show up here on the first run.
+7.  受信したタブに少なくとも1つの承認が表示されます。 クリックして承認を開きます。 最初の実行で承認がここに表示されるまで、約10〜15分かかる場合があります。
 
 ![A Screenshot with an arrow pointing to the cost approval required request](04/media/image16.png)
 
-8.  Select **Reject**, enter **We don't have the funds for this item** for **comment**, and click **Confirm**.
+8.  **Reject** を選択し、**comment** に **We don't have the funds for this item** と入力し、**Confirm** をクリックします。
 
 ![A screenshot of the details of the request with the relevant text in each field](04/media/image17.png)
 
-9.  Go back to the **Company 311 Admin** application.
+9.  **Company 311 Admin** アプリケーションに戻ります。
 
-10. Change the view to **My Reports** and click to open the same row you change the estimated cost.
+10. ビューを **My Reports** に変更し、クリックして、見積もりコストを変更するのと同じ行を開きます。
 
-11. The **Status Reason** should be set to **Won’t fix** and the **Resolution** should contain the details of Approver, Response, Request Date and Response Date.
+11. **Status Reason** は **Won’t fix** に設定する必要があり、**Resolution** には承認者、応答、要求日、応答日の詳細が含まれている必要があります。
 
-12. Click **Save**, if you have not done so previously.
+12. 以前に行ったことがない場合は、**Save** をクリックします。
 
 ![A screenshot of the status reason and resolution matching the values and text you put into the request](04/media/image18.png)
 
-### Exercise 3: Send approval requests as adaptive card in Microsoft Teams
+### 演習3：MicrosoftTeamsでアダプティブカードとして承認リクエストを送信する
 
-In this exercise, you will setup a team in Microsoft Teams dedicated to the Company 311 applications. You will modify the flow to send the approval request as an adaptive card in Teams chat instead of an approval message.
+この演習では、Company311アプリケーション専用のMicrosoftTeamsでチームを設定します。 フローを変更して、承認メッセージではなく、Teamsチャットでアダプティブカードとして承認要求を送信します。
 
-* Task 1: Setup Company 311 Team
-* Task 2: Modify flow to send adaptive card in Teams chat
-* Task 3: Test adaptive card
+* タスク1：Company 311 をセットアップする
+* タスク2：フローを変更してTeamsチャットでアダプティブカードを送信する
+* タスク3：アダプティブカードをテストする
 
-#### Task 1: Setup Company 311 Team
+#### タスク1：Company 311 チームをセットアップする
 
-In this task you will setup a Microsoft Teams team for the Lamna Healthcare Company, if you have not done so in previous exercises.
+このタスクでは、前の演習でまだ行っていない場合は、Lamna HealthcareCompanyのMicrosoftTeamsチームをセットアップします。
 
-1.  Navigate to [Microsoft Teams](https://teams.microsoft.com) and sign in with the same credentials you have been using previously.
+1.  [Microsoft Teams](https://teams.microsoft.com) に移動し、以前に使用していたのと同じ資格情報でサインインします。 
 
-2.  Select **Use the web app instead** on the welcome screen.
+2.  ようこそ画面で **Use the web app instead** を選択します。
 
 ![A screenshot of the Microsoft Teams landing page with a border around the use the web app instead button](04/media/image-5-teams.png)
 
-3.  When the Microsoft Teams window opens, dismiss the welcome messages.
+3.  Microsoft Teamsウィンドウが開いたら、ウェルカムメッセージを閉じます。
 
-4.  On the bottom left corner, choose **Join or create a team**.
+4.  左下隅で、**Join or create a team** を選択します。
 
-5.  Select **Create a team**.
+5.  **Create a team** を選択します。
 
 ![A screenshot with a box around the join or create a team button at the bottom of the window and a border around the create a team button](04/media/image-5-createteam.png)
 
-6.  Press **From scratch**.
+6.  **From scratch** を押します。
 
-7.  Select **Public**.
+7.  **Public** を選択します。
 
-8.  For the Team name choose **Company 311** and select **Create**.
+8.  チーム名として **Company 311** を選択し、**Create** を選択します。
 
-9.  Select **Skip** adding members to Company 311.
+9.  Company 311 メンバーを追加する **Skip** を選択します。
 
 
 #### Task 2: Modify flow to send adaptive card in Teams chat
