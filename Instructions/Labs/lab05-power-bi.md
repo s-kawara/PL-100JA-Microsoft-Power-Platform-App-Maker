@@ -52,6 +52,7 @@ lab:
 **目的：** この演習では、Power BI Desktopをインストールして構成し、Microsoft Dataverseへの接続を構成します。
 
 > [!IMPORTANT]
+> 
 > デスクトップアプリケーションをインストールするために必要なアクセス許可がない場合、またはPower BI Desktopの構成とデータへの接続で問題が発生した場合は、**補遺：サンプルデータのインポート**を実行してから**演習2 **に進みますが、PowerBIを使用します Power BIDesktopの代わりにサービス。
 
 #### タスク1：PowerBIデスクトップを構成する
@@ -59,6 +60,7 @@ lab:
 1. Power BI Desktopがインストールされていない場合は、[https://aka.ms/pbidesktopstore](https://aka.ms/pbidesktopstore) に移動して、Power BI アプリをダウンロードしてインストールします。
 
 > [!IMPORTANT]
+> 
 > Microsoft Storeを使用したPowerBI Desktopのインストールで問題が発生した場合は、[https://aka.ms/pbiSingleInstaller](https://aka.ms/pbiSingleInstaller) からダウンロードできるスタンドアロンインストールを試してください。
 
 2. Power BIデスクトップを開きます。
