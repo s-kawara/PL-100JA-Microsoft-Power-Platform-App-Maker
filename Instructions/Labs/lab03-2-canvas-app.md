@@ -197,6 +197,7 @@ Set('My Tabs', Table( {
 ```
 
 > [!IMPORTANT]
+> 
 > 式がコピーされると、引用符と二重引用符は、数式では無効な「スマート」な対応物に置き換えられることがあります。 上記の式をコピーして貼り付ける場合は、結果の数式にエラーが含まれていないことを確認してください。
 
 ![A screenshot of the copied expression into the expression tab](03-2/media/image15.png)
@@ -450,6 +451,7 @@ Set('My Tabs', Table( {
 6. このラボで以前に作成した **Company 311 Phone App** を選択します。
 
 > [!IMPORTANT]
+> 
 > アプリが表示されない場合は、アプリエディターに戻ってアプリを公開する必要があります
 
 7. **Save** を選択します。
