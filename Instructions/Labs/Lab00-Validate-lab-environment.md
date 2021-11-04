@@ -35,12 +35,12 @@ lab:
 8. 再度、**Get Started** を選択します。
 
 > [!NOTE]
-> If you encounter an error: "Sorry, there's been a disconnect", you can follow the steps below. If not, you can continue to **Exercise 2**.
+> 「申し訳ありませんが、接続が切断されました」というエラーが発生した場合は、以下の手順を実行できます。 そうでない場合は、**演習2 ** に進むことができます。
 >
-> 1. Navigate to [Power Apps Maker Portal](https://make.powerapps.com).
-> 2. Select the **Gear Icon** (Settings) from top-right corner on the header of the page.
->3. Select **Plan(s)** and verify if you have **Power Apps Per User Plan Trial**. 
-> 4. If you have the above mentioned license, please proceed to **Exercise 2** otherwise repeat **Exercise 1**.
+> 1. [Power Apps Maker Portal](https://make.powerapps.com) に移動します。 
+> 2. ページのヘッダーの右上隅から **歯車アイコン**（設定）を選択します。
+> 3. **Plan(s)** を選択し、**Power Apps Per User Plan Trial** があるかどうかを確認します。 
+> 4. 上記のライセンスをお持ちの場合は、**演習2** に進んでください。それ以外の場合は、**演習1** を繰り返してください。
 
 演習2 - 環境を作成する
 ------------------------------------------
