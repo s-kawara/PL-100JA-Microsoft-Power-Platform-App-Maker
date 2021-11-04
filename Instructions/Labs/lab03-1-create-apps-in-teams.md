@@ -18,7 +18,7 @@ lab:
 
 組織が未使用のコンピュータ周辺機器、電源コード、その他の電子機器を蓄積することは珍しくありません。 あなたの組織は、新しい機器を注文する前に、既存のデバイスとコンピュータ周辺機器を再利用するための措置を講じています。
 
-You are asked to create an application where users can post devices they no longer need and browse through what their colleagues posted.
+ユーザーが不要になったデバイスを投稿したり、同僚が投稿したものを閲覧したりできるアプリケーションを作成するように求められます。
 
 ## 要件
 
@@ -38,7 +38,7 @@ You are asked to create an application where users can post devices they no long
 
 ## 詳細な手順
 
-### Exercise 1: Get started with Microsoft Dataverse for Teams
+### 演習1：Microsoft Dataverse for Teamsの使用を開始する
 
 この演習では、新しいチームを作成し、Power Apps forTeamsをインストールします。
 
