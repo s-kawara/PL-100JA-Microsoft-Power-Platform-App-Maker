@@ -70,6 +70,7 @@ lab:
 ![A screenshot of the shared components window with the Lamna Healthcare shared components item](03-2/media/image2.png)
 
 > [!IMPORTANT]
+> 
 > ソリューションの一部としてアプリをインポートしても、コンポーネントライブラリにアプリが追加されない場合があるという問題があります。 次の手順は、問題を解決するために設計されています。
 
 10. **Apps** に移動し、**Lamna Healthcare Shared Components App** を選択します。
