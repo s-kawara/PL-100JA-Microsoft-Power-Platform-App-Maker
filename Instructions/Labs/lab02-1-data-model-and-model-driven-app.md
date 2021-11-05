@@ -189,6 +189,7 @@ lab:
 3.  **… More commands** ボタンをクリックし、**Switch to classic** を選択します。
 
 > [!NOTE]  
+> 
 > 最新のソリューションエクスプローラーはステータス理由の編集をまだサポートしていませんが、将来的にサポートするため、クラシックに切り替えています。
 
 ![A Screenshot with an arrow pointing to the ellipses icon for more options next to AI builder and a border around the switch to classic button](02-1/media/image19.png)
@@ -196,6 +197,7 @@ lab:
 4.  **Fields** を選択し、表示名列で **Status Reason** を探し、ダブルクリックして **Status Reason** 列を開きます。
 
 > [!NOTE]  
+> 
 > ブラウザでポップアップが有効になっていない場合、列を更新するためのポップアップウィンドウは開きません。 ブラウザタブで開いているポップアップとリダイレクトが有効になっていることを確認してください。 
 
 ![A screenshot with a border around the fields button and an arrow pointing to the display name of status code](02-1/media/image20.png)
