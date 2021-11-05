@@ -176,7 +176,7 @@ lab:
 
 #### タスク1：必要なアプリを評価する
 
-In this task you are going to look at how the users interact with the applications and decide if you need one or multiple applications and what style they're going to be, i.e. canvas or model-driven. There is no single right answer to how to accomplish this, but by asking the right questions you can design a better solution for your users. As you go through the following steps make some notes about your Company 311 solution.
+このタスクでは、ユーザーがアプリケーションをどのように操作するかを確認し、1つまたは複数のアプリケーションが必要かどうか、およびそれらがどのスタイルになるか（つまり、キャンバスまたはモデル駆動）を決定します。 これを実現する方法に対する正しい答えは1つではありませんが、正しい質問をすることで、ユーザーにとってより良いソリューションを設計できます。 次の手順を実行するときに、Company 311ソリューションについてメモを取ります。
 
 1.  アプリを使用するユーザーを特定します。
 
