@@ -401,7 +401,7 @@ lab:
 
 このタスクでは、電子メールで送信された承認をアダプティブカードに置き換えます。
 
-1. **演習2、タスク2 ** で作成した **Start and wait for an approval** ステップを待ちます。
+1. **演習2、タスク2** で作成した **Start and wait for an approval** ステップを待ちます。
 2. **...** を選択してから、**Delete** を選択します。
 3. ステップ間で **+** をクリックして新しいステップを挿入し、**Add an Action** を選択します。
 4. **approval** を検索し、**Create an approval** を選択します。
