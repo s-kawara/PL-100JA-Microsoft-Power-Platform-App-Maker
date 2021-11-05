@@ -281,9 +281,9 @@ lab:
 
 29. 以下のマークダウンテキストを **Details** 列に貼り付けます。
 
-> \#\# 緊急の承認が必要です
+> \#\# URGENT Approval Required
 >
-> これは \*\*非常に\*\* 高価なアイテムで、推定コストは
+> This is \*\*very\*\* expensive item with the estimated cost of
 
 30. コストの後にカーソルを置き、動的コンテンツのペインに移動し、[式]タブを選択して、下に式を貼り付け、**OK** をクリックします。
 
