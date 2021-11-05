@@ -163,7 +163,7 @@ lab:
 
 13. **+ Add Column** をクリックします。
 
-14. **Display name** に **Resolved On** を入力し、 **Data type** で **Date and time** を選択し、 **Done** をクリックします。
+14. **Display name** に **Resolved on** を入力し、 **Data type** で **Date and time** を選択し、 **Done** をクリックします。
 
 15. **Default** フィルターを選択し、**Custom** クリックをします。(小画面デバイスの場合、デフォルトのドロップダウンは**ellipsis**になります).
 ![A Screenshot with an arrow pointing to the default dropdown menu and a border around the custom button](02-1/media/image17.png)
